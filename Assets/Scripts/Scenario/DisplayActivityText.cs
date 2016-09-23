@@ -17,9 +17,9 @@ public class DisplayActivityText : MonoBehaviour
     public void OnGUI()
     {
         _cam = Camera.main;
-        //Bounds b = gameObject.GetComponentsInChildren<Renderer>().Aggregate((i1, i2) => i1.bounds.extents.magnitude > i2.bounds.extents.magnitude ? i1 : i2).bounds;
+        Bounds b = gameObject.GetComponentsInChildren<Renderer>().Aggregate((i1, i2) => i1.bounds.extents.magnitude > i2.bounds.extents.magnitude ? i1 : i2).bounds;
 
-        //RenderLabels(b);       
+        RenderLabels(b);       
     }
 
     private bool IsVisibleFromCamera()

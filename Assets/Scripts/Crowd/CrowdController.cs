@@ -49,7 +49,7 @@ public class CrowdController : MonoBehaviour
                 Quaternion rotation = Quaternion.Euler(new Vector3(0.0f, Random.Range(0.0f, 360.0f), 0.0f));
                 GameObject agent = (GameObject)Instantiate(Characters[index], generator.RandomPointOnNavMesh(transform.position), rotation);
                 agent.tag = "Crowd";
-                agent.name = string.Format("{0}{1}", Characters[index].name, i);
+                agent.name = string.Format("Crowd{0}", i);
                 if (Random.Range(0.0f, 100.0f) < 90.0f)
                 {
                     agent.GetComponent<NavMeshAgent>().speed = Random.Range(1.0f, 2.5f);
