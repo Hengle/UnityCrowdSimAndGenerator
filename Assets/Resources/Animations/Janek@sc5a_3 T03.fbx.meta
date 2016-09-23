@@ -1,0 +1,1462 @@
+fileFormatVersion: 2
+guid: 06d18abad15e07940a54ecce715c1d93
+timeCreated: 1474033053
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Alicja
+    100002: Alicja:ARIEL
+    100004: Alicja:C7
+    100006: Alicja:CLAV
+    100008: Alicja:LANK
+    100010: Alicja:LBHD
+    100012: Alicja:LBSH
+    100014: Alicja:LBWT
+    100016: Alicja:LELB
+    100018: Alicja:LFHD
+    100020: Alicja:LFSH
+    100022: Alicja:LFWT
+    100024: Alicja:LHEL
+    100026: Alicja:LHIP
+    100028: Alicja:LIEL
+    100030: Alicja:LIHAND
+    100032: Alicja:LIWR
+    100034: Alicja:LKNE
+    100036: Alicja:LKNI
+    100038: Alicja:LMT1
+    100040: Alicja:LMT5
+    100042: Alicja:LMWT
+    100044: Alicja:LOHAND
+    100046: Alicja:LOWR
+    100048: Alicja:LSHN
+    100050: Alicja:LTOE
+    100052: Alicja:LUPA
+    100054: Alicja:LWRE
+    100056: Alicja:RANK
+    100058: Alicja:RBHD
+    100060: Alicja:RBSH
+    100062: Alicja:RBWT
+    100064: Alicja:RELB
+    100066: Alicja:RFHD
+    100068: Alicja:RFSH
+    100070: Alicja:RFWT
+    100072: Alicja:RHEL
+    100074: Alicja:RHIP
+    100076: Alicja:RIEL
+    100078: Alicja:RIHAND
+    100080: Alicja:RIWR
+    100082: Alicja:RKNE
+    100084: Alicja:RKNI
+    100086: Alicja:RMT1
+    100088: Alicja:RMT5
+    100090: Alicja:RMWT
+    100092: Alicja:ROHAND
+    100094: Alicja:ROWR
+    100096: Alicja:RSHN
+    100098: Alicja:RTOE
+    100100: Alicja:RUPA
+    100102: Alicja:RWRE
+    100104: Alicja:Solving
+    100106: Alicja:Solving:Head
+    100108: Alicja:Solving:Head_End
+    100110: Alicja:Solving:Hips
+    100112: Alicja:Solving:L_Thumb_End
+    100114: Alicja:Solving:L_Toe_End
+    100116: Alicja:Solving:L_Wrist_End
+    100118: Alicja:Solving:LeftArm
+    100120: Alicja:Solving:LeftFoot
+    100122: Alicja:Solving:LeftForeArm
+    100124: Alicja:Solving:LeftHand
+    100126: Alicja:Solving:LeftHandThumb
+    100128: Alicja:Solving:LeftLeg
+    100130: Alicja:Solving:LeftShoulder
+    100132: Alicja:Solving:LeftToeBase
+    100134: Alicja:Solving:LeftUpLeg
+    100136: Alicja:Solving:Neck
+    100138: Alicja:Solving:R_Thumb_End
+    100140: Alicja:Solving:R_Toe_End
+    100142: Alicja:Solving:R_Wrist_End
+    100144: Alicja:Solving:RightArm
+    100146: Alicja:Solving:RightFoot
+    100148: Alicja:Solving:RightForeArm
+    100150: Alicja:Solving:RightHand
+    100152: Alicja:Solving:RightHandThumb
+    100154: Alicja:Solving:RightLeg
+    100156: Alicja:Solving:RightShoulder
+    100158: Alicja:Solving:RightToeBase
+    100160: Alicja:Solving:RightUpLeg
+    100162: Alicja:Solving:Spine
+    100164: Alicja:Solving:Spine1
+    100166: Alicja:STRN
+    100168: Alicja:T10
+    100170: Janek
+    100172: Janek:ARIEL
+    100174: Janek:C7
+    100176: Janek:CLAV
+    100178: Janek:LANK
+    100180: Janek:LBHD
+    100182: Janek:LBSH
+    100184: Janek:LBWT
+    100186: Janek:LELB
+    100188: Janek:LFHD
+    100190: Janek:LFSH
+    100192: Janek:LFWT
+    100194: Janek:LHEL
+    100196: Janek:LHIP
+    100198: Janek:LIEL
+    100200: Janek:LIHAND
+    100202: Janek:LIWR
+    100204: Janek:LKNE
+    100206: Janek:LKNI
+    100208: Janek:LMT1
+    100210: Janek:LMT5
+    100212: Janek:LMWT
+    100214: Janek:LOHAND
+    100216: Janek:LOWR
+    100218: Janek:LSHN
+    100220: Janek:LTOE
+    100222: Janek:LUPA
+    100224: Janek:LWRE
+    100226: Janek:RANK
+    100228: Janek:RBHD
+    100230: Janek:RBSH
+    100232: Janek:RBWT
+    100234: Janek:RELB
+    100236: Janek:RFHD
+    100238: Janek:RFSH
+    100240: Janek:RFWT
+    100242: Janek:RHEL
+    100244: Janek:RHIP
+    100246: Janek:RIEL
+    100248: Janek:RIHAND
+    100250: Janek:RIWR
+    100252: Janek:RKNE
+    100254: Janek:RKNI
+    100256: Janek:RMT1
+    100258: Janek:RMT5
+    100260: Janek:RMWT
+    100262: Janek:ROHAND
+    100264: Janek:ROWR
+    100266: Janek:RSHN
+    100268: Janek:RTOE
+    100270: Janek:RUPA
+    100272: Janek:RWRE
+    100274: Janek:Solving
+    100276: Janek:Solving:Head
+    100278: Janek:Solving:Head_End
+    100280: Janek:Solving:Hips
+    100282: Janek:Solving:L_Thumb_End
+    100284: Janek:Solving:L_Toe_End
+    100286: Janek:Solving:L_Wrist_End
+    100288: Janek:Solving:LeftArm
+    100290: Janek:Solving:LeftFoot
+    100292: Janek:Solving:LeftForeArm
+    100294: Janek:Solving:LeftHand
+    100296: Janek:Solving:LeftHandThumb
+    100298: Janek:Solving:LeftLeg
+    100300: Janek:Solving:LeftShoulder
+    100302: Janek:Solving:LeftToeBase
+    100304: Janek:Solving:LeftUpLeg
+    100306: Janek:Solving:Neck
+    100308: Janek:Solving:R_Thumb_End
+    100310: Janek:Solving:R_Toe_End
+    100312: Janek:Solving:R_Wrist_End
+    100314: Janek:Solving:RightArm
+    100316: Janek:Solving:RightFoot
+    100318: Janek:Solving:RightForeArm
+    100320: Janek:Solving:RightHand
+    100322: Janek:Solving:RightHandThumb
+    100324: Janek:Solving:RightLeg
+    100326: Janek:Solving:RightShoulder
+    100328: Janek:Solving:RightToeBase
+    100330: Janek:Solving:RightUpLeg
+    100332: Janek:Solving:Spine
+    100334: Janek:Solving:Spine1
+    100336: Janek:STRN
+    100338: Janek:T10
+    100340: Marek
+    100342: Marek:ARIEL
+    100344: Marek:C7
+    100346: Marek:CLAV
+    100348: Marek:LANK
+    100350: Marek:LBHD
+    100352: Marek:LBSH
+    100354: Marek:LBWT
+    100356: Marek:LELB
+    100358: Marek:LFHD
+    100360: Marek:LFSH
+    100362: Marek:LFWT
+    100364: Marek:LHEL
+    100366: Marek:LHIP
+    100368: Marek:LIEL
+    100370: Marek:LIHAND
+    100372: Marek:LIWR
+    100374: Marek:LKNE
+    100376: Marek:LKNI
+    100378: Marek:LMT1
+    100380: Marek:LMT5
+    100382: Marek:LMWT
+    100384: Marek:LOHAND
+    100386: Marek:LOWR
+    100388: Marek:LSHN
+    100390: Marek:LTOE
+    100392: Marek:LUPA
+    100394: Marek:LWRE
+    100396: Marek:RANK
+    100398: Marek:RBHD
+    100400: Marek:RBSH
+    100402: Marek:RBWT
+    100404: Marek:RELB
+    100406: Marek:RFHD
+    100408: Marek:RFSH
+    100410: Marek:RFWT
+    100412: Marek:RHEL
+    100414: Marek:RHIP
+    100416: Marek:RIEL
+    100418: Marek:RIHAND
+    100420: Marek:RIWR
+    100422: Marek:RKNE
+    100424: Marek:RKNI
+    100426: Marek:RMT1
+    100428: Marek:RMT5
+    100430: Marek:RMWT
+    100432: Marek:ROHAND
+    100434: Marek:ROWR
+    100436: Marek:RSHN
+    100438: Marek:RTOE
+    100440: Marek:RUPA
+    100442: Marek:RWRE
+    100444: Marek:Solving
+    100446: Marek:Solving:Head
+    100448: Marek:Solving:Head_End
+    100450: Marek:Solving:Hips
+    100452: Marek:Solving:L_Thumb_End
+    100454: Marek:Solving:L_Toe_End
+    100456: Marek:Solving:L_Wrist_End
+    100458: Marek:Solving:LeftArm
+    100460: Marek:Solving:LeftFoot
+    100462: Marek:Solving:LeftForeArm
+    100464: Marek:Solving:LeftHand
+    100466: Marek:Solving:LeftHandThumb
+    100468: Marek:Solving:LeftLeg
+    100470: Marek:Solving:LeftShoulder
+    100472: Marek:Solving:LeftToeBase
+    100474: Marek:Solving:LeftUpLeg
+    100476: Marek:Solving:Neck
+    100478: Marek:Solving:R_Thumb_End
+    100480: Marek:Solving:R_Toe_End
+    100482: Marek:Solving:R_Wrist_End
+    100484: Marek:Solving:RightArm
+    100486: Marek:Solving:RightFoot
+    100488: Marek:Solving:RightForeArm
+    100490: Marek:Solving:RightHand
+    100492: Marek:Solving:RightHandThumb
+    100494: Marek:Solving:RightLeg
+    100496: Marek:Solving:RightShoulder
+    100498: Marek:Solving:RightToeBase
+    100500: Marek:Solving:RightUpLeg
+    100502: Marek:Solving:Spine
+    100504: Marek:Solving:Spine1
+    100506: Marek:STRN
+    100508: Marek:T10
+    100510: //RootNode
+    100512: Mateusz
+    100514: Mateusz:ARIEL
+    100516: Mateusz:C7
+    100518: Mateusz:CLAV
+    100520: Mateusz:LANK
+    100522: Mateusz:LBHD
+    100524: Mateusz:LBSH
+    100526: Mateusz:LBWT
+    100528: Mateusz:LELB
+    100530: Mateusz:LFHD
+    100532: Mateusz:LFSH
+    100534: Mateusz:LFWT
+    100536: Mateusz:LHEL
+    100538: Mateusz:LHIP
+    100540: Mateusz:LIEL
+    100542: Mateusz:LIHAND
+    100544: Mateusz:LIWR
+    100546: Mateusz:LKNE
+    100548: Mateusz:LKNI
+    100550: Mateusz:LMT1
+    100552: Mateusz:LMT5
+    100554: Mateusz:LMWT
+    100556: Mateusz:LOHAND
+    100558: Mateusz:LOWR
+    100560: Mateusz:LSHN
+    100562: Mateusz:LTOE
+    100564: Mateusz:LUPA
+    100566: Mateusz:LWRE
+    100568: Mateusz:RANK
+    100570: Mateusz:RBHD
+    100572: Mateusz:RBSH
+    100574: Mateusz:RBWT
+    100576: Mateusz:RELB
+    100578: Mateusz:RFHD
+    100580: Mateusz:RFSH
+    100582: Mateusz:RFWT
+    100584: Mateusz:RHEL
+    100586: Mateusz:RHIP
+    100588: Mateusz:RIEL
+    100590: Mateusz:RIHAND
+    100592: Mateusz:RIWR
+    100594: Mateusz:RKNE
+    100596: Mateusz:RKNI
+    100598: Mateusz:RMT1
+    100600: Mateusz:RMT5
+    100602: Mateusz:RMWT
+    100604: Mateusz:ROHAND
+    100606: Mateusz:ROWR
+    100608: Mateusz:RSHN
+    100610: Mateusz:RTOE
+    100612: Mateusz:RUPA
+    100614: Mateusz:RWRE
+    100616: Mateusz:Solving
+    100618: Mateusz:Solving:Head
+    100620: Mateusz:Solving:Head_End
+    100622: Mateusz:Solving:Hips
+    100624: Mateusz:Solving:L_Thumb_End
+    100626: Mateusz:Solving:L_Toe_End
+    100628: Mateusz:Solving:L_Wrist_End
+    100630: Mateusz:Solving:LeftArm
+    100632: Mateusz:Solving:LeftFoot
+    100634: Mateusz:Solving:LeftForeArm
+    100636: Mateusz:Solving:LeftHand
+    100638: Mateusz:Solving:LeftHandThumb
+    100640: Mateusz:Solving:LeftLeg
+    100642: Mateusz:Solving:LeftShoulder
+    100644: Mateusz:Solving:LeftToeBase
+    100646: Mateusz:Solving:LeftUpLeg
+    100648: Mateusz:Solving:Neck
+    100650: Mateusz:Solving:R_Thumb_End
+    100652: Mateusz:Solving:R_Toe_End
+    100654: Mateusz:Solving:R_Wrist_End
+    100656: Mateusz:Solving:RightArm
+    100658: Mateusz:Solving:RightFoot
+    100660: Mateusz:Solving:RightForeArm
+    100662: Mateusz:Solving:RightHand
+    100664: Mateusz:Solving:RightHandThumb
+    100666: Mateusz:Solving:RightLeg
+    100668: Mateusz:Solving:RightShoulder
+    100670: Mateusz:Solving:RightToeBase
+    100672: Mateusz:Solving:RightUpLeg
+    100674: Mateusz:Solving:Spine
+    100676: Mateusz:Solving:Spine1
+    100678: Mateusz:STRN
+    100680: Mateusz:T10
+    100682: System
+    100684: System:T40_12695
+    100686: System:T40_13827
+    100688: System:T40_15290
+    100690: System:T40_15298
+    100692: System:T40_15462
+    100694: System:T40_15469
+    100696: System:T40_15475
+    100698: System:T40_15482
+    100700: System:T40_16731
+    100702: System:T40_16795
+    100704: Unlabeled_Markers
+    400000: Alicja
+    400002: Alicja:ARIEL
+    400004: Alicja:C7
+    400006: Alicja:CLAV
+    400008: Alicja:LANK
+    400010: Alicja:LBHD
+    400012: Alicja:LBSH
+    400014: Alicja:LBWT
+    400016: Alicja:LELB
+    400018: Alicja:LFHD
+    400020: Alicja:LFSH
+    400022: Alicja:LFWT
+    400024: Alicja:LHEL
+    400026: Alicja:LHIP
+    400028: Alicja:LIEL
+    400030: Alicja:LIHAND
+    400032: Alicja:LIWR
+    400034: Alicja:LKNE
+    400036: Alicja:LKNI
+    400038: Alicja:LMT1
+    400040: Alicja:LMT5
+    400042: Alicja:LMWT
+    400044: Alicja:LOHAND
+    400046: Alicja:LOWR
+    400048: Alicja:LSHN
+    400050: Alicja:LTOE
+    400052: Alicja:LUPA
+    400054: Alicja:LWRE
+    400056: Alicja:RANK
+    400058: Alicja:RBHD
+    400060: Alicja:RBSH
+    400062: Alicja:RBWT
+    400064: Alicja:RELB
+    400066: Alicja:RFHD
+    400068: Alicja:RFSH
+    400070: Alicja:RFWT
+    400072: Alicja:RHEL
+    400074: Alicja:RHIP
+    400076: Alicja:RIEL
+    400078: Alicja:RIHAND
+    400080: Alicja:RIWR
+    400082: Alicja:RKNE
+    400084: Alicja:RKNI
+    400086: Alicja:RMT1
+    400088: Alicja:RMT5
+    400090: Alicja:RMWT
+    400092: Alicja:ROHAND
+    400094: Alicja:ROWR
+    400096: Alicja:RSHN
+    400098: Alicja:RTOE
+    400100: Alicja:RUPA
+    400102: Alicja:RWRE
+    400104: Alicja:Solving
+    400106: Alicja:Solving:Head
+    400108: Alicja:Solving:Head_End
+    400110: Alicja:Solving:Hips
+    400112: Alicja:Solving:L_Thumb_End
+    400114: Alicja:Solving:L_Toe_End
+    400116: Alicja:Solving:L_Wrist_End
+    400118: Alicja:Solving:LeftArm
+    400120: Alicja:Solving:LeftFoot
+    400122: Alicja:Solving:LeftForeArm
+    400124: Alicja:Solving:LeftHand
+    400126: Alicja:Solving:LeftHandThumb
+    400128: Alicja:Solving:LeftLeg
+    400130: Alicja:Solving:LeftShoulder
+    400132: Alicja:Solving:LeftToeBase
+    400134: Alicja:Solving:LeftUpLeg
+    400136: Alicja:Solving:Neck
+    400138: Alicja:Solving:R_Thumb_End
+    400140: Alicja:Solving:R_Toe_End
+    400142: Alicja:Solving:R_Wrist_End
+    400144: Alicja:Solving:RightArm
+    400146: Alicja:Solving:RightFoot
+    400148: Alicja:Solving:RightForeArm
+    400150: Alicja:Solving:RightHand
+    400152: Alicja:Solving:RightHandThumb
+    400154: Alicja:Solving:RightLeg
+    400156: Alicja:Solving:RightShoulder
+    400158: Alicja:Solving:RightToeBase
+    400160: Alicja:Solving:RightUpLeg
+    400162: Alicja:Solving:Spine
+    400164: Alicja:Solving:Spine1
+    400166: Alicja:STRN
+    400168: Alicja:T10
+    400170: Janek
+    400172: Janek:ARIEL
+    400174: Janek:C7
+    400176: Janek:CLAV
+    400178: Janek:LANK
+    400180: Janek:LBHD
+    400182: Janek:LBSH
+    400184: Janek:LBWT
+    400186: Janek:LELB
+    400188: Janek:LFHD
+    400190: Janek:LFSH
+    400192: Janek:LFWT
+    400194: Janek:LHEL
+    400196: Janek:LHIP
+    400198: Janek:LIEL
+    400200: Janek:LIHAND
+    400202: Janek:LIWR
+    400204: Janek:LKNE
+    400206: Janek:LKNI
+    400208: Janek:LMT1
+    400210: Janek:LMT5
+    400212: Janek:LMWT
+    400214: Janek:LOHAND
+    400216: Janek:LOWR
+    400218: Janek:LSHN
+    400220: Janek:LTOE
+    400222: Janek:LUPA
+    400224: Janek:LWRE
+    400226: Janek:RANK
+    400228: Janek:RBHD
+    400230: Janek:RBSH
+    400232: Janek:RBWT
+    400234: Janek:RELB
+    400236: Janek:RFHD
+    400238: Janek:RFSH
+    400240: Janek:RFWT
+    400242: Janek:RHEL
+    400244: Janek:RHIP
+    400246: Janek:RIEL
+    400248: Janek:RIHAND
+    400250: Janek:RIWR
+    400252: Janek:RKNE
+    400254: Janek:RKNI
+    400256: Janek:RMT1
+    400258: Janek:RMT5
+    400260: Janek:RMWT
+    400262: Janek:ROHAND
+    400264: Janek:ROWR
+    400266: Janek:RSHN
+    400268: Janek:RTOE
+    400270: Janek:RUPA
+    400272: Janek:RWRE
+    400274: Janek:Solving
+    400276: Janek:Solving:Head
+    400278: Janek:Solving:Head_End
+    400280: Janek:Solving:Hips
+    400282: Janek:Solving:L_Thumb_End
+    400284: Janek:Solving:L_Toe_End
+    400286: Janek:Solving:L_Wrist_End
+    400288: Janek:Solving:LeftArm
+    400290: Janek:Solving:LeftFoot
+    400292: Janek:Solving:LeftForeArm
+    400294: Janek:Solving:LeftHand
+    400296: Janek:Solving:LeftHandThumb
+    400298: Janek:Solving:LeftLeg
+    400300: Janek:Solving:LeftShoulder
+    400302: Janek:Solving:LeftToeBase
+    400304: Janek:Solving:LeftUpLeg
+    400306: Janek:Solving:Neck
+    400308: Janek:Solving:R_Thumb_End
+    400310: Janek:Solving:R_Toe_End
+    400312: Janek:Solving:R_Wrist_End
+    400314: Janek:Solving:RightArm
+    400316: Janek:Solving:RightFoot
+    400318: Janek:Solving:RightForeArm
+    400320: Janek:Solving:RightHand
+    400322: Janek:Solving:RightHandThumb
+    400324: Janek:Solving:RightLeg
+    400326: Janek:Solving:RightShoulder
+    400328: Janek:Solving:RightToeBase
+    400330: Janek:Solving:RightUpLeg
+    400332: Janek:Solving:Spine
+    400334: Janek:Solving:Spine1
+    400336: Janek:STRN
+    400338: Janek:T10
+    400340: Marek
+    400342: Marek:ARIEL
+    400344: Marek:C7
+    400346: Marek:CLAV
+    400348: Marek:LANK
+    400350: Marek:LBHD
+    400352: Marek:LBSH
+    400354: Marek:LBWT
+    400356: Marek:LELB
+    400358: Marek:LFHD
+    400360: Marek:LFSH
+    400362: Marek:LFWT
+    400364: Marek:LHEL
+    400366: Marek:LHIP
+    400368: Marek:LIEL
+    400370: Marek:LIHAND
+    400372: Marek:LIWR
+    400374: Marek:LKNE
+    400376: Marek:LKNI
+    400378: Marek:LMT1
+    400380: Marek:LMT5
+    400382: Marek:LMWT
+    400384: Marek:LOHAND
+    400386: Marek:LOWR
+    400388: Marek:LSHN
+    400390: Marek:LTOE
+    400392: Marek:LUPA
+    400394: Marek:LWRE
+    400396: Marek:RANK
+    400398: Marek:RBHD
+    400400: Marek:RBSH
+    400402: Marek:RBWT
+    400404: Marek:RELB
+    400406: Marek:RFHD
+    400408: Marek:RFSH
+    400410: Marek:RFWT
+    400412: Marek:RHEL
+    400414: Marek:RHIP
+    400416: Marek:RIEL
+    400418: Marek:RIHAND
+    400420: Marek:RIWR
+    400422: Marek:RKNE
+    400424: Marek:RKNI
+    400426: Marek:RMT1
+    400428: Marek:RMT5
+    400430: Marek:RMWT
+    400432: Marek:ROHAND
+    400434: Marek:ROWR
+    400436: Marek:RSHN
+    400438: Marek:RTOE
+    400440: Marek:RUPA
+    400442: Marek:RWRE
+    400444: Marek:Solving
+    400446: Marek:Solving:Head
+    400448: Marek:Solving:Head_End
+    400450: Marek:Solving:Hips
+    400452: Marek:Solving:L_Thumb_End
+    400454: Marek:Solving:L_Toe_End
+    400456: Marek:Solving:L_Wrist_End
+    400458: Marek:Solving:LeftArm
+    400460: Marek:Solving:LeftFoot
+    400462: Marek:Solving:LeftForeArm
+    400464: Marek:Solving:LeftHand
+    400466: Marek:Solving:LeftHandThumb
+    400468: Marek:Solving:LeftLeg
+    400470: Marek:Solving:LeftShoulder
+    400472: Marek:Solving:LeftToeBase
+    400474: Marek:Solving:LeftUpLeg
+    400476: Marek:Solving:Neck
+    400478: Marek:Solving:R_Thumb_End
+    400480: Marek:Solving:R_Toe_End
+    400482: Marek:Solving:R_Wrist_End
+    400484: Marek:Solving:RightArm
+    400486: Marek:Solving:RightFoot
+    400488: Marek:Solving:RightForeArm
+    400490: Marek:Solving:RightHand
+    400492: Marek:Solving:RightHandThumb
+    400494: Marek:Solving:RightLeg
+    400496: Marek:Solving:RightShoulder
+    400498: Marek:Solving:RightToeBase
+    400500: Marek:Solving:RightUpLeg
+    400502: Marek:Solving:Spine
+    400504: Marek:Solving:Spine1
+    400506: Marek:STRN
+    400508: Marek:T10
+    400510: //RootNode
+    400512: Mateusz
+    400514: Mateusz:ARIEL
+    400516: Mateusz:C7
+    400518: Mateusz:CLAV
+    400520: Mateusz:LANK
+    400522: Mateusz:LBHD
+    400524: Mateusz:LBSH
+    400526: Mateusz:LBWT
+    400528: Mateusz:LELB
+    400530: Mateusz:LFHD
+    400532: Mateusz:LFSH
+    400534: Mateusz:LFWT
+    400536: Mateusz:LHEL
+    400538: Mateusz:LHIP
+    400540: Mateusz:LIEL
+    400542: Mateusz:LIHAND
+    400544: Mateusz:LIWR
+    400546: Mateusz:LKNE
+    400548: Mateusz:LKNI
+    400550: Mateusz:LMT1
+    400552: Mateusz:LMT5
+    400554: Mateusz:LMWT
+    400556: Mateusz:LOHAND
+    400558: Mateusz:LOWR
+    400560: Mateusz:LSHN
+    400562: Mateusz:LTOE
+    400564: Mateusz:LUPA
+    400566: Mateusz:LWRE
+    400568: Mateusz:RANK
+    400570: Mateusz:RBHD
+    400572: Mateusz:RBSH
+    400574: Mateusz:RBWT
+    400576: Mateusz:RELB
+    400578: Mateusz:RFHD
+    400580: Mateusz:RFSH
+    400582: Mateusz:RFWT
+    400584: Mateusz:RHEL
+    400586: Mateusz:RHIP
+    400588: Mateusz:RIEL
+    400590: Mateusz:RIHAND
+    400592: Mateusz:RIWR
+    400594: Mateusz:RKNE
+    400596: Mateusz:RKNI
+    400598: Mateusz:RMT1
+    400600: Mateusz:RMT5
+    400602: Mateusz:RMWT
+    400604: Mateusz:ROHAND
+    400606: Mateusz:ROWR
+    400608: Mateusz:RSHN
+    400610: Mateusz:RTOE
+    400612: Mateusz:RUPA
+    400614: Mateusz:RWRE
+    400616: Mateusz:Solving
+    400618: Mateusz:Solving:Head
+    400620: Mateusz:Solving:Head_End
+    400622: Mateusz:Solving:Hips
+    400624: Mateusz:Solving:L_Thumb_End
+    400626: Mateusz:Solving:L_Toe_End
+    400628: Mateusz:Solving:L_Wrist_End
+    400630: Mateusz:Solving:LeftArm
+    400632: Mateusz:Solving:LeftFoot
+    400634: Mateusz:Solving:LeftForeArm
+    400636: Mateusz:Solving:LeftHand
+    400638: Mateusz:Solving:LeftHandThumb
+    400640: Mateusz:Solving:LeftLeg
+    400642: Mateusz:Solving:LeftShoulder
+    400644: Mateusz:Solving:LeftToeBase
+    400646: Mateusz:Solving:LeftUpLeg
+    400648: Mateusz:Solving:Neck
+    400650: Mateusz:Solving:R_Thumb_End
+    400652: Mateusz:Solving:R_Toe_End
+    400654: Mateusz:Solving:R_Wrist_End
+    400656: Mateusz:Solving:RightArm
+    400658: Mateusz:Solving:RightFoot
+    400660: Mateusz:Solving:RightForeArm
+    400662: Mateusz:Solving:RightHand
+    400664: Mateusz:Solving:RightHandThumb
+    400666: Mateusz:Solving:RightLeg
+    400668: Mateusz:Solving:RightShoulder
+    400670: Mateusz:Solving:RightToeBase
+    400672: Mateusz:Solving:RightUpLeg
+    400674: Mateusz:Solving:Spine
+    400676: Mateusz:Solving:Spine1
+    400678: Mateusz:STRN
+    400680: Mateusz:T10
+    400682: System
+    400684: System:T40_12695
+    400686: System:T40_13827
+    400688: System:T40_15290
+    400690: System:T40_15298
+    400692: System:T40_15462
+    400694: System:T40_15469
+    400696: System:T40_15475
+    400698: System:T40_15482
+    400700: System:T40_16731
+    400702: System:T40_16795
+    400704: Unlabeled_Markers
+    7400000: sc5a_3_T03_x2d
+    7400002: Mateusz@Alicja@Janek@sc5a_3 T03
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: <None>
+    animationImportErrors: 
+    animationImportWarnings: "\nDefault bone length found in this file is different
+      form the one found in the source avatar:\n\t'Janek:Solving:LeftUpLeg' : position
+      error = 31.934679 mm\n\t'Janek:Solving:LeftLeg' : position error = 650.125854
+      mm\n\t'Janek:Solving:LeftFoot' : position error = 618.527649 mm\n\t'Janek:Solving:LeftToeBase'
+      : position error = 248.938721 mm\n\t'Janek:Solving:RightUpLeg' : position error
+      = 31.934679 mm\n\t'Janek:Solving:RightLeg' : position error = 650.125793 mm\n\t'Janek:Solving:RightFoot'
+      : position error = 618.527466 mm\n\t'Janek:Solving:RightToeBase' : position
+      error = 248.938705 mm\n\t'Janek:Solving:Spine' : position error = 83.917427
+      mm\n\t'Janek:Solving:Spine1' : position error = 250.079987 mm\n\t'Janek:Solving:Neck'
+      : position error = 422.918701 mm\n\t'Janek:Solving:Head' : position error =
+      217.551422 mm\n\t'Janek:Solving:LeftShoulder' : position error = 403.815735
+      mm\n\t'Janek:Solving:LeftArm' : position error = 250.154556 mm\n\t'Janek:Solving:LeftForeArm'
+      : position error = 439.532593 mm\n\t'Janek:Solving:LeftHand' : position error
+      = 357.472412 mm\n\t'Janek:Solving:RightShoulder' : position error = 403.815735
+      mm\n\t'Janek:Solving:RightArm' : position error = 250.154587 mm\n\t'Janek:Solving:RightForeArm'
+      : position error = 439.532654 mm\n\t'Janek:Solving:RightHand' : position error
+      = 357.472565 mm\n\nInbetween bone default rotation found in this file is different
+      from the one found in the source avatar:\n\t'Janek:Solving:Spine1' : rotation
+      error = 5.540158 deg\n\nClip 'sc5a_3_T03_x2d' has import animation warnings
+      that might lower retargeting quality:\n\t'Janek:Solving:Spine1' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths:
+    - Janek:Solving:Hips
+    clipAnimations:
+    - serializedVersion: 16
+      name: Mateusz@Alicja@Janek@sc5a_3 T03
+      takeName: sc5a_3_T03_x2d
+      firstFrame: 1
+      lastFrame: 3321
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Janek:Solving:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:Spine3
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Janek:Solving:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Janek@Reference(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_16795
+      position: {x: 3.939542, y: 3.1506336, z: 5.603598}
+      rotation: {x: 0.8819163, y: 0.19947343, z: 0.4235929, w: 0.0548002}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100716
+      position: {x: -3.3656032, y: 0.75029755, z: 2.970485}
+      rotation: {x: 0.033516943, y: 0.9903162, z: -0.031460166, w: -0.13099901}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100729
+      position: {x: 3.702577, y: 2.3426487, z: -0.4666372}
+      rotation: {x: 0.017219909, y: 0.09973393, z: 0.28390843, w: 0.95349497}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:ARIEL
+      position: {x: 0.12941188, y: 1.7216742, z: -1.0459158}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LFHD
+      position: {x: 0.083095044, y: 1.7213933, z: -0.9183603}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LBHD
+      position: {x: 0.030702204, y: 1.6297626, z: -1.0194697}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RFHD
+      position: {x: 0.21040675, y: 1.6782751, z: -0.9373369}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RBHD
+      position: {x: 0.20848571, y: 1.6115426, z: -1.0208344}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:C7
+      position: {x: 0.100032, y: 1.4877396, z: -1.1089119}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:T10
+      position: {x: 0.095121115, y: 1.2155557, z: -1.1452643}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:CLAV
+      position: {x: 0.11377631, y: 1.3983697, z: -0.8981879}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:STRN
+      position: {x: 0.12116513, y: 1.1872623, z: -0.8040736}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LFSH
+      position: {x: -0.030685319, y: 1.4426743, z: -0.9436022}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LBSH
+      position: {x: -0.052176416, y: 1.4059329, z: -1.1233549}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LUPA
+      position: {x: -0.18756925, y: 1.4957243, z: -1.0328121}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LELB
+      position: {x: -0.31220347, y: 1.4935273, z: -0.9978865}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LIEL
+      position: {x: -0.31025136, y: 1.3951483, z: -0.948619}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LOWR
+      position: {x: -0.52323055, y: 1.4928519, z: -0.9236563}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LIWR
+      position: {x: -0.48499918, y: 1.4979925, z: -0.83062965}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LWRE
+      position: {x: -0.41306174, y: 1.5099096, z: -0.96367425}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LIHAND
+      position: {x: -0.57627964, y: 1.5437264, z: -0.82686967}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LOHAND
+      position: {x: -0.5800807, y: 1.5178795, z: -0.9168749}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RFSH
+      position: {x: 0.24204853, y: 1.4438035, z: -0.980262}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RBSH
+      position: {x: 0.245727, y: 1.4050587, z: -1.1366603}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RUPA
+      position: {x: 0.40501568, y: 1.4599249, z: -1.1026542}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RELB
+      position: {x: 0.5373904, y: 1.477236, z: -1.0914159}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RIEL
+      position: {x: 0.5684668, y: 1.3814651, z: -1.0613718}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:ROWR
+      position: {x: 0.7429584, y: 1.4958439, z: -1.0730776}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RIWR
+      position: {x: 0.73525435, y: 1.4983648, z: -0.9770871}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RWRE
+      position: {x: 0.6359917, y: 1.5034126, z: -1.0777193}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RIHAND
+      position: {x: 0.81268615, y: 1.5303353, z: -0.9800749}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:ROHAND
+      position: {x: 0.8237083, y: 1.5155003, z: -1.059069}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LFWT
+      position: {x: -0.048348274, y: 0.9130547, z: -0.87024117}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LMWT
+      position: {x: 0.12747264, y: 1.0173154, z: -0.76761407}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LBWT
+      position: {x: 0.025039965, y: 0.973281, z: -1.1059853}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RFWT
+      position: {x: 0.27541018, y: 0.936039, z: -0.88808864}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RMWT
+      position: {x: 0.10323525, y: 0.9894652, z: -1.0996236}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RBWT
+      position: {x: 0.19330096, y: 0.96588004, z: -1.1156837}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LHIP
+      position: {x: -0.029162716, y: 0.5840102, z: -0.89687437}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LKNE
+      position: {x: -0.06450409, y: 0.43443838, z: -1.044491}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LKNI
+      position: {x: 0.07543777, y: 0.4382003, z: -0.9980977}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LSHN
+      position: {x: -0.059992608, y: 0.23922575, z: -0.9891737}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LANK
+      position: {x: -0.07693469, y: 0.0989105, z: -1.0424359}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LHEL
+      position: {x: 0.017990928, y: 0.07943945, z: -1.0830562}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LMT5
+      position: {x: -0.12013791, y: 0.04139523, z: -0.92596555}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LMT1
+      position: {x: -0.00078447966, y: 0.034937464, z: -0.90967923}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:LTOE
+      position: {x: -0.086726435, y: 0.046061218, z: -0.8614166}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RHIP
+      position: {x: 0.260935, y: 0.54060024, z: -0.92797834}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RKNE
+      position: {x: 0.28506517, y: 0.424025, z: -1.0602834}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RKNI
+      position: {x: 0.16267769, y: 0.4156996, z: -0.98581004}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RSHN
+      position: {x: 0.27435452, y: 0.26885864, z: -1.0142759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RANK
+      position: {x: 0.26693678, y: 0.08587681, z: -1.0910798}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RHEL
+      position: {x: 0.19720358, y: 0.07897911, z: -1.1199386}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RMT5
+      position: {x: 0.34131926, y: 0.04465154, z: -0.98768544}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RMT1
+      position: {x: 0.22056037, y: 0.03630891, z: -0.94152355}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:RTOE
+      position: {x: 0.3039063, y: 0.051424935, z: -0.89872426}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:Hips
+      position: {x: 0.0019542128, y: 0.9038253, z: -0.0007008314}
+      rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:Spine
+      position: {x: -0, y: 0.04313815, z: 0.06470722}
+      rotation: {x: -0.08991302, y: -0.03742667, z: -0.008774064, w: 0.9952075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:Spine1
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: 0.052590724, y: -0.0016305244, z: 0.00040166997, w: 0.9986148}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:Spine2
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: 0.046037268, y: 0.0032435516, z: 0.011735177, w: 0.99886554}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:Spine3
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: 0.0052488926, y: 0.0061917333, z: 0.0016465157, w: 0.9999657}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:Neck
+      position: {x: -0, y: -0.03235361, z: 0.22647527}
+      rotation: {x: 0.092424475, y: -0.0005403856, z: 0.02061299, w: 0.99550617}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:Head
+      position: {x: -0, y: 0, z: 0.11862991}
+      rotation: {x: -0.09181412, y: 0.00467369, z: 0.027073028, w: 0.99539715}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:HeadEnd
+      position: {x: -0, y: 0, z: 0.13965975}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightShoulder
+      position: {x: 0.029757999, y: -0.049596667, z: 0.1606932}
+      rotation: {x: 0.025464252, y: 0.99943465, z: -0.0014133824, w: -0.02190769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightArm
+      position: {x: -0.14779785, y: -0.00000007250128, z: 0.00000024959445}
+      rotation: {x: -0.06673639, y: -0.011572808, z: -0.03690426, w: 0.9970207}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightForeArm
+      position: {x: -0.28405353, y: 0, z: 0}
+      rotation: {x: -0.0054405094, y: 0.023560371, z: 0.05271576, w: 0.9983168}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightHand
+      position: {x: -0.20037927, y: 0, z: 0}
+      rotation: {x: 0.19128291, y: 0.06555472, z: -0.071879916, w: 0.976702}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightHandEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:R_FingersEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightHandThumb1
+      position: {x: -0.024915682, y: -0.04152614, z: 0.016610455}
+      rotation: {x: 0.9876721, y: 0.13002947, z: 0.011375968, w: 0.08641026}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightHandThumb2
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftShoulder
+      position: {x: -0.029757999, y: -0.049596667, z: 0.1606932}
+      rotation: {x: 0.0052331993, y: -0.03233437, z: 0.011325983, w: 0.99939924}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftArm
+      position: {x: -0.14779806, y: 0, z: 0}
+      rotation: {x: 0.014847753, y: 0.06874729, z: -0.032903776, w: 0.9969808}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftForeArm
+      position: {x: -0.28405353, y: 0, z: 0}
+      rotation: {x: 0.008321355, y: -0.030180926, z: 0.04464378, w: 0.9985123}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftHand
+      position: {x: -0.20037927, y: 0, z: 0}
+      rotation: {x: -0.13043894, y: 0.031470623, z: -0.22317274, w: 0.96549946}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftHandEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0.7071067, y: -0, z: -0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:L_FingersEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftHandThumb1
+      position: {x: -0.024915682, y: -0.04152614, z: -0.016610455}
+      rotation: {x: 0.9876721, y: 0.13002947, z: 0.011375968, w: 0.08641026}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftHandThumb2
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightUpLeg
+      position: {x: 0.08828207, y: 0, z: -0.025790267}
+      rotation: {x: 0.16679879, y: -0.75239336, z: 0.09112259, w: 0.6306973}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightLeg
+      position: {x: -0.41859066, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.034673344, w: 0.9993987}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightFoot
+      position: {x: -0.40022987, y: 0, z: 0}
+      rotation: {x: 0.02687109, y: 0.1094049, z: 0.6516812, w: 0.7500801}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightToeBase
+      position: {x: -0.14929587, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.18097281, w: 0.98348814}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:RightToeBaseEnd
+      position: {x: -0.0714192, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftUpLeg
+      position: {x: -0.08828207, y: 0, z: -0.025790267}
+      rotation: {x: -0.082737334, y: -0.6881737, z: -0.23377922, w: 0.6818496}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftLeg
+      position: {x: -0.41859066, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.08436016, w: 0.99643534}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftFoot
+      position: {x: -0.40022987, y: 0, z: 0}
+      rotation: {x: 0.020862125, y: -0.11842328, z: 0.5247042, w: 0.8427492}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftToeBase
+      position: {x: -0.14929587, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.2610112, w: 0.9653358}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Janek:Solving:LeftToeBaseEnd
+      position: {x: -0.0714192, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

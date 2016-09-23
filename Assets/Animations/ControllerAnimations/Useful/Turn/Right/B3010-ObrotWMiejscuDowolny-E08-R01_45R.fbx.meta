@@ -1,0 +1,1353 @@
+fileFormatVersion: 2
+guid: fb52c0f2ce8d604489575b1ee3235881
+timeCreated: 1471348691
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: B3010
+    100002: //RootNode
+    100004: B3010:ARIEL
+    100006: B3010:C7
+    100008: B3010:CLAV
+    100010: B3010:LANK
+    100012: B3010:LBHD
+    100014: B3010:LBSH
+    100016: B3010:LBWT
+    100018: B3010:LELB
+    100020: B3010:LFHD
+    100022: B3010:LFSH
+    100024: B3010:LFWT
+    100026: B3010:LHEL
+    100028: B3010:LHIP
+    100030: B3010:LIEL
+    100032: B3010:LIHAND
+    100034: B3010:LIWR
+    100036: B3010:LKNE
+    100038: B3010:LKNI
+    100040: B3010:LMT1
+    100042: B3010:LMT5
+    100044: B3010:LMWT
+    100046: B3010:LOHAND
+    100048: B3010:LOWR
+    100050: B3010:LSHN
+    100052: B3010:LTOE
+    100054: B3010:LUPA
+    100056: B3010:LWRE
+    100058: B3010:RANK
+    100060: B3010:RBHD
+    100062: B3010:RBSH
+    100064: B3010:RBWT
+    100066: B3010:RELB
+    100068: B3010:RFHD
+    100070: B3010:RFSH
+    100072: B3010:RFWT
+    100074: B3010:RHEL
+    100076: B3010:RHIP
+    100078: B3010:RIEL
+    100080: B3010:RIHAND
+    100082: B3010:RIWR
+    100084: B3010:RKNE
+    100086: B3010:RKNI
+    100088: B3010:RMT1
+    100090: B3010:RMT5
+    100092: B3010:RMWT
+    100094: B3010:ROHAND
+    100096: B3010:ROWR
+    100098: B3010:RSHN
+    100100: B3010:RTOE
+    100102: B3010:RUPA
+    100104: B3010:RWRE
+    100106: B3010:Solving
+    100108: B3010:Solving:Head
+    100110: B3010:Solving:HeadEnd
+    100112: B3010:Solving:Hips
+    100114: B3010:Solving:L_FingersEnd
+    100116: B3010:Solving:LeftArm
+    100118: B3010:Solving:LeftFoot
+    100120: B3010:Solving:LeftForeArm
+    100122: B3010:Solving:LeftHand
+    100124: B3010:Solving:LeftHandEnd
+    100126: B3010:Solving:LeftHandThumb1
+    100128: B3010:Solving:LeftHandThumb2
+    100130: B3010:Solving:LeftLeg
+    100132: B3010:Solving:LeftShoulder
+    100134: B3010:Solving:LeftToeBase
+    100136: B3010:Solving:LeftToeBaseEnd
+    100138: B3010:Solving:LeftUpLeg
+    100140: B3010:Solving:Neck
+    100142: B3010:Solving:R_FingersEnd
+    100144: B3010:Solving:RightArm
+    100146: B3010:Solving:RightFoot
+    100148: B3010:Solving:RightForeArm
+    100150: B3010:Solving:RightHand
+    100152: B3010:Solving:RightHandEnd
+    100154: B3010:Solving:RightHandThumb1
+    100156: B3010:Solving:RightHandThumb2
+    100158: B3010:Solving:RightLeg
+    100160: B3010:Solving:RightShoulder
+    100162: B3010:Solving:RightToeBase
+    100164: B3010:Solving:RightToeBaseEnd
+    100166: B3010:Solving:RightUpLeg
+    100168: B3010:Solving:Spine
+    100170: B3010:Solving:Spine1
+    100172: B3010:Solving:Spine2
+    100174: B3010:Solving:Spine3
+    100176: B3010:STRN
+    100178: B3010:T10
+    100180: System
+    100182: System:Bonita_10_2099034
+    100184: System:Bonita_10_2100709
+    100186: System:Bonita_10_2100712
+    100188: System:Bonita_10_2100716
+    100190: System:Bonita_10_2100719
+    100192: System:Bonita_10_2100727
+    100194: System:Bonita_10_2100729
+    100196: System:Bonita_10_2100738
+    100198: System:Bonita_10_2100744
+    100200: System:Bonita_10_2100745
+    100202: System:T40_12695
+    100204: System:T40_13827
+    100206: System:T40_15290
+    100208: System:T40_15298
+    100210: System:T40_15462
+    100212: System:T40_15469
+    100214: System:T40_15475
+    100216: System:T40_15482
+    100218: System:T40_16731
+    100220: System:T40_16795
+    100222: System:Vantage_5_2107617
+    100224: System:Vantage_5_2107676
+    100226: System:Vantage_5_2107693
+    100228: System:Vantage_5_2107712
+    100230: System:Vantage_5_2107727
+    100232: System:Vantage_5_2107733
+    100234: System:Vantage_5_2107744
+    100236: System:Vantage_5_2108360
+    100238: Unlabeled_Markers
+    400000: B3010
+    400002: //RootNode
+    400004: B3010:ARIEL
+    400006: B3010:C7
+    400008: B3010:CLAV
+    400010: B3010:LANK
+    400012: B3010:LBHD
+    400014: B3010:LBSH
+    400016: B3010:LBWT
+    400018: B3010:LELB
+    400020: B3010:LFHD
+    400022: B3010:LFSH
+    400024: B3010:LFWT
+    400026: B3010:LHEL
+    400028: B3010:LHIP
+    400030: B3010:LIEL
+    400032: B3010:LIHAND
+    400034: B3010:LIWR
+    400036: B3010:LKNE
+    400038: B3010:LKNI
+    400040: B3010:LMT1
+    400042: B3010:LMT5
+    400044: B3010:LMWT
+    400046: B3010:LOHAND
+    400048: B3010:LOWR
+    400050: B3010:LSHN
+    400052: B3010:LTOE
+    400054: B3010:LUPA
+    400056: B3010:LWRE
+    400058: B3010:RANK
+    400060: B3010:RBHD
+    400062: B3010:RBSH
+    400064: B3010:RBWT
+    400066: B3010:RELB
+    400068: B3010:RFHD
+    400070: B3010:RFSH
+    400072: B3010:RFWT
+    400074: B3010:RHEL
+    400076: B3010:RHIP
+    400078: B3010:RIEL
+    400080: B3010:RIHAND
+    400082: B3010:RIWR
+    400084: B3010:RKNE
+    400086: B3010:RKNI
+    400088: B3010:RMT1
+    400090: B3010:RMT5
+    400092: B3010:RMWT
+    400094: B3010:ROHAND
+    400096: B3010:ROWR
+    400098: B3010:RSHN
+    400100: B3010:RTOE
+    400102: B3010:RUPA
+    400104: B3010:RWRE
+    400106: B3010:Solving
+    400108: B3010:Solving:Head
+    400110: B3010:Solving:HeadEnd
+    400112: B3010:Solving:Hips
+    400114: B3010:Solving:L_FingersEnd
+    400116: B3010:Solving:LeftArm
+    400118: B3010:Solving:LeftFoot
+    400120: B3010:Solving:LeftForeArm
+    400122: B3010:Solving:LeftHand
+    400124: B3010:Solving:LeftHandEnd
+    400126: B3010:Solving:LeftHandThumb1
+    400128: B3010:Solving:LeftHandThumb2
+    400130: B3010:Solving:LeftLeg
+    400132: B3010:Solving:LeftShoulder
+    400134: B3010:Solving:LeftToeBase
+    400136: B3010:Solving:LeftToeBaseEnd
+    400138: B3010:Solving:LeftUpLeg
+    400140: B3010:Solving:Neck
+    400142: B3010:Solving:R_FingersEnd
+    400144: B3010:Solving:RightArm
+    400146: B3010:Solving:RightFoot
+    400148: B3010:Solving:RightForeArm
+    400150: B3010:Solving:RightHand
+    400152: B3010:Solving:RightHandEnd
+    400154: B3010:Solving:RightHandThumb1
+    400156: B3010:Solving:RightHandThumb2
+    400158: B3010:Solving:RightLeg
+    400160: B3010:Solving:RightShoulder
+    400162: B3010:Solving:RightToeBase
+    400164: B3010:Solving:RightToeBaseEnd
+    400166: B3010:Solving:RightUpLeg
+    400168: B3010:Solving:Spine
+    400170: B3010:Solving:Spine1
+    400172: B3010:Solving:Spine2
+    400174: B3010:Solving:Spine3
+    400176: B3010:STRN
+    400178: B3010:T10
+    400180: System
+    400182: System:Bonita_10_2099034
+    400184: System:Bonita_10_2100709
+    400186: System:Bonita_10_2100712
+    400188: System:Bonita_10_2100716
+    400190: System:Bonita_10_2100719
+    400192: System:Bonita_10_2100727
+    400194: System:Bonita_10_2100729
+    400196: System:Bonita_10_2100738
+    400198: System:Bonita_10_2100744
+    400200: System:Bonita_10_2100745
+    400202: System:T40_12695
+    400204: System:T40_13827
+    400206: System:T40_15290
+    400208: System:T40_15298
+    400210: System:T40_15462
+    400212: System:T40_15469
+    400214: System:T40_15475
+    400216: System:T40_15482
+    400218: System:T40_16731
+    400220: System:T40_16795
+    400222: System:Vantage_5_2107617
+    400224: System:Vantage_5_2107676
+    400226: System:Vantage_5_2107693
+    400228: System:Vantage_5_2107712
+    400230: System:Vantage_5_2107727
+    400232: System:Vantage_5_2107733
+    400234: System:Vantage_5_2107744
+    400236: System:Vantage_5_2108360
+    400238: Unlabeled_Markers
+    7400000: B3010-ObrotWMiejscuDowolny-E08-R01_45R
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'B3010_ObrotWMiejscuDowolny_E08_R01_T03_x2d'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'B3010:Solving:Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'B3010:Solving:Spine3'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: B3010-ObrotWMiejscuDowolny-E08-R01_45R
+      takeName: B3010_ObrotWMiejscuDowolny_E08_R01_T03_x2d
+      firstFrame: 157
+      lastFrame: 287
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: B3010
+        weight: 1
+      - path: B3010/B3010:ARIEL
+        weight: 0
+      - path: B3010/B3010:C7
+        weight: 0
+      - path: B3010/B3010:CLAV
+        weight: 0
+      - path: B3010/B3010:LANK
+        weight: 0
+      - path: B3010/B3010:LBHD
+        weight: 0
+      - path: B3010/B3010:LBSH
+        weight: 0
+      - path: B3010/B3010:LBWT
+        weight: 0
+      - path: B3010/B3010:LELB
+        weight: 0
+      - path: B3010/B3010:LFHD
+        weight: 0
+      - path: B3010/B3010:LFSH
+        weight: 0
+      - path: B3010/B3010:LFWT
+        weight: 0
+      - path: B3010/B3010:LHEL
+        weight: 0
+      - path: B3010/B3010:LHIP
+        weight: 0
+      - path: B3010/B3010:LIEL
+        weight: 0
+      - path: B3010/B3010:LIHAND
+        weight: 0
+      - path: B3010/B3010:LIWR
+        weight: 0
+      - path: B3010/B3010:LKNE
+        weight: 0
+      - path: B3010/B3010:LKNI
+        weight: 0
+      - path: B3010/B3010:LMT1
+        weight: 0
+      - path: B3010/B3010:LMT5
+        weight: 0
+      - path: B3010/B3010:LMWT
+        weight: 0
+      - path: B3010/B3010:LOHAND
+        weight: 0
+      - path: B3010/B3010:LOWR
+        weight: 0
+      - path: B3010/B3010:LSHN
+        weight: 0
+      - path: B3010/B3010:LTOE
+        weight: 0
+      - path: B3010/B3010:LUPA
+        weight: 0
+      - path: B3010/B3010:LWRE
+        weight: 0
+      - path: B3010/B3010:RANK
+        weight: 0
+      - path: B3010/B3010:RBHD
+        weight: 0
+      - path: B3010/B3010:RBSH
+        weight: 0
+      - path: B3010/B3010:RBWT
+        weight: 0
+      - path: B3010/B3010:RELB
+        weight: 0
+      - path: B3010/B3010:RFHD
+        weight: 0
+      - path: B3010/B3010:RFSH
+        weight: 0
+      - path: B3010/B3010:RFWT
+        weight: 0
+      - path: B3010/B3010:RHEL
+        weight: 0
+      - path: B3010/B3010:RHIP
+        weight: 0
+      - path: B3010/B3010:RIEL
+        weight: 0
+      - path: B3010/B3010:RIHAND
+        weight: 0
+      - path: B3010/B3010:RIWR
+        weight: 0
+      - path: B3010/B3010:RKNE
+        weight: 0
+      - path: B3010/B3010:RKNI
+        weight: 0
+      - path: B3010/B3010:RMT1
+        weight: 0
+      - path: B3010/B3010:RMT5
+        weight: 0
+      - path: B3010/B3010:RMWT
+        weight: 0
+      - path: B3010/B3010:ROHAND
+        weight: 0
+      - path: B3010/B3010:ROWR
+        weight: 0
+      - path: B3010/B3010:RSHN
+        weight: 0
+      - path: B3010/B3010:RTOE
+        weight: 0
+      - path: B3010/B3010:RUPA
+        weight: 0
+      - path: B3010/B3010:RWRE
+        weight: 0
+      - path: B3010/B3010:Solving
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:LeftUpLeg
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:LeftUpLeg/B3010:Solving:LeftLeg
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:LeftUpLeg/B3010:Solving:LeftLeg/B3010:Solving:LeftFoot
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:LeftUpLeg/B3010:Solving:LeftLeg/B3010:Solving:LeftFoot/B3010:Solving:LeftToeBase
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:LeftUpLeg/B3010:Solving:LeftLeg/B3010:Solving:LeftFoot/B3010:Solving:LeftToeBase/B3010:Solving:LeftToeBaseEnd
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:RightUpLeg
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:RightUpLeg/B3010:Solving:RightLeg
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:RightUpLeg/B3010:Solving:RightLeg/B3010:Solving:RightFoot
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:RightUpLeg/B3010:Solving:RightLeg/B3010:Solving:RightFoot/B3010:Solving:RightToeBase
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:RightUpLeg/B3010:Solving:RightLeg/B3010:Solving:RightFoot/B3010:Solving:RightToeBase/B3010:Solving:RightToeBaseEnd
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:LeftShoulder
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:LeftShoulder/B3010:Solving:LeftArm
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:LeftShoulder/B3010:Solving:LeftArm/B3010:Solving:LeftForeArm
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:LeftShoulder/B3010:Solving:LeftArm/B3010:Solving:LeftForeArm/B3010:Solving:LeftHand
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:LeftShoulder/B3010:Solving:LeftArm/B3010:Solving:LeftForeArm/B3010:Solving:LeftHand/B3010:Solving:LeftHandEnd
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:LeftShoulder/B3010:Solving:LeftArm/B3010:Solving:LeftForeArm/B3010:Solving:LeftHand/B3010:Solving:LeftHandEnd/B3010:Solving:L_FingersEnd
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:LeftShoulder/B3010:Solving:LeftArm/B3010:Solving:LeftForeArm/B3010:Solving:LeftHand/B3010:Solving:LeftHandThumb1
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:LeftShoulder/B3010:Solving:LeftArm/B3010:Solving:LeftForeArm/B3010:Solving:LeftHand/B3010:Solving:LeftHandThumb1/B3010:Solving:LeftHandThumb2
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:Neck
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:Neck/B3010:Solving:Head
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:Neck/B3010:Solving:Head/B3010:Solving:HeadEnd
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:RightShoulder
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:RightShoulder/B3010:Solving:RightArm
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:RightShoulder/B3010:Solving:RightArm/B3010:Solving:RightForeArm
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:RightShoulder/B3010:Solving:RightArm/B3010:Solving:RightForeArm/B3010:Solving:RightHand
+        weight: 1
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:RightShoulder/B3010:Solving:RightArm/B3010:Solving:RightForeArm/B3010:Solving:RightHand/B3010:Solving:RightHandEnd
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:RightShoulder/B3010:Solving:RightArm/B3010:Solving:RightForeArm/B3010:Solving:RightHand/B3010:Solving:RightHandEnd/B3010:Solving:R_FingersEnd
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:RightShoulder/B3010:Solving:RightArm/B3010:Solving:RightForeArm/B3010:Solving:RightHand/B3010:Solving:RightHandThumb1
+        weight: 0
+      - path: B3010/B3010:Solving/B3010:Solving:Hips/B3010:Solving:Spine/B3010:Solving:Spine1/B3010:Solving:Spine2/B3010:Solving:Spine3/B3010:Solving:RightShoulder/B3010:Solving:RightArm/B3010:Solving:RightForeArm/B3010:Solving:RightHand/B3010:Solving:RightHandThumb1/B3010:Solving:RightHandThumb2
+        weight: 0
+      - path: B3010/B3010:STRN
+        weight: 0
+      - path: B3010/B3010:T10
+        weight: 0
+      - path: System
+        weight: 0
+      - path: System/System:Bonita_10_2099034
+        weight: 0
+      - path: System/System:Bonita_10_2100709
+        weight: 0
+      - path: System/System:Bonita_10_2100712
+        weight: 0
+      - path: System/System:Bonita_10_2100716
+        weight: 0
+      - path: System/System:Bonita_10_2100719
+        weight: 0
+      - path: System/System:Bonita_10_2100727
+        weight: 0
+      - path: System/System:Bonita_10_2100729
+        weight: 0
+      - path: System/System:Bonita_10_2100738
+        weight: 0
+      - path: System/System:Bonita_10_2100744
+        weight: 0
+      - path: System/System:Bonita_10_2100745
+        weight: 0
+      - path: System/System:T40_12695
+        weight: 0
+      - path: System/System:T40_13827
+        weight: 0
+      - path: System/System:T40_15290
+        weight: 0
+      - path: System/System:T40_15298
+        weight: 0
+      - path: System/System:T40_15462
+        weight: 0
+      - path: System/System:T40_15469
+        weight: 0
+      - path: System/System:T40_15475
+        weight: 0
+      - path: System/System:T40_15482
+        weight: 0
+      - path: System/System:T40_16731
+        weight: 0
+      - path: System/System:T40_16795
+        weight: 0
+      - path: System/System:Vantage_5_2107617
+        weight: 0
+      - path: System/System:Vantage_5_2107676
+        weight: 0
+      - path: System/System:Vantage_5_2107693
+        weight: 0
+      - path: System/System:Vantage_5_2107712
+        weight: 0
+      - path: System/System:Vantage_5_2107727
+        weight: 0
+      - path: System/System:Vantage_5_2107733
+        weight: 0
+      - path: System/System:Vantage_5_2107744
+        weight: 0
+      - path: System/System:Vantage_5_2108360
+        weight: 0
+      - path: Unlabeled_Markers
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: B3010:Solving:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:Spine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B3010:Solving:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: B3010-ObrotWMiejscuDowolny-E08-R01-T03(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:ARIEL
+      position: {x: 0.31257892, y: 1.7152395, z: 0.3851081}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:C7
+      position: {x: 0.32087016, y: 1.4880998, z: 0.36618155}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:CLAV
+      position: {x: 0.11054364, y: 1.396892, z: 0.38671792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LANK
+      position: {x: 0.26397765, y: 0.094151415, z: 0.21749246}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LBHD
+      position: {x: 0.2635432, y: 1.6242809, z: 0.29027608}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LBSH
+      position: {x: 0.33622113, y: 1.4121023, z: 0.2151552}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LBWT
+      position: {x: 0.34082526, y: 0.9678111, z: 0.28333205}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LELB
+      position: {x: 0.2521835, y: 1.5241586, z: -0.045845296}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LFHD
+      position: {x: 0.18218063, y: 1.737984, z: 0.34205577}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LFSH
+      position: {x: 0.1572452, y: 1.4494303, z: 0.23880348}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LFWT
+      position: {x: 0.09562559, y: 0.9056242, z: 0.22856586}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LHEL
+      position: {x: 0.31582722, y: 0.077234104, z: 0.30779296}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LHIP
+      position: {x: 0.13348836, y: 0.57421285, z: 0.25118446}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LIEL
+      position: {x: 0.19339672, y: 1.429814, z: -0.059586376}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LIHAND
+      position: {x: 0.08614626, y: 1.6141888, z: -0.30316392}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LIWR
+      position: {x: 0.09221296, y: 1.5640007, z: -0.21405247}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LKNE
+      position: {x: 0.28077254, y: 0.422303, z: 0.21076429}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LKNI
+      position: {x: 0.23546271, y: 0.4326823, z: 0.35472882}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LMT1
+      position: {x: 0.13787252, y: 0.031121204, z: 0.30979618}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LMT5
+      position: {x: 0.14423455, y: 0.03941733, z: 0.18800907}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LMWT
+      position: {x: -0.004552446, y: 1.0108956, z: 0.40907437}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LOHAND
+      position: {x: 0.17097461, y: 1.5782295, z: -0.31792736}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LOWR
+      position: {x: 0.18171018, y: 1.5500704, z: -0.25837994}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LSHN
+      position: {x: 0.21775363, y: 0.22524072, z: 0.22938281}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LTOE
+      position: {x: 0.082171045, y: 0.042222235, z: 0.2281332}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LUPA
+      position: {x: 0.25728938, y: 1.5186191, z: 0.08630539}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:LWRE
+      position: {x: 0.22177032, y: 1.550364, z: -0.15096651}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RANK
+      position: {x: 0.3036469, y: 0.078265086, z: 0.5147767}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RBHD
+      position: {x: 0.26700297, y: 1.6125757, z: 0.471642}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RBSH
+      position: {x: 0.36366794, y: 1.4119182, z: 0.5023186}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RBWT
+      position: {x: 0.35935718, y: 0.95622045, z: 0.45167473}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RELB
+      position: {x: 0.36340284, y: 1.4735202, z: 0.7986424}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RFHD
+      position: {x: 0.19745898, y: 1.6952044, z: 0.47224948}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RFSH
+      position: {x: 0.20223236, y: 1.4505512, z: 0.5140532}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RFWT
+      position: {x: 0.13119486, y: 0.929279, z: 0.55121315}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RHEL
+      position: {x: 0.34466815, y: 0.07361628, z: 0.44604084}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RHIP
+      position: {x: 0.18246162, y: 0.5343149, z: 0.52781266}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RIEL
+      position: {x: 0.32248035, y: 1.3814306, z: 0.83162314}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RIHAND
+      position: {x: 0.2777984, y: 1.5402191, z: 1.0784378}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RIWR
+      position: {x: 0.26447356, y: 1.5083485, z: 1.0035274}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RKNE
+      position: {x: 0.31345674, y: 0.41709015, z: 0.5370831}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RKNI
+      position: {x: 0.21368963, y: 0.4117174, z: 0.43365604}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RMT1
+      position: {x: 0.163598, y: 0.032541145, z: 0.4478309}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RMT5
+      position: {x: 0.19176477, y: 0.041471943, z: 0.573964}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RMWT
+      position: {x: 0.33897358, y: 0.9831154, z: 0.36270127}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:ROHAND
+      position: {x: 0.35602546, y: 1.5102272, z: 1.0859346}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:ROWR
+      position: {x: 0.3596421, y: 1.4903544, z: 1.0042677}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RSHN
+      position: {x: 0.2543429, y: 0.25988367, z: 0.5339081}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RTOE
+      position: {x: 0.109592035, y: 0.048872583, z: 0.5247361}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RUPA
+      position: {x: 0.35520166, y: 1.4664145, z: 0.6655854}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:RWRE
+      position: {x: 0.3613233, y: 1.4986688, z: 0.89875525}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:Hips
+      position: {x: 0.0013758838, y: 0.9011326, z: -0.00023216009}
+      rotation: {x: -0.70995826, y: 0.021441229, z: -0.016318968, w: 0.70372814}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftUpLeg
+      position: {x: -0.08828207, y: 0, z: -0.025790267}
+      rotation: {x: -0.080408886, y: -0.70046866, z: -0.24061115, w: 0.66707146}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftLeg
+      position: {x: -0.41859066, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.10661768, w: 0.9943001}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftFoot
+      position: {x: -0.40022987, y: 0, z: 0}
+      rotation: {x: 0.05410293, y: -0.11731319, z: 0.5181691, w: 0.8454652}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftToeBase
+      position: {x: -0.14929587, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.25346825, w: 0.9673437}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftToeBaseEnd
+      position: {x: -0.0714192, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightUpLeg
+      position: {x: 0.08828207, y: 0, z: -0.025790267}
+      rotation: {x: 0.21411048, y: -0.7312177, z: 0.15615995, w: 0.62856305}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightLeg
+      position: {x: -0.41859066, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.016156303, w: 0.9998695}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightFoot
+      position: {x: -0.40022987, y: 0, z: 0}
+      rotation: {x: -0.12203668, y: 0.20042293, z: 0.6247765, w: 0.7447094}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightToeBase
+      position: {x: -0.14929587, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.17644446, w: 0.9843106}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightToeBaseEnd
+      position: {x: -0.0714192, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:Spine
+      position: {x: -0, y: 0.04313815, z: 0.06470722}
+      rotation: {x: -0.066589065, y: -0.031483404, z: -0.005690029, w: 0.9972674}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:Spine1
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: 0.05956621, y: -0.0045754905, z: -0.00016118403, w: 0.9982139}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:Spine2
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: 0.033332508, y: 0.0045866463, z: 0.0041120024, w: 0.99942535}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:Spine3
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: -0.0034126446, y: 0.000113344686, z: -0.0013254976, w: 0.9999933}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftShoulder
+      position: {x: -0.029757999, y: -0.049596667, z: 0.1606932}
+      rotation: {x: -0.018163055, y: 0.037065897, z: -0.012596156, w: 0.9990683}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftArm
+      position: {x: -0.14779806, y: 0, z: 0}
+      rotation: {x: -0.033850543, y: -0.0051466846, z: -0.011683987, w: 0.9993454}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftForeArm
+      position: {x: -0.28405353, y: 0, z: 0}
+      rotation: {x: 0.006552861, y: -0.024456127, z: 0.04944648, w: 0.9984559}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftHand
+      position: {x: -0.20037927, y: 0, z: 0}
+      rotation: {x: -0.15421301, y: -0.0025439337, z: -0.113437824, w: 0.98150074}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftHandEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0.7071067, y: -0, z: -0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:L_FingersEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftHandThumb1
+      position: {x: -0.024915682, y: -0.04152614, z: -0.016610455}
+      rotation: {x: 0.9876721, y: 0.13002947, z: 0.011375968, w: 0.08641026}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:LeftHandThumb2
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:Neck
+      position: {x: -0, y: -0.03235361, z: 0.22647527}
+      rotation: {x: 0.01242548, y: 0.005720898, z: 0.014985364, w: 0.9997941}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:Head
+      position: {x: -0, y: 0, z: 0.11862991}
+      rotation: {x: -0.13484828, y: -0.0018834914, z: 0.024372315, w: 0.9905647}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:HeadEnd
+      position: {x: -0, y: 0, z: 0.13965975}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightShoulder
+      position: {x: 0.029757999, y: -0.049596667, z: 0.1606932}
+      rotation: {x: 0.003926763, y: 0.9998625, z: -0.0076851128, w: 0.014160519}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightArm
+      position: {x: -0.14779806, y: 0, z: 0}
+      rotation: {x: -0.0029170143, y: -0.0062463027, z: -0.023714185, w: 0.99969506}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightForeArm
+      position: {x: -0.28405353, y: 0, z: 0}
+      rotation: {x: -0.004883582, y: 0.021079518, z: 0.056229927, w: 0.9981834}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightHand
+      position: {x: -0.20037927, y: 0, z: 0}
+      rotation: {x: 0.22412191, y: 0.05888375, z: -0.05559963, w: 0.9711904}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightHandEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:R_FingersEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightHandThumb1
+      position: {x: -0.024915682, y: -0.04152614, z: 0.016610455}
+      rotation: {x: 0.9876721, y: 0.13002947, z: 0.011375968, w: 0.08641026}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:Solving:RightHandThumb2
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:STRN
+      position: {x: 0.028392563, y: 1.1806148, z: 0.40005058}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B3010:T10
+      position: {x: 0.36105078, y: 1.2214941, z: 0.35638136}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2099034
+      position: {x: -3.6972644, y: 1.0161825, z: -2.695211}
+      rotation: {x: 0.14387757, y: 0.9868781, z: -0.04626694, w: 0.05683486}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100709
+      position: {x: 3.5719316, y: 2.3618448, z: -3.0504098}
+      rotation: {x: -0.047520846, y: 0.12044926, z: 0.25867224, w: 0.9572473}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100712
+      position: {x: -3.5075817, y: 2.3488262, z: 0.4054011}
+      rotation: {x: 0.20552908, y: 0.9774007, z: 0.003920074, w: -0.04929838}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100716
+      position: {x: -3.3656032, y: 0.75029755, z: 2.970485}
+      rotation: {x: 0.033516943, y: 0.9903162, z: -0.031460166, w: -0.13099901}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100719
+      position: {x: 3.8615904, y: 2.3267272, z: 2.5599658}
+      rotation: {x: -0.021937625, y: -0.1671679, z: 0.28413934, w: 0.9438424}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100727
+      position: {x: -3.3352, y: 2.3408165, z: 2.9862802}
+      rotation: {x: 0.21016794, y: 0.9681904, z: -0.0032240588, w: -0.13574448}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100729
+      position: {x: 3.702577, y: 2.3426487, z: -0.4666372}
+      rotation: {x: 0.017219909, y: 0.09973393, z: 0.28390843, w: 0.95349497}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100738
+      position: {x: 3.8825586, y: 0.6843996, z: 2.5543985}
+      rotation: {x: 0.03553074, y: -0.17803846, z: 0.07839767, w: 0.98025185}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100744
+      position: {x: 3.6609569, y: 1.2606049, z: -3.0438173}
+      rotation: {x: 0.06876698, y: 0.18060787, z: 0.08873061, w: 0.97712785}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100745
+      position: {x: -3.6545894, y: 2.3550463, z: -2.6689098}
+      rotation: {x: 0.25638685, y: 0.9518196, z: 0.015334181, w: 0.16754137}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_12695
+      position: {x: -0.1647838, y: 3.208966, z: -6.0520587}
+      rotation: {x: -0.6703001, y: -0.15014519, z: 0.7103238, w: 0.15360463}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_13827
+      position: {x: 3.58583, y: 3.1948192, z: -1.8881024}
+      rotation: {x: 0.9170039, y: 0.27858385, z: -0.2832495, w: -0.035562363}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_15290
+      position: {x: -3.0884511, y: 3.1387277, z: 6.0343866}
+      rotation: {x: 0.46650702, y: 0.07267644, z: 0.85627186, w: 0.20949432}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_15298
+      position: {x: -3.5667272, y: 3.1869066, z: -2.198657}
+      rotation: {x: -0.2888708, y: -0.030220404, z: 0.92563134, w: 0.24258421}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_15462
+      position: {x: -3.664356, y: 3.206229, z: -5.6430435}
+      rotation: {x: -0.4338611, y: -0.07201153, z: 0.88248044, w: 0.16675477}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_15469
+      position: {x: -3.2990572, y: 3.1704473, z: 2.7218294}
+      rotation: {x: 0.38308492, y: 0.09336381, z: 0.87879086, w: 0.26880455}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_15475
+      position: {x: 3.3651416, y: 3.2115347, z: -5.8525705}
+      rotation: {x: 0.84297067, y: 0.17517146, z: -0.49693, w: -0.10851756}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_15482
+      position: {x: 3.7772336, y: 3.178247, z: 2.347555}
+      rotation: {x: 0.92002016, y: 0.27171987, z: 0.27652222, w: 0.057155706}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_16731
+      position: {x: 0.41671866, y: 3.124783, z: 6.0754466}
+      rotation: {x: 0.7177035, y: 0.1472483, z: 0.66591686, w: 0.1406213}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_16795
+      position: {x: 3.939542, y: 3.1506336, z: 5.603598}
+      rotation: {x: 0.8819163, y: 0.19947343, z: 0.4235929, w: 0.0548002}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Vantage_5_2107617
+      position: {x: 3.3844185, y: 3.3133767, z: -4.455191}
+      rotation: {x: 0.18269132, y: 0.45892063, z: 0.20989981, w: 0.843776}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Vantage_5_2107676
+      position: {x: -3.1727648, y: 3.2469945, z: 4.5133924}
+      rotation: {x: 0.26036772, y: 0.8344983, z: -0.15816973, w: -0.4591336}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Vantage_5_2107693
+      position: {x: 2.925715, y: 3.2396648, z: 5.956731}
+      rotation: {x: -0.1730039, y: -0.4775701, z: 0.28583002, w: 0.812587}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Vantage_5_2107712
+      position: {x: 0.045582183, y: 3.2948067, z: -6.095933}
+      rotation: {x: 0.2302817, y: 0.6860645, z: 0.21348266, w: 0.65628576}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Vantage_5_2107727
+      position: {x: 1.0849258, y: 3.1825206, z: -4.851169}
+      rotation: {x: 0.27273098, y: 0.5844436, z: 0.16313647, w: 0.7466123}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Vantage_5_2107733
+      position: {x: -3.585263, y: 3.301673, z: -4.161928}
+      rotation: {x: 0.22828148, y: 0.83735937, z: 0.21020885, w: 0.45003232}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Vantage_5_2107744
+      position: {x: 3.8428035, y: 3.259318, z: 4.1924586}
+      rotation: {x: -0.19071747, y: -0.41276568, z: 0.26287588, w: 0.85096866}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Vantage_5_2108360
+      position: {x: -2.6717706, y: 3.296993, z: -5.988167}
+      rotation: {x: 0.2568273, y: 0.84269327, z: 0.18399474, w: 0.43595165}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Unlabeled_Markers
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

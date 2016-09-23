@@ -1,0 +1,14 @@
+﻿<scenario name="TwoActorsComplexAction">
+	<level id="1">
+		<action prob="1.0" name="sc5a_3 T03" id ="0">
+			<actor name="actor1" mocapId ="Alicja">
+			</actor>
+			<actor name="actor2" mocapId ="Janek">
+			</actor>
+      <actor name="actor3" mocapId ="Marek">
+      </actor>
+      <actor name="actor4" mocapId ="Mateusz">
+      </actor>
+		</action>
+	</level>
+</scenario>
