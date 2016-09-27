@@ -6,9 +6,10 @@ using System.IO;
 
 public class SceneGenerator
 {
-    public static void Start()
+    public static void Start(int mapSize)
     {
         var onSceneGenerator = GameObject.FindObjectOfType<BuildScene>();
+        onSceneGenerator.mapSize = mapSize;
         onSceneGenerator.Generate();
         SaveScene();
     }

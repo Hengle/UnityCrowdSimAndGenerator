@@ -13,7 +13,7 @@ public class SequencesCreator
     private bool _markActions;
     private bool _crowd;
     private bool _debug;
-    NavMeshPointGenerator _generator = new NavMeshPointGenerator(25.0f);
+    NavMeshPointGenerator _generator = new NavMeshPointGenerator();
 
     public List<GameObject> Agents
     {

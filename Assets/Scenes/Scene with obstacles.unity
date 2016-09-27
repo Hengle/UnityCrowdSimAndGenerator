@@ -42,7 +42,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -63,7 +63,8 @@ LightmapSettings:
     m_CompAOExponent: 0
     m_CompAOExponentDirect: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
+    m_LightmapParameters: {fileID: 15201, guid: 0000000000000000f000000000000000,
+      type: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_DirectLightInLightProbes: 1
@@ -71,7 +72,8 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 9335daadd4f8de24aa05d973e01adc8d,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -608,17 +610,17 @@ Prefab:
     - target: {fileID: 114000010572236710, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: TakeScreenshots
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010572236710, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: MarkAgentsOnScreenshots
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010119231640, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: LoadFromConfig
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010568512236, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
@@ -638,7 +640,7 @@ Prefab:
     - target: {fileID: 114000010119231640, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: Close
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010572236710, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
@@ -663,21 +665,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9890b161335929e48ae32d3f5131a011, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1199368412 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 166372, guid: 9890b161335929e48ae32d3f5131a011, type: 2}
-  m_PrefabInternal: {fileID: 1199368411}
---- !u!114 &1199368413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1199368412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b8579fd3a464a4cb448641e213595d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1311937882
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class Preparer
         if (SceneNameGetter.Mode == "generation")
         {
             EditorSceneManager.OpenScene("Assets/_Scenes/main.unity", OpenSceneMode.Single);
-            SceneGenerator.Start();
+            SceneGenerator.Start(SceneNameGetter.MapSize);
             EditorApplication.Exit(0);
         }
         else
