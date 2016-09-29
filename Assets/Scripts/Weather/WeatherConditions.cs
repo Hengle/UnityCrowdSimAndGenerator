@@ -40,7 +40,7 @@ public class WeatherConditions : MonoBehaviour
                 light.GetComponent<Light>().color = Color.white;
                 break;
             case 2:
-                value = 90.0f;
+                value = 92.0f;
                 light.GetComponent<Light>().color = Color.white;
                 break;
             case 3:

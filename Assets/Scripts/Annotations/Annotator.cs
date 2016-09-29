@@ -129,7 +129,6 @@ public class Annotator
             pts[i].x = (pts[i].x + 1.0f) * (_resWidth / 2.0f);
             pts[i].y = (pts[i].y + 1.0f) * (_resHeigth / 2.0f);
             pts[i].y = _resHeigth - pts[i].y;
-
         }
 
         Vector3 min = pts[0];
@@ -160,6 +159,4 @@ public class Annotator
 
         return finalRect;
     }
-
-
 }
