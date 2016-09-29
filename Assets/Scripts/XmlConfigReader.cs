@@ -21,6 +21,7 @@ public static class XmlConfigReader
         public int ResolutionWidth;
         public int ResolutionHeight;
         public int FrameRate;
+        public int BufferSize;
     }
     public static Config Data;
 
@@ -57,6 +58,7 @@ public static class XmlConfigReader
             Data.ResolutionWidth = int.Parse(configElement.ChildNodes.Item(3).Attributes.Item(2).Value);
             Data.ResolutionHeight = int.Parse(configElement.ChildNodes.Item(3).Attributes.Item(3).Value);
             Data.FrameRate = int.Parse(configElement.ChildNodes.Item(3).Attributes.Item(4).Value);
+            Data.BufferSize = int.Parse(configElement.ChildNodes.Item(3).Attributes.Item(5).Value);
         }
     }
 }

@@ -30,11 +30,11 @@ public class StatusChecker : EditorWindow
 
         GUILayout.Label("Custom importer", EditorStyles.boldLabel);
         _importerExtension = EditorGUILayout.Toggle("Enable:",_importerExtension);
-        HumanoidModelImporter.useImporter = _importerExtension;
+        //HumanoidModelImporter.useImporter = _importerExtension;
 
         if (GUILayout.Button("Generate Scene"))
         {
-            SceneGenerator.Start();
+            SceneGenerator.Start(10);
         } 
 
         //SceneNameGetter.ParseXmlConfig(Application.dataPath + "/config.xml");

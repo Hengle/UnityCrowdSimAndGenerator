@@ -69,6 +69,7 @@ public class SimulationController : MonoBehaviour
             _screenshooter.ResWidth = XmlConfigReader.Data.ResolutionWidth;
             _screenshooter.ResHeight = XmlConfigReader.Data.ResolutionHeight;
             _screenshooter.ChangeFrameRate(XmlConfigReader.Data.FrameRate);
+            _screenshooter.ScreenshotLimit = XmlConfigReader.Data.BufferSize;
 
             Close = true;
             MarkWithPlanes = false;

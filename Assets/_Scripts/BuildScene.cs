@@ -463,12 +463,12 @@ namespace ProceduralSceneGenerator
                 building.GetChild(0).GetComponent<NavMeshObstacle>().enabled = true;
             }
 
-            GameObject light = new GameObject();
-            light.name = "DefaultLight";
-            light.transform.rotation = Quaternion.Euler(60.0f, 0.0f, 0.0f);
-            Light l = light.AddComponent<Light>();
-            l.type = LightType.Directional;
-            light.transform.parent = scenePrefab.transform;
+            //GameObject light = new GameObject();
+            //light.name = "DefaultLight";
+            //light.transform.rotation = Quaternion.Euler(60.0f, 0.0f, 0.0f);
+            //Light l = light.AddComponent<Light>();
+            //l.type = LightType.Directional;
+            //light.transform.parent = scenePrefab.transform;
 
             GameObject overseer =  Instantiate(simulationOverseerPrefab);
             overseer.transform.parent = scenePrefab.transform;

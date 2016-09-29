@@ -50,6 +50,9 @@ public class SceneGenerator
         camera.clearFlags = CameraClearFlags.Color;
         camera.backgroundColor = Color.white;
         camera.farClipPlane = 1000.0f;
+        Light light = previewCamera.AddComponent<Light>();
+        light.type = LightType.Directional;
+
         Vector3 cameraOffset = new Vector3(0.0f, 50.0f, 50.0f);
         previewCamera.transform.position = g.transform.position + cameraOffset;
         previewCamera.transform.LookAt(g.transform.position + new Vector3(0.0f, 1.0f, 0.0f));
