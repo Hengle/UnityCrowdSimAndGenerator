@@ -83,16 +83,15 @@ public class Annotator
             {
                 bool agentIsCrowd = agent.tag == "Crowd";
                 string agentAction = agent.gameObject.GetComponent<Movement>().IsFinished ? agent.gameObject.GetComponent<Activity>().ParamName : "Moving";
-                Bounds bounds = agent.GetComponentsInChildren<Renderer>().Aggregate((i1, i2) => i1.bounds.extents.magnitude > i2.bounds.extents.magnitude ? i1 : i2).bounds;
                 Rect trackingRekt = new Rect();
                 Rect actionRecognitionRekt = new Rect();
 
-                trackingRekt = GetRect(bounds, camera);
+                trackingRekt = GetRect(agent, camera);//(bounds, camera);
                 //AdjustTrackingRect(ref trackingRekt);
 
                 if (!agentIsCrowd)
                 {
-                    actionRecognitionRekt = GetFixedSizeRect(bounds, camera);
+                    actionRecognitionRekt = GetFixedSizeRect(agent, camera);//(bounds, camera);
                 }
                 
                 if (IsRectValid(trackingRekt))
@@ -106,26 +105,57 @@ public class Annotator
     }
     
     //REKT
-    private Rect GetRect(Bounds bounds, Camera camera)
+    private Rect GetRect(GameObject agent, Camera camera)//(Bounds bounds, Camera camera)
     {
+        SkinnedMeshRenderer biggest = agent.GetComponentsInChildren<SkinnedMeshRenderer>().Aggregate((i1, i2) => i1.bounds.extents.magnitude > i2.bounds.extents.magnitude ? i1 : i2);
+        biggest.sharedMesh.RecalculateBounds();
+        biggest.updateWhenOffscreen = true;
+        Bounds bounds = biggest.bounds;//.sharedMesh.bounds;//biggest.bounds;
+
         Vector4[] pts = new Vector4[8];
-        
-        pts[0] = new Vector4(bounds.center.x + bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z + bounds.extents.z, 1.0f);
-        pts[1] = new Vector4(bounds.center.x + bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z - bounds.extents.z, 1.0f);
-        pts[2] = new Vector4(bounds.center.x + bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z + bounds.extents.z, 1.0f);
-        pts[3] = new Vector4(bounds.center.x + bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z - bounds.extents.z, 1.0f);
-        pts[4] = new Vector4(bounds.center.x - bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z + bounds.extents.z, 1.0f);
-        pts[5] = new Vector4(bounds.center.x - bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z - bounds.extents.z, 1.0f);
-        pts[6] = new Vector4(bounds.center.x - bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z + bounds.extents.z, 1.0f);
-        pts[7] = new Vector4(bounds.center.x - bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z - bounds.extents.z, 1.0f);
+
+        pts[0] = new Vector4(bounds.center.x + bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z + bounds.extents.z, 1.0f);// lewy góra przód
+        pts[1] = new Vector4(bounds.center.x + bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z - bounds.extents.z, 1.0f);// lewy góra tył
+        pts[2] = new Vector4(bounds.center.x + bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z + bounds.extents.z, 1.0f);// lewy dół przód
+        pts[3] = new Vector4(bounds.center.x + bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z - bounds.extents.z, 1.0f);// lewy dół tył
+        pts[4] = new Vector4(bounds.center.x - bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z + bounds.extents.z, 1.0f);// prawy góra przód
+        pts[5] = new Vector4(bounds.center.x - bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z - bounds.extents.z, 1.0f);// prawy góra tył
+        pts[6] = new Vector4(bounds.center.x - bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z + bounds.extents.z, 1.0f);// prawy dół przód
+        pts[7] = new Vector4(bounds.center.x - bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z - bounds.extents.z, 1.0f);// prawy dół tył
        
-        Matrix4x4 scaledPerspective = Matrix4x4.Perspective(camera.fieldOfView, (float)_resWidth/(float)_resHeigth, camera.nearClipPlane, camera.farClipPlane);
-        Matrix4x4 VP = scaledPerspective * camera.worldToCameraMatrix;
+        Matrix4x4 scaledPerspective = Matrix4x4.Perspective(camera.fieldOfView, (float)_resWidth/(float)_resHeigth, camera.nearClipPlane, camera.farClipPlane);      
+        Matrix4x4 PV = scaledPerspective * camera.worldToCameraMatrix;
+
+
+        //for (int i = 0; i < pts.Length; i++)
+        //{
+        //    Vector3 temp = pts[i];
+        //    pts[i] = Matrix4x4.TRS(temp - bounds.center , Quaternion.identity, Vector3.zero) * pts[i];
+        //    //pts[i] = Matrix4x4.TRS(pts[i], agent.transform.rotation, Vector3.zero) * pts[i];
+        //    pts[i] = agent.transform.rotation * pts[i];
+        //    pts[i] += (Vector4)bounds.center;
+        //    //pts[i] = Matrix4x4.TRS((Vector3)pts[i] + bounds.center, Quaternion.identity, Vector3.zero) * pts[i];
+        //}
+
+        float time = 0.01f;
+        Debug.DrawLine(pts[0], pts[4], Color.red, time);
+        Debug.DrawLine(pts[2], pts[6], Color.red, time);
+        Debug.DrawLine(pts[1], pts[5], Color.red, time);
+        Debug.DrawLine(pts[3], pts[7], Color.red, time);
+        Debug.DrawLine(pts[0], pts[1], Color.red, time);
+        Debug.DrawLine(pts[4], pts[5], Color.red, time);
+        Debug.DrawLine(pts[2], pts[3], Color.red, time);
+        Debug.DrawLine(pts[6], pts[7], Color.red, time);
+        Debug.DrawLine(pts[0], pts[2], Color.red, time);
+        Debug.DrawLine(pts[4], pts[6], Color.red, time);
+        Debug.DrawLine(pts[1], pts[3], Color.red, time);
+        Debug.DrawLine(pts[5], pts[7], Color.red, time);
 
         for (int i = 0; i < pts.Length; i++)
         {
-            pts[i] = VP * pts[i];
+            pts[i] = PV  * pts[i];
             pts[i] /= pts[i].w;
+
             pts[i].x = (pts[i].x + 1.0f) * (_resWidth / 2.0f);
             pts[i].y = (pts[i].y + 1.0f) * (_resHeigth / 2.0f);
             pts[i].y = _resHeigth - pts[i].y;
@@ -138,14 +168,17 @@ public class Annotator
             min = Vector3.Min(min, pts[i]);
             max = Vector3.Max(max, pts[i]);
         }
-        
+
         Rect r = Rect.MinMaxRect((int)min.x, (int)min.y, (int)max.x, (int)max.y);   
+        //Debug.DrawLine()
+
+
         return r;
     }
 
-    private Rect GetFixedSizeRect(Bounds bounds, Camera camera)
+    private Rect GetFixedSizeRect(GameObject agent, Camera camera)//(Bounds bounds, Camera camera)
     {
-        Rect rect = GetRect(bounds, camera);
+        Rect rect = GetRect(agent, camera);//(bounds, camera);
         int roundUpTarget = Mathf.Max((int)(_resHeigth * 0.2f), (int)(_resWidth * 0.2f));
 
         int roundedUpWidth = Mathf.RoundToInt(rect.width / roundUpTarget) * roundUpTarget;
