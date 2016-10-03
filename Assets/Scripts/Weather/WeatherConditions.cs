@@ -91,8 +91,8 @@ public class WeatherConditions : MonoBehaviour
             case 5:
                 foreach (var camera in cameras)
                 {
-                    GameObject fog = (GameObject)Instantiate(Resources.Load("Weather/Fog"));
-                    fog.transform.position = camera.transform.position;
+                    var fog = camera.GetComponent <UnityStandardAssets.ImageEffects.GlobalFog>();
+                    fog.enabled = true;
                 }
                 light.color = Color.gray;
                 light.intensity = 0.5f;
