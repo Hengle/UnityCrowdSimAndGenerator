@@ -474,6 +474,8 @@ MonoBehaviour:
   grassTile: {fileID: 1000013817342468, guid: 68ed7936debf0c148a7de0b3a8e87988, type: 2}
   grassTileWithoutTrees: {fileID: 1000013615743680, guid: 23aafa90061d79242aab94ffb234fc47,
     type: 2}
+  cameraPrafab: {fileID: 1000013029285688, guid: 80ad3e00569d61449af1186161acd9da,
+    type: 2}
   mapSize: 9
 --- !u!4 &1001412845
 Transform:
