@@ -76,6 +76,11 @@ public class SimulationController : MonoBehaviour
             GetComponent<CamerasController>().enabled = false;
         }
         weather.GenerateWeatherConditions();
+        if (GetComponent<Lighting>() != null)
+        {
+            GetComponent<Lighting>().SetSampleSceneLighting();
+        }
+        
         SessionLength *= _screenshooter.FrameRate;
         if (!Tracking)
         {

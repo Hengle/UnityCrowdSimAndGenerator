@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 public class WeatherConditions : MonoBehaviour
-{   
+{
     [Tooltip("1 - Morning, 2 - Noon, 3 - Afternoon")]
     [Range(1, 3)]
     public int Time;
@@ -10,52 +9,74 @@ public class WeatherConditions : MonoBehaviour
     [Range(1, 5)]
     public int Conditions;
 
+    private GameObject mainLight;
+
+    public GameObject MainLight
+    {
+        get
+        {
+            return mainLight;
+        }
+
+        set
+        {
+            mainLight = value;
+        }
+    }
+
     public void GenerateWeatherConditions()
     {
         SetLight(Time);
         SetConditions(Conditions);
     }
 
-    private void SetLight(int id)
+    void SetLight(int id)
     {
-        GameObject light;
-        if (FindObjectOfType<Light>() == null)
+        Light[] lights = FindObjectsOfType<Light>();
+        foreach (Light l in lights)
         {
-            light = new GameObject();
-            light.name = "Light";
-            light.AddComponent<Light>();
-            light.transform.position = Vector3.zero;
-            light.GetComponent<Light>().type = LightType.Directional;
-            light.GetComponent<Light>().shadows = LightShadows.Soft;
+            if (l.type == LightType.Directional)
+            {
+                l.transform.DetachChildren();
+                //Destroy all directional lights
+                DestroyImmediate(l.gameObject);
+            }
         }
-        else
-        {
-            light = FindObjectOfType<Light>().gameObject;
-        }
-        float value = light.transform.eulerAngles.x;
+        //Create new directional light - the only one on the scene
+        MainLight = new GameObject("Light");
+        // mainLight.name = "Light";
+        MainLight.AddComponent<Light>();
+        MainLight.transform.position = Vector3.zero;
+        MainLight.GetComponent<Light>().type = LightType.Directional;
+        MainLight.GetComponent<Light>().shadows = LightShadows.Soft;
+
+        float valueX = MainLight.transform.eulerAngles.x;
+        float valueY = MainLight.transform.eulerAngles.y;
+        valueY = 0f;
+        MainLight.GetComponent<Light>().color = Color.white;
+
         switch (id)
         {
             case 1:
-                value = 30.0f;
-                light.GetComponent<Light>().color = Color.white;
+                valueX = 30.0f;
                 break;
             case 2:
-                value = 92.0f;
-                light.GetComponent<Light>().color = Color.white;
+                valueX = 80.0f;
                 break;
             case 3:
-                value = 170.0f;
-                light.GetComponent<Light>().color = new Color32(144, 124, 70, 255);
+                valueX = -0.0f;
+                MainLight.GetComponent<Light>().color = new Color32(144, 124, 70, 255);
                 break;
             default:
                 break;
         }
-        light.transform.rotation = Quaternion.Euler(value, 0.0f, 0.0f);
+        MainLight.GetComponent<Light>().intensity = 0.7F;
+        MainLight.GetComponent<Light>().transform.rotation = Quaternion.Euler(valueX, valueY, 0.0f);
     }
 
-    private void SetConditions(int id)
+    void SetConditions(int id)
     {
-        Light light = FindObjectOfType<Light>();
+        Light light = MainLight.GetComponent<Light>();
         Camera[] cameras = FindObjectsOfType<Camera>();
         switch (id)
         {
@@ -67,7 +88,7 @@ public class WeatherConditions : MonoBehaviour
                     rain.transform.GetChild(0).transform.Translate(0.0f, 50.0f, 0.0f);
                     rain.transform.GetChild(0).transform.rotation = Quaternion.Euler(0.0f, camera.transform.rotation.eulerAngles.y, 0.0f);
                     rain.transform.GetChild(1).transform.Translate(0.0f, 10.0f, 0.0f);
-                }      
+                }
                 light.intensity = 0.75f;
                 light.shadowStrength = 0.5f;
                 break;
@@ -78,7 +99,7 @@ public class WeatherConditions : MonoBehaviour
                     snow.transform.position = camera.transform.position;
                     snow.transform.GetChild(0).transform.Translate(0.0f, 50.0f, 0.0f);
                     snow.transform.GetChild(0).transform.rotation = Quaternion.Euler(0.0f, camera.transform.rotation.eulerAngles.y, 0.0f);
-                    snow.transform.GetChild(1).transform.Translate(0.0f, 10.0f, 0.0f);                  
+                    snow.transform.GetChild(1).transform.Translate(0.0f, 10.0f, 0.0f);
                 }
                 light.intensity = 0.65f;
                 light.shadowStrength = 0.5f;
