@@ -584,7 +584,7 @@ public class SequencesCreator
         switch (action.Name.ToLower())
         {
             case "walk":
-                float speedW = UnityEngine.Random.Range(2.5f, 5.0f);
+                float speedW = UnityEngine.Random.Range(1.6f, 3.0f);//(2.5f, 5.0f);
                 mData = new MovementData(point, speedW);
                 if (action.Blends != null)
                 {
@@ -592,7 +592,7 @@ public class SequencesCreator
                 }
                 break;
             case "run":
-                float speedR = UnityEngine.Random.Range(6.0f, 10.0f);
+                float speedR = UnityEngine.Random.Range(3.1f, 5.5f);//(6.0f, 10.0f);
                 mData = new MovementData(point, speedR);
                 if (action.Blends != null)
                 {
