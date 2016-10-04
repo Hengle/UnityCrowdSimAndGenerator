@@ -19,6 +19,8 @@ namespace ProceduralSceneGenerator
         public GameObject citySquareTile;
         public GameObject grassTile;
         public GameObject grassTileWithoutTrees;
+        public GameObject cameraPrafab;
+
         private BuildingTemplateMaterials btm;
         private GameObject scenePrefab;
 
@@ -314,8 +316,9 @@ namespace ProceduralSceneGenerator
                         cr.transform.localScale = Vector3.one * (buildingFootprint / 30);
 
                         //Create cameras above cross roads
-                        GameObject cam = new GameObject("Camera" + w + h);
-                        cam.AddComponent<Camera>();
+                        GameObject cam = Instantiate(cameraPrafab);//new GameObject("Camera" + w + h);
+                        cam.name = "Camera" + w + h;
+                        //cam.AddComponent<Camera>();
                         cam.AddComponent<SphereCollider>();
                         cam.GetComponent<SphereCollider>().radius = 0.3f;
                         cam.GetComponent<Camera>().fieldOfView = 30;
@@ -415,8 +418,9 @@ namespace ProceduralSceneGenerator
             float camheight = 1.5f;
             foreach (Vec2Int vec in brzegowe)
             {
-                GameObject cam = new GameObject("Camera" + vec.w + vec.h);
-                cam.AddComponent<Camera>();
+                GameObject cam = Instantiate(cameraPrafab);//new GameObject("Camera" + vec.w + vec.h);
+                //cam.AddComponent<Camera>();
+                cam.name = "Camera" + vec.w + vec.h;
                 cam.AddComponent<SphereCollider>();
                 cam.GetComponent<SphereCollider>().radius = 0.3f;
                 cam.GetComponent<Camera>().fieldOfView = 30;
