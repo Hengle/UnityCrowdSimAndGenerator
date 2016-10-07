@@ -20,7 +20,7 @@ Material:
         name: _BumpMap
       second:
         m_Texture: {fileID: 2800000, guid: f5f050de1a6b5bd4f942b0f5aafc8007, type: 3}
-        m_Scale: {x: 3, y: 2}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _DecalTex
@@ -56,8 +56,8 @@ Material:
         name: _MainTex
       second:
         m_Texture: {fileID: 2800000, guid: 05b36941d386b344cabb84d439fd5da5, type: 3}
-        m_Scale: {x: 3.0000029, y: 15}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: -1.06, y: 0}
     - first:
         name: _MetallicARoughness
       second:

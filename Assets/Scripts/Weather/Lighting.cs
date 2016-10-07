@@ -16,11 +16,39 @@ public class Lighting : MonoBehaviour
         lights = FindObjectsOfType<Light>();
         mainLight = GetComponent<WeatherConditions>().MainLight.GetComponent<Light>();
 
+        if (wc.Time == 1)
+        {
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
+            {
+                mainLight.intensity = 0.5f;
+            }
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample2_Square")
+            {
+                mainLight.intensity = 0.7f;
+                valX = 35;
+                valY = -30.0f;
+            }
+            mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
+        }
+        if (wc.Time == 2)
+        {
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
+            {
+            }
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample2_Square")
+            {
+                mainLight.intensity = 0.7f;
+                valX = 72f;
+                valY = -45.0f;
+            }
+            mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
+        }
         if (wc.Time == 3)
         {
             if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
             {
-                mainLight.intensity = 0f;
+                //  mainLight.intensity = 0f;
+                mainLight.gameObject.SetActive(false);
                 mat.SetColor("_EmissionColor", Color.white);
                 SetActiveLights(true);
                 valX = mainLight.transform.rotation.x;
@@ -38,9 +66,11 @@ public class Lighting : MonoBehaviour
             {
                 valX = mainLight.transform.eulerAngles.x;
                 valY = 45.0f;
+                SetActiveLights(true);
             }
             mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
         }
+
         else
         {
             mat.SetColor("_EmissionColor", Color.black);
