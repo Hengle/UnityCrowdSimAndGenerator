@@ -45,6 +45,7 @@ namespace ProceduralSceneGenerator
 
         public GameObject GenerateBuilding(int w, int l, int h, int facadeMaterialIndex, int doorPrefabIndex, int windowPrefabIndex, int roofTypeIndex, int roofTexIndex)
         {
+            EnsureCorrectDir();
             LoadResources();
             LoadAssets();
 
@@ -64,6 +65,7 @@ namespace ProceduralSceneGenerator
         }
         public GameObject GenerateRandomBuilding(int w, int l, int h)
         {
+            EnsureCorrectDir();
             LoadResources();
             LoadAssets();
             width = w;
@@ -96,6 +98,16 @@ namespace ProceduralSceneGenerator
          
             return gameObject;
         }
+
+        private void EnsureCorrectDir()
+        {
+            string dirPath = Application.dataPath + "/Resources/GeneratedMaterials/";
+            if (!System.IO.Directory.Exists(dirPath))
+            {
+                System.IO.Directory.CreateDirectory(dirPath);
+            }
+        }
+
         private void DestroyGo()
         {
 
