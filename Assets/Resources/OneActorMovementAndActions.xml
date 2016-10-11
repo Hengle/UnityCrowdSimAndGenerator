@@ -1,7 +1,7 @@
 ﻿<scenario name="OneActorMovementAndActions">
   <level id="0">
     <action prob="1.0" name="walk" id ="0">
-      <actor name="actor1">
+      <actor name="actor1" mocapId ="">
       </actor>
     </action>
   </level>
@@ -21,7 +21,7 @@
   </level>
   <level id="3">
     <action prob="0.75" name="run" id="3">
-      <actor name="actor1">
+      <actor name="actor1" mocapId ="">
         <prev id="2"></prev>
       </actor>
     </action>

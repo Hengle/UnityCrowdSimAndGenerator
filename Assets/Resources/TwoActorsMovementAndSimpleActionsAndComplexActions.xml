@@ -1,11 +1,11 @@
 ﻿<scenario name="TwoActorsMovementAndSimpleActionsAndComplexActions">
 	<level id="0">
 		<action prob="1.0" name="walk" id ="0">
-			<actor name="actor1">
+			<actor name="actor1" mocapId ="">
 			</actor>
 		</action>
 		<action prob="1.0" name="walk" id ="1">
-			<actor name="actor2">
+			<actor name="actor2" mocapId ="">
 			</actor>
 		</action>
 	</level>
@@ -16,12 +16,12 @@
 			</actor>
 		</action>
 		<action prob="0.55" name="walk" id="3">
-			<actor name="actor2">
+			<actor name="actor2" mocapId ="">
 				<prev id="1"></prev>
 			</actor>
 		</action>
 		<action prob="0.45" name="run" id="4">
-			<actor name="actor2">
+			<actor name="actor2" mocapId ="">
 				<prev id="1"></prev>
 			</actor>
 		</action>
@@ -44,7 +44,7 @@
 			</actor>
 		</action>
 		<action prob="1.0" name="walk" id="7">
-			<actor name="actor2">
+			<actor name="actor2" mocapId ="">
 			<prev id="5"></prev>
 			</actor>
 		</action>
