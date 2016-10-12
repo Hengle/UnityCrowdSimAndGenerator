@@ -28,6 +28,7 @@ GameObject:
   - 114: {fileID: 114000012674643902}
   - 114: {fileID: 114000014183865670}
   - 114: {fileID: 114000010747245450}
+  - 135: {fileID: 135000012426274930}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -338,3 +339,15 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013029285688}
   m_Enabled: 1
+--- !u!135 &135000012426274930
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013029285688}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

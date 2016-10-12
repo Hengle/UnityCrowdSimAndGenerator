@@ -16,67 +16,87 @@ public class Lighting : MonoBehaviour
         lights = FindObjectsOfType<Light>();
         mainLight = GetComponent<WeatherConditions>().MainLight.GetComponent<Light>();
 
-        if (wc.Time == 1)
+        switch (wc.Time)
         {
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
-            {
-                mainLight.intensity = 0.5f;
-            }
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample2_Square")
-            {
-                mainLight.intensity = 0.7f;
-                valX = 35;
-                valY = -30.0f;
-            }
-            mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
-        }
-        if (wc.Time == 2)
-        {
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
-            {
-            }
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample2_Square")
-            {
-                mainLight.intensity = 0.7f;
-                valX = 72f;
-                valY = -45.0f;
-            }
-            mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
-        }
-        if (wc.Time == 3)
-        {
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
-            {
-                //  mainLight.intensity = 0f;
-                mainLight.gameObject.SetActive(false);
-                mat.SetColor("_EmissionColor", Color.white);
-                SetActiveLights(true);
-                valX = mainLight.transform.rotation.x;
-                valY = mainLight.transform.rotation.y;
-            }
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample2_Square")
-            {
-                mainLight.intensity = 0f;
-                mainLight.color = new Color(231, 229, 219);
-                valX = -4;
-                valY = -45.0f;
-                SetActiveLights(true);
-            }
-            else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample1_Crossroad")
-            {
-                valX = mainLight.transform.eulerAngles.x;
-                valY = 45.0f;
-                SetActiveLights(true);
-            }
-            mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
+            case 1:
+                mat.SetColor("_EmissionColor", Color.black);
+                SetActiveLights(false);
+
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
+                {
+                    mainLight.intensity = 0.5f;
+                }
+                else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample2_Square")
+                {
+                    mainLight.intensity = 0.7f;
+                    valX = 35;
+                    valY = -30.0f;
+                    mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
+                }
+                break;
+            case 2:
+                mat.SetColor("_EmissionColor", Color.black);
+                SetActiveLights(false);
+
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
+                {
+
+                }
+                else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample2_Square")
+                {
+                    mainLight.intensity = 0.7f;
+                    valX = 72f;
+                    valY = -45.0f;
+                    mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
+                }
+                break;
+
+            case 3:
+
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample3_Estate")
+                {
+                    //  mainLight.intensity = 0f;
+                    mainLight.gameObject.SetActive(false);
+                    mat.SetColor("_EmissionColor", Color.white);
+                    SetActiveLights(true);
+                    valX = mainLight.transform.rotation.x;
+                    valY = mainLight.transform.rotation.y;
+                }
+                else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample2_Square")
+                {
+                    mainLight.intensity = 0f;
+                    mainLight.color = new Color(231, 229, 219);
+                    valX = -4;
+                    valY = -45.0f;
+                    SetActiveLights(true);
+                }
+                else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample1_Crossroad")
+                {
+                    valX = mainLight.transform.eulerAngles.x;
+                    valY = 45.0f;
+                    SetActiveLights(true);
+                }
+                mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
+                break;
+            default:
+                break;
         }
 
-        else
+        Camera camera = FindObjectOfType<Camera>();
+        switch (wc.Conditions)
         {
-            mat.SetColor("_EmissionColor", Color.black);
-            SetActiveLights(false);
+             
+            case 5:
+                var fog = camera.GetComponent<UnityStandardAssets.ImageEffects.GlobalFog>();
+                fog.heightDensity = 10;
+                fog.height = 2;
+                fog.startDistance = 4;
+                break;
+            default:
+                break;
         }
     }
+
     void SetActiveLights(bool truefalse)
     {
         foreach (Light light in lights)

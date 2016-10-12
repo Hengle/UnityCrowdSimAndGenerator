@@ -19432,6 +19432,7 @@ GameObject:
   - 114: {fileID: 638020215}
   - 114: {fileID: 638020214}
   - 114: {fileID: 638020213}
+  - 135: {fileID: 638020212}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -19507,6 +19508,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 171191806}
   m_RootOrder: 3
+--- !u!135 &638020212
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 638020206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &638020213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19772,8 +19785,8 @@ MonoBehaviour:
   useRadialDistance: 0
   heightFog: 1
   height: 1
-  heightDensity: 0.001
-  startDistance: 10.5
+  heightDensity: 2
+  startDistance: 10
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!1 &638319963
 GameObject:
@@ -25804,7 +25817,12 @@ Prefab:
     - target: {fileID: 114000012837680498, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: Time
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012837680498, guid: 9890b161335929e48ae32d3f5131a011,
+        type: 2}
+      propertyPath: Conditions
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9890b161335929e48ae32d3f5131a011, type: 2}
