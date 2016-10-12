@@ -46,7 +46,16 @@ public class Screenshooter : MonoBehaviour
         SetupDictionary();
     }
 
-	void Update ()
+
+    public void SetParams(bool takeScreens, bool markAgents)
+    {
+        TakeScreenshots = takeScreens;
+        MarkAgentsOnScreenshots = markAgents;
+        _annotationFileWriter.MarkAgentsOnScreenshots = MarkAgentsOnScreenshots;
+
+    }
+
+    void Update ()
     {
 
         if (TakeScreenshots)

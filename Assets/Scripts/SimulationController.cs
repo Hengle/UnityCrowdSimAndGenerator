@@ -64,8 +64,10 @@ public class SimulationController : MonoBehaviour
             SimultaneousScenarioInstances = XmlConfigReader.Data.Instances > 1 ? XmlConfigReader.Data.Instances : 1;
 
             ScreenshotsDirectory = XmlConfigReader.Data.ResultsDirectory;
-            _screenshooter.TakeScreenshots = true;
-            _screenshooter.MarkAgentsOnScreenshots = XmlConfigReader.Data.BoundingBoxes;
+            //_screenshooter.TakeScreenshots = true;
+            //_screenshooter.MarkAgentsOnScreenshots = XmlConfigReader.Data.BoundingBoxes;
+
+            _screenshooter.SetParams(true, XmlConfigReader.Data.BoundingBoxes);
             _screenshooter.ResWidth = XmlConfigReader.Data.ResolutionWidth;
             _screenshooter.ResHeight = XmlConfigReader.Data.ResolutionHeight;
             _screenshooter.ChangeFrameRate(XmlConfigReader.Data.FrameRate);
