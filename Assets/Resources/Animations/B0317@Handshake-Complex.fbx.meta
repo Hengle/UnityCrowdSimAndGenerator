@@ -459,8 +459,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Handshake-Complex
       takeName: B3010_B0317_Przywitanie_E23_R01_T02_x2d
-      firstFrame: 1
-      lastFrame: 962
+      firstFrame: 100
+      lastFrame: 710
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -483,7 +483,7 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

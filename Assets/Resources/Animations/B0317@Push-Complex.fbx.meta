@@ -460,8 +460,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Push-Complex
       takeName: B3010_B0317_Popchniecie_E25_R02_T03_x2d
-      firstFrame: 1
-      lastFrame: 777
+      firstFrame: 100
+      lastFrame: 580
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -484,7 +484,7 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

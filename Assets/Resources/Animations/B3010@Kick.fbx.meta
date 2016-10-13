@@ -277,8 +277,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Kick
       takeName: B3010_Kopanie_E19_R02_T01_x2d
-      firstFrame: 1
-      lastFrame: 908
+      firstFrame: 95
+      lastFrame: 699
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -301,7 +301,7 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

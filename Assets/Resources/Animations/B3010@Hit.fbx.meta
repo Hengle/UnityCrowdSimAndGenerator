@@ -277,8 +277,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Hit
       takeName: B3010_uderzanie_E20_R02_T02_x2d
-      firstFrame: 1
-      lastFrame: 699
+      firstFrame: 69
+      lastFrame: 477
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -301,7 +301,7 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

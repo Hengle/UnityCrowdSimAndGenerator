@@ -10,7 +10,7 @@
     </action>
   </level>
   <level id="1">
-    <action prob="1" name="Popchniecie-E25-R02-T03" id="2">
+    <action prob="1" name="Handshake-Complex" id="2">
       <actor name="actor1" mocapId ="B3010">
         <prev id ="0"></prev>
       </actor>
