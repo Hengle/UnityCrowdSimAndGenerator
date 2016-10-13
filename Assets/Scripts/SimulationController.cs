@@ -37,69 +37,111 @@ public class SimulationController : MonoBehaviour
     private string[] _actorsNames;
     private List<GameObject> _actors;
 
+
+    public struct LukaszToPala
+    {
+        public int Time;
+        public int Weather;
+        public int Crowd;
+        public bool Boxes;
+
+        public LukaszToPala(int time, int weather, int crowd, bool boxes)
+        {
+            Time = time;
+            Weather = weather;
+            Crowd = crowd;
+            Boxes = boxes;
+        }
+    }
+    public List<LukaszToPala> _lukasze;
+    public int _iter;
+
     void Start()
     {
         _crowdController = GetComponent<CrowdController>();
         _sequenceCreator = new SequencesCreator();
         _screenshooter = FindObjectOfType<Screenshooter>();
-        WeatherConditions weather = GetComponent<WeatherConditions>();
-        if (LoadFromConfig)
+        _lukasze = new List<LukaszToPala>();
+        for (int i = 1; i < 4; i++)
         {
-            XmlConfigReader.ParseXmlConfig(Application.dataPath + "/config.xml");
-
-            weather.Time = XmlConfigReader.Data.DayTime;
-            weather.Conditions = XmlConfigReader.Data.WeatherConditions;
-
-            _crowdController.CreatePrefabs = true;
-            _crowdController.LoadAgentsFromResources = true;
-            _crowdController.AgentsFilter = XmlConfigReader.Data.Models;
-            _crowdController.MaxPeople = XmlConfigReader.Data.MaxPeople;
-            _crowdController.ActionsFilter = XmlConfigReader.Data.ActionsFilter;
-
-            Tracking = XmlConfigReader.Data.Tracking;
-            ScenarioFile = XmlConfigReader.Data.ScenarioFile;
-            SessionLength = XmlConfigReader.Data.Length > 1 ? XmlConfigReader.Data.Length : 1;
-           
-            Repeats = XmlConfigReader.Data.Repeats > 1 ? XmlConfigReader.Data.Repeats : 1;
-            SimultaneousScenarioInstances = XmlConfigReader.Data.Instances > 1 ? XmlConfigReader.Data.Instances : 1;
-
-            ScreenshotsDirectory = XmlConfigReader.Data.ResultsDirectory;
-            //_screenshooter.TakeScreenshots = true;
-            //_screenshooter.MarkAgentsOnScreenshots = XmlConfigReader.Data.BoundingBoxes;
-
-            _screenshooter.SetParams(true, XmlConfigReader.Data.BoundingBoxes);
-            _screenshooter.ResWidth = XmlConfigReader.Data.ResolutionWidth;
-            _screenshooter.ResHeight = XmlConfigReader.Data.ResolutionHeight;
-            _screenshooter.ChangeFrameRate(XmlConfigReader.Data.FrameRate);
-            _screenshooter.ScreenshotLimit = XmlConfigReader.Data.BufferSize;
-
-            Close = true;
-            MarkWithPlanes = false;
-            GetComponent<CamerasController>().enabled = false;
+            for (int j = 1; j < 6; j++)
+            {
+                for (int k = 1; k < 4; k++)
+                {
+                    for (int l = 0; l < 2; l++)
+                    {
+                        if (l == 0)
+                        {
+                            _lukasze.Add(new LukaszToPala(i, j, k * 100, false));
+                        }
+                        else if (l == 1)
+                        {
+                            _lukasze.Add(new LukaszToPala(i, j, k * 100, true));
+                        }
+                    }
+                }
+            }
         }
-        weather.GenerateWeatherConditions();
-        if (GetComponent<Lighting>() != null)
-        {
-            GetComponent<Lighting>().SetSampleSceneLighting();
-        }
-        
-        SessionLength *= _screenshooter.FrameRate;
-        if (!Tracking)
-        {
-            XmlScenarioReader.ParseXmlWithScenario(ScenarioFile);
-            _actorsNames = GetActorsNames(XmlScenarioReader.ScenarioData);
-            _actorsSequencesControllers = new List<SequenceController>();
-        }
-        
-        _screnshooterActive = _screenshooter.TakeScreenshots;
-        if (_screnshooterActive)
-        {
-            string dir = string.Format("/Session-{0:yyyy-MM-dd_hh-mm-ss-tt}", System.DateTime.Now);
-            ScreenshotsDirectory += dir;
-        }
-        _screenshooter.TakeScreenshots = false;
+        _iter = 0;
+        Autoscreens(_lukasze[_iter]);
+        //WeatherConditions weather = GetComponent<WeatherConditions>();
+        //if (LoadFromConfig)
+        //{
+        //    XmlConfigReader.ParseXmlConfig(Application.dataPath + "/config.xml");
 
-        Invoke("StartInstanceOfSimulation", 0.5f);
+        //    weather.Time = XmlConfigReader.Data.DayTime;
+        //    weather.Conditions = XmlConfigReader.Data.WeatherConditions;
+
+        //    _crowdController.CreatePrefabs = true;
+        //    _crowdController.LoadAgentsFromResources = true;
+        //    _crowdController.AgentsFilter = XmlConfigReader.Data.Models;
+        //    _crowdController.MaxPeople = XmlConfigReader.Data.MaxPeople;
+        //    _crowdController.ActionsFilter = XmlConfigReader.Data.ActionsFilter;
+
+        //    Tracking = XmlConfigReader.Data.Tracking;
+        //    ScenarioFile = XmlConfigReader.Data.ScenarioFile;
+        //    SessionLength = XmlConfigReader.Data.Length > 1 ? XmlConfigReader.Data.Length : 1;
+
+        //    Repeats = XmlConfigReader.Data.Repeats > 1 ? XmlConfigReader.Data.Repeats : 1;
+        //    SimultaneousScenarioInstances = XmlConfigReader.Data.Instances > 1 ? XmlConfigReader.Data.Instances : 1;
+
+        //    ScreenshotsDirectory = XmlConfigReader.Data.ResultsDirectory;
+        //    //_screenshooter.TakeScreenshots = true;
+        //    //_screenshooter.MarkAgentsOnScreenshots = XmlConfigReader.Data.BoundingBoxes;
+
+        //    _screenshooter.SetParams(true, XmlConfigReader.Data.BoundingBoxes);
+        //    _screenshooter.ResWidth = XmlConfigReader.Data.ResolutionWidth;
+        //    _screenshooter.ResHeight = XmlConfigReader.Data.ResolutionHeight;
+        //    _screenshooter.ChangeFrameRate(XmlConfigReader.Data.FrameRate);
+        //    _screenshooter.ScreenshotLimit = XmlConfigReader.Data.BufferSize;
+
+        //    Close = true;
+        //    MarkWithPlanes = false;
+        //    GetComponent<CamerasController>().enabled = false;
+        //}
+        //weather.GenerateWeatherConditions();
+        //if (GetComponent<Lighting>() != null)
+        //{
+        //    GetComponent<Lighting>().SetSampleSceneLighting();
+        //}
+
+        //SessionLength *= _screenshooter.FrameRate;
+        //if (!Tracking)
+        //{
+        //    XmlScenarioReader.ParseXmlWithScenario(ScenarioFile);
+        //    _actorsNames = GetActorsNames(XmlScenarioReader.ScenarioData);
+        //    _actorsSequencesControllers = new List<SequenceController>();
+        //}
+
+        //_screnshooterActive = _screenshooter.TakeScreenshots;
+        //if (_screnshooterActive)
+        //{
+        //    string dir = string.Format("/Session-{0:yyyy-MM-dd_hh-mm-ss-tt}", System.DateTime.Now);
+        //    ScreenshotsDirectory += dir;
+        //}
+        //_screenshooter.TakeScreenshots = false;
+
+        //Invoke("StartInstanceOfSimulation", 0.5f);
     }
 
     void Update()
@@ -144,7 +186,7 @@ public class SimulationController : MonoBehaviour
             {
                 string path = ScreenshotsDirectory + "/Take_" + _repeatsCounter;
 
-                Debug.Log("Screenshot buffer full! Saving to: " +  path);
+                Debug.Log("Screenshot buffer full! Saving to: " + path);
                 _screenshooter.SaveScreenshotsAtDirectory(path);
                 _screenshotBufferFull = false;
             }
@@ -153,7 +195,7 @@ public class SimulationController : MonoBehaviour
 
     private void StartInstanceOfSimulation()
     {
-        _crowdController.GenerateCrowd();       
+        _crowdController.GenerateCrowd();
         if (!Tracking)
         {
             _actors = CreateActorsFromCrowd(SimultaneousScenarioInstances, _actorsNames);
@@ -163,7 +205,7 @@ public class SimulationController : MonoBehaviour
             _sequenceCreator.Crowd = false;
             _sequenceCreator.ShowSequenceOnConsole = true;
             _actorsSequencesControllers = _sequenceCreator.GenerateInGameSequences(SimultaneousScenarioInstances, out SessionLength);
-            SessionLength *= _screenshooter.FrameRate;         
+            SessionLength *= _screenshooter.FrameRate;
         }
         _sequenceCreator.MarkActions = false;
         _sequenceCreator.Crowd = true;
@@ -201,21 +243,25 @@ public class SimulationController : MonoBehaviour
     private IEnumerator EndInstance()
     {
         yield return new WaitForSeconds(0.5f);
-        if (_repeatsCounter < Repeats)
+        //        if (_repeatsCounter < Repeats)
+        //        {
+        //            StartInstanceOfSimulation();
+        //        }
+        //        else
+        //        {
+        //#if UNITY_EDITOR
+        //            EditorApplication.isPlaying = false;
+        //            if (Close)
+        //            {
+        //                EditorApplication.Exit(0);
+        //            }
+        //#else
+        //                Application.Quit();
+        //#endif
+        //       }
+        if (_iter < _lukasze.Count)
         {
-            StartInstanceOfSimulation();
-        }
-        else
-        {
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-            if (Close)
-            {
-                EditorApplication.Exit(0);
-            }
-#else
-                Application.Quit();
-#endif
+            Autoscreens(_lukasze[_iter]);
         }
     }
 
@@ -280,5 +326,117 @@ public class SimulationController : MonoBehaviour
         }
         string[] actors = hashedActors.ToArray();
         return actors;
+    }
+
+    private void Autoscreens(LukaszToPala lukasz)
+    {
+        WeatherConditions weather = GetComponent<WeatherConditions>();
+
+        weather.Time = lukasz.Time;
+        weather.Conditions = lukasz.Weather;
+
+        _crowdController.CreatePrefabs = true;
+        _crowdController.LoadAgentsFromResources = true;
+        _crowdController.AgentsFilter = "";
+        _crowdController.MaxPeople = lukasz.Crowd;
+        _crowdController.ActionsFilter = "";
+
+        Tracking = true;
+        ScenarioFile = "";
+        SessionLength = 3;
+
+        Repeats = 1;
+        SimultaneousScenarioInstances = 1;
+        string time, con, size, box;
+        switch (lukasz.Time)
+        {
+            case 1:
+                time = "Moring";
+                break;
+            case 2:
+                time = "Noon";
+                break;
+            case 3:
+                time = "Evening";
+                break;
+            default:
+                time = "Time";
+                break;
+        }
+        switch (lukasz.Weather)
+        {
+            case 1:
+                con = "Sun";
+                break;
+            case 2:
+                con = "Rain";
+                break;
+            case 3:
+                con = "Snow";
+                break;
+            case 4:
+                con = "Overcast";
+                break;
+            case 5:
+                con = "Fog";
+                break;
+            default:
+                con = "Weather";
+                break;
+        }
+        switch (lukasz.Crowd)
+        {
+            case 100:
+                size = "Small";
+                break;
+            case 200:
+                size = "Medium";
+                break;
+            case 300:
+                size = "Large";
+                break;
+            default:
+                size = "Size";
+                break;
+        }
+        if (lukasz.Boxes)
+        {
+            box = "WithBB";
+        }
+        else
+        {
+            box = "WithoutBB";
+        }
+
+        ScreenshotsDirectory = string.Format("D:/Screenshots/{0}_{1}_{2}_{3}", time, con,  size, box );
+
+        _screenshooter.SetParams(true, lukasz.Boxes);
+        _screenshooter.ResWidth = 1920;
+        _screenshooter.ResHeight = 1080;
+        _screenshooter.ChangeFrameRate(5);
+        _screenshooter.ScreenshotLimit = 500;
+
+        Close = false;
+        MarkWithPlanes = false;
+        GetComponent<CamerasController>().enabled = false;
+
+        weather.GenerateWeatherConditions();
+        if (GetComponent<Lighting>() != null)
+        {
+            GetComponent<Lighting>().SetSampleSceneLighting();
+        }
+
+        SessionLength *= _screenshooter.FrameRate;
+
+        _screnshooterActive = _screenshooter.TakeScreenshots;
+        if (_screnshooterActive)
+        {
+            string dir = string.Format("/Session-{0:yyyy-MM-dd_hh-mm-ss-tt}", System.DateTime.Now);
+            ScreenshotsDirectory += dir;
+        }
+        _screenshooter.TakeScreenshots = false;
+
+        _iter++;
+        Invoke("StartInstanceOfSimulation", 0.5f);
     }
 }
