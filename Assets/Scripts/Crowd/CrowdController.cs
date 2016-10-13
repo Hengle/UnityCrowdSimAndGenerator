@@ -123,6 +123,10 @@ public class CrowdController : MonoBehaviour
         obj.AddComponent<NavMeshAgent>();
         obj.AddComponent<Rigidbody>().isKinematic = true;
         obj.AddComponent<Agent>();
+        CapsuleCollider capsule = obj.AddComponent<CapsuleCollider>();
+        capsule.height = 2;
+        capsule.radius = 0.4f;
+        capsule.center = new Vector3(0, 1, 0);
         //obj.AddComponent<GenerateDestination>();
         return obj;
     }
