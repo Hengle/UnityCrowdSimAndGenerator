@@ -239,32 +239,38 @@ public class Activity : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!IsFinished)
+        if (other.GetType() == typeof(SphereCollider))
         {
-            if (_complexAction)
+            if (!IsFinished)
             {
-                for (int i = 0; i < _otherRequiredAgents.Count; i++)
+                if (_complexAction)
                 {
-                    if (other.gameObject == _otherRequiredAgents[i])
+                    for (int i = 0; i < _otherRequiredAgents.Count; i++)
                     {
-                        _requiredAgentsNearbyCheck[i] = true;
+                        if (other.gameObject == _otherRequiredAgents[i])
+                        {
+                            _requiredAgentsNearbyCheck[i] = true;
+                        }
                     }
                 }
-            }
+            } 
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (!IsFinished && _complexAction)
+        if (other.GetType() == typeof(SphereCollider))
         {
-            for (int i = 0; i < _otherRequiredAgents.Count; i++)
+            if (!IsFinished && _complexAction)
             {
-                if (other.gameObject == _otherRequiredAgents[i])
+                for (int i = 0; i < _otherRequiredAgents.Count; i++)
                 {
-                    _requiredAgentsNearbyCheck[i] = false;
+                    if (other.gameObject == _otherRequiredAgents[i])
+                    {
+                        _requiredAgentsNearbyCheck[i] = false;
+                    }
                 }
-            }
+            } 
         }
     }
 }
