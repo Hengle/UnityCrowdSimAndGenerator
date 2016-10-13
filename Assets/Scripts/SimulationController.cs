@@ -99,7 +99,7 @@ public class SimulationController : MonoBehaviour
         }
         _screenshooter.TakeScreenshots = false;
 
-        Invoke("StartInstanceOfSimulation", 0.1f);
+        Invoke("StartInstanceOfSimulation", 0.5f);
     }
 
     void Update()
