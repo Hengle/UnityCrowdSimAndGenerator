@@ -3,6 +3,7 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
 [RequireComponent(typeof(CrowdController))]
 [RequireComponent(typeof(WeatherConditions))]
@@ -62,21 +63,21 @@ public class SimulationController : MonoBehaviour
         _sequenceCreator = new SequencesCreator();
         _screenshooter = FindObjectOfType<Screenshooter>();
         _lukasze = new List<LukaszToPala>();
-        for (int i = 1; i < 4; i++)
+        for (int i = 3; i != 0; i--)
         {
-            for (int j = 1; j < 6; j++)
+            for (int l = 0; l < 2; l++)
             {
                 for (int k = 1; k < 4; k++)
                 {
-                    for (int l = 0; l < 2; l++)
+                    for (int j = 1; j < 6; j++)
                     {
                         if (l == 0)
                         {
-                            _lukasze.Add(new LukaszToPala(i, j, k * 100, false));
+                            _lukasze.Add(new LukaszToPala(i, j, k * 50, false));
                         }
                         else if (l == 1)
                         {
-                            _lukasze.Add(new LukaszToPala(i, j, k * 100, true));
+                            _lukasze.Add(new LukaszToPala(i, j, k * 50, true));
                         }
                     }
                 }
@@ -178,7 +179,7 @@ public class SimulationController : MonoBehaviour
                 if (_elapsedTimeCounter >= SessionLength * 5.0f)
                 {
                     EndInstanceOfSimulation();
-                    Debug.Log("Aborting sequence");
+                    UnityEngine.Debug.Log("Aborting sequence");
                 }
             }
 
@@ -186,7 +187,7 @@ public class SimulationController : MonoBehaviour
             {
                 string path = ScreenshotsDirectory + "/Take_" + _repeatsCounter;
 
-                Debug.Log("Screenshot buffer full! Saving to: " + path);
+                UnityEngine.Debug.Log("Screenshot buffer full! Saving to: " + path);
                 _screenshooter.SaveScreenshotsAtDirectory(path);
                 _screenshotBufferFull = false;
             }
@@ -259,9 +260,18 @@ public class SimulationController : MonoBehaviour
         //                Application.Quit();
         //#endif
         //       }
+        var wc = FindObjectOfType(typeof(WeatherConditions)) as WeatherConditions;
+        wc.RemoveConditions(_lukasze[_iter - 1].Weather);
         if (_iter < _lukasze.Count)
         {
             Autoscreens(_lukasze[_iter]);
+        }
+        else
+        {
+            var psi = new ProcessStartInfo("shutdown", "/s /t 0");
+            psi.CreateNoWindow = true;
+            psi.UseShellExecute = false;
+            Process.Start(psi);
         }
     }
 
@@ -331,6 +341,7 @@ public class SimulationController : MonoBehaviour
     private void Autoscreens(LukaszToPala lukasz)
     {
         WeatherConditions weather = GetComponent<WeatherConditions>();
+        //weather.RemoveConditions(lukasz.Weather);
 
         weather.Time = lukasz.Time;
         weather.Conditions = lukasz.Weather;
@@ -386,13 +397,13 @@ public class SimulationController : MonoBehaviour
         }
         switch (lukasz.Crowd)
         {
-            case 100:
+            case 50:
                 size = "Small";
                 break;
-            case 200:
+            case 100:
                 size = "Medium";
                 break;
-            case 300:
+            case 150:
                 size = "Large";
                 break;
             default:
@@ -408,13 +419,13 @@ public class SimulationController : MonoBehaviour
             box = "WithoutBB";
         }
 
-        ScreenshotsDirectory = string.Format("D:/Screenshots/{0}_{1}_{2}_{3}", time, con,  size, box );
+        ScreenshotsDirectory = string.Format("D:/Screenshots/{0}_{1}_{2}_{3}", time, con, size, box);
 
         _screenshooter.SetParams(true, lukasz.Boxes);
-        _screenshooter.ResWidth = 1920;
-        _screenshooter.ResHeight = 1080;
-        _screenshooter.ChangeFrameRate(5);
-        _screenshooter.ScreenshotLimit = 500;
+        _screenshooter.ResWidth = 640;
+        _screenshooter.ResHeight = 480;
+        _screenshooter.ChangeFrameRate(7);
+        _screenshooter.ScreenshotLimit = 250;
 
         Close = false;
         MarkWithPlanes = false;

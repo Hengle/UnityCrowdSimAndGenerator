@@ -123,4 +123,38 @@ public class WeatherConditions : MonoBehaviour
                 break;
         }
     }
+
+    public void RemoveConditions(int id)
+    {
+        Light light = MainLight.GetComponent<Light>();
+        Camera[] cameras = FindObjectsOfType<Camera>();
+        switch (id)
+        {
+            case 2:
+                RainSnowController[] rains = FindObjectsOfType(typeof(RainSnowController)) as RainSnowController[];
+                foreach (var rsc in rains)
+                {
+                    DestroyImmediate(rsc.gameObject);
+                }
+                break;
+            case 3:
+                RainSnowController[] snows = FindObjectsOfType(typeof(RainSnowController)) as RainSnowController[];
+                foreach (var rsc in snows)
+                {
+                    DestroyImmediate(rsc.gameObject);
+                }
+                break;
+            case 4:
+                break;
+            case 5:
+                foreach (var camera in cameras)
+                {
+                    var fog = camera.GetComponent<UnityStandardAssets.ImageEffects.GlobalFog>();
+                    fog.enabled = false;
+                }
+                break;
+            default:
+                break;
+        }
+    }
 }
