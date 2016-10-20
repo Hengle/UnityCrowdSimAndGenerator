@@ -11,6 +11,9 @@ class AnnotationFileWriter
     private int _screenshotId = 0;
     private string _imageFormat = "png";
     private bool _markAgentsOnScreenshots = true;
+    //private Color[] _colors = { Color.red, Color.green, Color.blue, Color.black,
+    //                            Color.cyan, Color.gray, Color.magenta, Color.white,
+    //                            Color.yellow, new Color()};
 
     public bool MarkAgentsOnScreenshots
     {
@@ -139,14 +142,22 @@ class AnnotationFileWriter
     {
         foreach (var annotation in annotations)
         {
-            screenShot.DrawRectangle(annotation.trackingBounds, Color.blue);
+            Color color = GetColorForAgent((int)annotation.agentId);
+            screenShot.DrawRectangle(annotation.trackingBounds, color);
 
-            if (annotation.actionRecognitionBoundsIsValid)
-            {
-                screenShot.DrawRectangle(annotation.actionRecognitionBounds, Color.green);
-            }
+            //if (annotation.actionRecognitionBoundsIsValid)
+            //{
+            //    screenShot.DrawRectangle(annotation.actionRecognitionBounds, Color.green);
+            //}
             
         }     
+    }
+
+    private Color GetColorForAgent(int agentId)
+    {       
+        UnityEngine.Random.seed = agentId;
+        Color color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
+        return color;
     }
 
 }
