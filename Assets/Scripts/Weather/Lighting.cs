@@ -33,6 +33,7 @@ public class Lighting : MonoBehaviour
                     valY = -30.0f;
                     mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
                 }
+
                 break;
             case 2:
                 mat.SetColor("_EmissionColor", Color.black);
@@ -72,8 +73,8 @@ public class Lighting : MonoBehaviour
                 }
                 else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Sample1_Crossroad")
                 {
-                    valX = mainLight.transform.eulerAngles.x;
-                    valY = 45.0f;
+                    mainLight.intensity = 0f;
+                    mat.SetColor("_EmissionColor", Color.white);
                     SetActiveLights(true);
                 }
                 mainLight.transform.rotation = Quaternion.Euler(valX, valY, mainLight.transform.rotation.z);
@@ -82,18 +83,20 @@ public class Lighting : MonoBehaviour
                 break;
         }
 
-        Camera camera = FindObjectOfType<Camera>();
-        switch (wc.Conditions)
+        var cameras = FindObjectsOfType<Camera>();
+        foreach (Camera camera in cameras)
         {
-             
-            case 5:
-                var fog = camera.GetComponent<UnityStandardAssets.ImageEffects.GlobalFog>();
-                fog.heightDensity = 10;
-                fog.height = 2;
-                fog.startDistance = 4;
-                break;
-            default:
-                break;
+            switch (wc.Conditions)
+            {
+                case 5:
+                    var fog = camera.GetComponent<UnityStandardAssets.ImageEffects.GlobalFog>();
+                    fog.heightDensity = 10;
+                    fog.height = 2;
+                    fog.startDistance = 4;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

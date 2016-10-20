@@ -36,7 +36,8 @@ public class SimulationController : MonoBehaviour
     private bool _screenshotBufferFull = false;
     private string[] _actorsNames;
     private List<GameObject> _actors;
-
+    
+   
     void Start()
     {
         _crowdController = GetComponent<CrowdController>();
@@ -76,13 +77,60 @@ public class SimulationController : MonoBehaviour
             Close = true;
             MarkWithPlanes = false;
             GetComponent<CamerasController>().enabled = false;
+        }              
+        string time, con, size, box;
+        switch (weather.Time)
+        {
+            case 1:
+                time = "Moring";
+                break;
+            case 2:
+                time = "Noon";
+                break;
+            case 3:
+                time = "Evening";
+                break;
+            default:
+                time = "Time";
+                break;
         }
+        switch (weather.Conditions)
+        {
+            case 1:
+                con = "Sun";
+                break;
+            case 2:
+                con = "Rain";
+                break;
+            case 3:
+                con = "Snow";
+                break;
+            case 4:
+                con = "Overcast";
+                break;
+            case 5:
+                con = "Fog";
+                break;
+            default:
+                con = "Weather";
+                break;
+        }
+        size = _crowdController.MaxPeople.ToString();
+        
+        if (_screenshooter.MarkAgentsOnScreenshots)
+        {
+            box = "WithBB";
+        }
+        else
+        {
+            box = "WithoutBB";
+        }
+        ScreenshotsDirectory = string.Format("D:/Screenshots/{0}_{1}_{2}_{3}", time, con, size, box);
         weather.GenerateWeatherConditions();
         if (GetComponent<Lighting>() != null)
         {
             GetComponent<Lighting>().SetSampleSceneLighting();
         }
-        
         SessionLength *= _screenshooter.FrameRate;
         if (!Tracking)
         {
