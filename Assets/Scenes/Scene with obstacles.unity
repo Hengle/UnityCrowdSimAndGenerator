@@ -625,7 +625,7 @@ Prefab:
     - target: {fileID: 114000010568512236, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: ActionsFilter
-      value: '|B3010@RozmowaPrzezTelefon-E11-R01-T02|B3010@Kucanie-E16-R01-T02|B3010@Kopanie-E19-R02-T01'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114000010119231640, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}

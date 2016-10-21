@@ -1049,7 +1049,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013029285688, guid: 80ad3e00569d61449af1186161acd9da, type: 2}
       propertyPath: m_Name
-      value: Main Camera (3)
+      value: Camera_2
       objectReference: {fileID: 0}
     - target: {fileID: 4000014196666070, guid: 80ad3e00569d61449af1186161acd9da, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3733,7 +3733,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013029285688, guid: 80ad3e00569d61449af1186161acd9da, type: 2}
       propertyPath: m_Name
-      value: Main Camera
+      value: Camera_1
       objectReference: {fileID: 0}
     - target: {fileID: 4000014196666070, guid: 80ad3e00569d61449af1186161acd9da, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5089,7 +5089,7 @@ Prefab:
     - target: {fileID: 114000010119231640, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: LoadFromConfig
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010119231640, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
@@ -5099,7 +5099,7 @@ Prefab:
     - target: {fileID: 114000010119231640, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: Close
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010572236710, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
@@ -5144,6 +5144,11 @@ Prefab:
     - target: {fileID: 114000012837680498, guid: 9890b161335929e48ae32d3f5131a011,
         type: 2}
       propertyPath: Conditions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010119231640, guid: 9890b161335929e48ae32d3f5131a011,
+        type: 2}
+      propertyPath: Repeats
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7523,7 +7528,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013029285688, guid: 80ad3e00569d61449af1186161acd9da, type: 2}
       propertyPath: m_Name
-      value: Main Camera (5)
+      value: Camera_3
       objectReference: {fileID: 0}
     - target: {fileID: 4000014196666070, guid: 80ad3e00569d61449af1186161acd9da, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
