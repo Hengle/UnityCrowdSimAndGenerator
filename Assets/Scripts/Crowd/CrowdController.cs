@@ -50,14 +50,14 @@ public class CrowdController : MonoBehaviour
                 GameObject agent = (GameObject)Instantiate(Characters[index], generator.RandomPointOnNavMesh(transform.position), rotation);
                 agent.tag = "Crowd";
                 agent.name = string.Format("Crowd{0}", i);
-                if (Random.Range(0.0f, 100.0f) < 90.0f)
+                if (Random.Range(0.0f, 100.0f) < 99.0f)
                 {
-                    agent.GetComponent<NavMeshAgent>().speed = Random.Range(1.0f, 2.5f);
+                    agent.GetComponent<NavMeshAgent>().speed = Random.Range(1.6f, 3.0f);
                 }
                 else
                 {
-                    agent.GetComponent<NavMeshAgent>().speed = 10.0f;
-                }
+                    agent.GetComponent<NavMeshAgent>().speed = Random.Range(3.1f, 5.0f);
+        }
                 agent.GetComponent<NavMeshAgent>().stoppingDistance = 1.0f;
                 _crowd.Add(agent);
             }
@@ -175,9 +175,9 @@ public class CrowdController : MonoBehaviour
                 actions.Add(action);
                 actionIndex++;
             }
-            Action walk = new Action("walk", movementProbability * 3 / 4, actionIndex);
+            Action walk = new Action("walk", movementProbability * 0.95f, actionIndex);
             actionIndex++;
-            Action run = new Action("run", movementProbability / 4, actionIndex);
+            Action run = new Action("run", movementProbability * 0.05f, actionIndex);
             actionIndex++;
             Actor movementActor = new Actor(agent.name, prevIndexes);
             run.Actors = walk.Actors = new List<Actor> { movementActor };

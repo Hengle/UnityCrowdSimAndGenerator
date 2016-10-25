@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     private bool _settingDestinationFailed = false;
     private string _blendParam;
 
+    private string _nameToDisplay;
+    private int _levelIndex;
 
     public bool IsFinished
     {
@@ -31,6 +33,14 @@ public class Movement : MonoBehaviour
         {
             _speed = Mathf.Clamp(value, 0.0f, float.MaxValue);
             _nMA.speed = _speed;
+            if (_speed < 3.0f)
+            {
+                _nameToDisplay = "Walk";
+            }
+            else
+            {
+                _nameToDisplay = "Run";
+            }
         }
     }
     public Vector3 Destination
@@ -80,6 +90,43 @@ public class Movement : MonoBehaviour
         set
         {
             _finalRotation = value;
+        }
+    }
+
+    public string NameToDisplay
+    {
+        get
+        {
+            return _nameToDisplay;
+        }
+    }
+
+    public int LevelIndex
+    {
+        get
+        {
+            return _levelIndex;
+        }
+
+        set
+        {
+            _levelIndex = value;
+        }
+    }
+
+    public string ActorName
+    {
+        get
+        {
+            return name;
+        }
+    }
+
+    public string MocapId
+    {
+        get
+        {
+            return "";
         }
     }
 

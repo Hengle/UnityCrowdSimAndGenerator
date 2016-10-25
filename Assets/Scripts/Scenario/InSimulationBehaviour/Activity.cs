@@ -23,6 +23,9 @@ public class Activity : MonoBehaviour
     private Bounds _actionBounds;
     private GameObject _actionArena;
 
+    private string _nameToDisplay;
+    private int _levelIndex;
+
     public DynamicAnimationState _dynamicAnimationState;
 
     public bool IsFinished
@@ -54,6 +57,8 @@ public class Activity : MonoBehaviour
         set
         {
             _paramName = value;
+            string[] name = _paramName.Split('@');
+            _nameToDisplay = name[1];
             _isFinished = false;
             _elapsedTimeCounter = 0.0f;
             GetComponent<NavMeshAgent>().obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
@@ -111,6 +116,44 @@ public class Activity : MonoBehaviour
         }
     }
 
+    public string NameToDisplay
+    {
+        get
+        {
+            return _nameToDisplay;
+        }
+    }
+
+    public int LevelIndex
+    {
+        get
+        {
+            return _levelIndex;
+        }
+
+        set
+        {
+            _levelIndex = value;
+        }
+    }
+
+    public string ActorName
+    {
+        get
+        {
+            return name;
+        }
+    }
+
+    public string MocapId
+    {
+        get
+        {
+            string[] name = _paramName.Split('@');
+            return name[0];
+        }
+    }
+
     private void CreateLocalAnimatorControllerCopy()
     {
         AnimatorController currentController = _animator.runtimeAnimatorController as AnimatorController;
@@ -154,7 +197,7 @@ public class Activity : MonoBehaviour
     }
 
     void Update()
-    {
+    {  
         if (!IsFinished)
         {
 
@@ -189,6 +232,7 @@ public class Activity : MonoBehaviour
             {
                 if (!_canExecuteComplexAction)
                 {
+                    _nameToDisplay = "Waiting";
                     _canExecuteComplexAction = true;
                     foreach (bool agentNearbyCheck in _requiredAgentsNearbyCheck)
                     {
@@ -201,6 +245,8 @@ public class Activity : MonoBehaviour
                 }
                 else
                 {
+                    string[] name = _paramName.Split('@');
+                    _nameToDisplay = name[1];
                     if (ExitTime > 0.0f && _elapsedTimeCounter <= ExitTime)
                     {
                         if (_elapsedTimeCounter >= ExitTime * 0.9f)
@@ -226,6 +272,7 @@ public class Activity : MonoBehaviour
                     }
                 }
             }
+            Debug.Log(string.Format("{0} {1} {2} {3}", LevelIndex, MocapId, ActorName, NameToDisplay));
         }
         else
         {
