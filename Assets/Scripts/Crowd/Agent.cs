@@ -68,7 +68,7 @@ public class Agent : MonoBehaviour
     static int deathCounter = 0;
     void OnDestroy()
     {
-        print(gameObject.name + " was destroyed! " + deathCounter);
+        //print(gameObject.name + " was destroyed! " + deathCounter);
         deathCounter++;
     }
 

@@ -272,7 +272,7 @@ public class Activity : MonoBehaviour
                     }
                 }
             }
-            Debug.Log(string.Format("{0} {1} {2} {3}", LevelIndex, MocapId, ActorName, NameToDisplay));
+            //Debug.Log(string.Format("{0} {1} {2} {3}", LevelIndex, MocapId, ActorName, NameToDisplay));
         }
         else
         {
