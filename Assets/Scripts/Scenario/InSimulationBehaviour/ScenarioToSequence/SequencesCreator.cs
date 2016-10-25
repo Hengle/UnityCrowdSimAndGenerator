@@ -614,7 +614,7 @@ public class SequencesCreator
                 }
                 break;
             case "run":
-                float speedR = UnityEngine.Random.Range(3.1f, 5.5f);//(6.0f, 10.0f);
+                float speedR = UnityEngine.Random.Range(3.1f, 5.0f);//(6.0f, 10.0f);
                 mData = new MovementData(point, speedR);
                 if (action.Blends != null)
                 {

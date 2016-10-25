@@ -10,12 +10,12 @@
 		</action>
 	</level>
 	<level id="1">
-		<action prob="0.5" name="RozmowaPrzezTelefon-E11-R01-T02" id ="2">
+		<action prob="0.5" name="PhoneCall" id ="2">
 			<actor name="actor1" mocapId ="B3010">
 				<prev id ="0"></prev>
 			</actor>
 		</action>
-		<action prob="0.5" name="Przywitanie-E23-R01-T01" id="3">
+		<action prob="0.5" name="Handshake-Complex" id="3">
 			<actor name="actor1" mocapId ="B3010">
 				<prev id ="0"></prev>
 			</actor>
@@ -45,7 +45,7 @@
 				<prev id="3"></prev>
 			</actor>
 		</action>
-		<action prob="1.0" name="Przywitanie-E23-R01-T01" id="8">
+		<action prob="1.0" name="Handshake-Complex" id="8">
 			<actor name="actor1" mocapId ="B3010">
 				<prev id ="2"></prev>
 			</actor>
@@ -56,7 +56,7 @@
 		</action>
 	</level>
 	<level id="3">
-		<action prob="1.0" name="RozmowaPrzezTelefon-E11-R01-T02" id ="9">
+		<action prob="1.0" name="PhoneCall" id ="9">
 			<actor name="actor1" mocapId ="B3010">
 				<prev id ="8"></prev>
 			</actor>

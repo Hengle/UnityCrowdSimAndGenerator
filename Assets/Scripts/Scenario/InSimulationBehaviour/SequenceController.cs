@@ -95,6 +95,7 @@ public class SequenceController : MonoBehaviour
             if (_sequence[_currentActivityIndex + 1].Movement != null)
             {
                 _movementScript.Speed = _sequence[_currentActivityIndex + 1].Movement.Speed;
+                _movementScript.LevelIndex = _currentActivityIndex + 2;
                 _movementScript.BlendParameter = _sequence[_currentActivityIndex + 1].Movement.Blend;
 
                 Vector3 positionOffsetForMultiActorActivity = Vector3.zero;
@@ -133,15 +134,7 @@ public class SequenceController : MonoBehaviour
                 if (!_isCrowd)
                 {
                     _movementScript.Destination = _sequence[_currentActivityIndex + 1].Movement.Waypoint + positionOffsetForMultiActorActivity;
-
-                    if (_sequence[_currentActivityIndex + 1].Movement.Speed < 5.0f)
-                    {
-                        GetComponent<DisplayActivityText>().ChangeText("Walking" + " " + _sequence[_currentActivityIndex + 1].Movement.Blend);
-                    }
-                    else
-                    {
-                        GetComponent<DisplayActivityText>().ChangeText("Running" + " " + _sequence[_currentActivityIndex + 1].Movement.Blend);
-                    }
+                    GetComponent<DisplayActivityText>().ChangeText(string.Format("{0}_{1}_{2}", _movementScript.LevelIndex, _movementScript.ActorName, _movementScript.NameToDisplay));        
                 }
                 else
                 {
@@ -175,9 +168,10 @@ public class SequenceController : MonoBehaviour
                 _actionScript.OtherAgents = _sequence[_currentActivityIndex + 1].Activity.RequiredAgents;
                 _actionScript.ParamName = _sequence[_currentActivityIndex + 1].Activity.ParameterName;
                 _actionScript.ActionBounds = _sequence[_currentActivityIndex + 1].Activity.ComplexActionBounds;
+                _actionScript.LevelIndex = _currentActivityIndex + 2;
                 if (!_isCrowd)
                 {
-                    GetComponent<DisplayActivityText>().ChangeText(_sequence[_currentActivityIndex + 1].Activity.ParameterName + " " + _sequence[_currentActivityIndex + 1].Activity.Blend);
+                    GetComponent<DisplayActivityText>().ChangeText(string.Format("{0}_{1}_{2}_{3}", _actionScript.LevelIndex, _actionScript.ActorName, _actionScript.MocapId, _actionScript.NameToDisplay));
                 }
 
             }

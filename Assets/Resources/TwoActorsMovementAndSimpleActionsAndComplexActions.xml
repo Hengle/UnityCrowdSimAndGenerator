@@ -10,7 +10,7 @@
 		</action>
 	</level>
 	<level id="1">
-		<action prob="1.0" name="RozmowaPrzezTelefon-E11-R01-T02" id ="2">
+		<action prob="1.0" name="PhoneCall" id ="2">
 			<actor name="actor1" mocapId ="B3010">
 				<prev id ="0"></prev>
 			</actor>
@@ -27,7 +27,7 @@
 		</action>
 	</level>
 	<level id="2">
-		<action prob="1.0" name="Popchniecie-E25-R02-T03" id ="5">
+		<action prob="1.0" name="Push-Complex" id ="5">
 			<actor name="actor1" mocapId ="B3010">
 				<prev id="2"></prev>
 			</actor>
@@ -38,7 +38,7 @@
 		</action>
 	</level>
 	<level id="3">
-		<action prob="1.0" name="RozmowaPrzezTelefon-E11-R01-T02" id="6">
+		<action prob="1.0" name="PhoneCall" id="6">
 			<actor name="actor1" mocapId ="B3010">
 				<prev id="5"></prev>
 			</actor>
