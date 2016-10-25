@@ -12,6 +12,7 @@ TagManager:
   - conc
   - gableroof
   - MainLight
+  - ActionZone
   layers:
   - Default
   - TransparentFX

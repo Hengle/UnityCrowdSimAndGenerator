@@ -3,7 +3,8 @@
 public class NavMeshPointGenerator
 {
     private float _range;
-
+    GameObject[] _actionZones;
+    System.Random _rng;
     public NavMeshPointGenerator(float range)
     {
         _range = range;
@@ -12,9 +13,10 @@ public class NavMeshPointGenerator
 
     public NavMeshPointGenerator()
     {
+        _actionZones = GameObject.FindGameObjectsWithTag("ActionZone");
+        _rng = new System.Random();
         Bounds navMeshBounds = new Bounds();
-        navMeshBounds.center = Vector3.zero;
-        
+        navMeshBounds.center = Vector3.zero;       
         
         Vector3[] navMeshVertices = NavMesh.CalculateTriangulation().vertices;
 
@@ -38,9 +40,10 @@ public class NavMeshPointGenerator
 
         GameObject bb = new GameObject();
         bb.transform.position = mean;
-        var col = bb.AddComponent<BoxCollider>();
+        var col = bb.AddComponent<SphereCollider>();
+        col.isTrigger = true;
         col.center = Vector3.zero;
-        col.size = navMeshBounds.size;
+        col.radius = navMeshBounds.extents.magnitude;//navMeshBounds.size;
 
         _range = navMeshBounds.extents.magnitude;
     }
@@ -51,11 +54,30 @@ public class NavMeshPointGenerator
         {
             Vector3 randomPoint = center + Random.insideUnitSphere * _range;
             NavMeshHit hit;
-            if (NavMesh.SamplePosition(randomPoint, out hit, 10.0f, NavMesh.AllAreas))
+            if (NavMesh.SamplePosition(randomPoint, out hit, 0.1f, NavMesh.AllAreas))
             {
                 return hit.position;
             }
         } while (true);
+    }
+
+    public Vector3 RandomPointWithinActionZones()
+    {
+        int randomIndex = _rng.Next(0,_actionZones.Length - 1);
+        Bounds bounds = _actionZones[randomIndex].GetComponent<BoxCollider>().bounds;
+
+        do
+        {
+            Vector3 randomPoint = bounds.center + Random.insideUnitSphere * bounds.extents.magnitude;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(randomPoint, out hit, 0.1f, NavMesh.AllAreas))
+            {
+                return hit.position;
+            }
+
+        } while (true);
+
+
     }
 
 
