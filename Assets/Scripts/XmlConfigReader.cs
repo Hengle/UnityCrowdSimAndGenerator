@@ -17,7 +17,7 @@ public static class XmlConfigReader
         public int Repeats;
         public int Instances;
         public string ResultsDirectory;
-        public bool BoundingBoxes;
+        public int BoundingBoxes;
         public int ResolutionWidth;
         public int ResolutionHeight;
         public int FrameRate;
@@ -54,7 +54,7 @@ public static class XmlConfigReader
             Data.Instances = int.Parse(configElement.ChildNodes.Item(2).Attributes.Item(4).Value);
 
             Data.ResultsDirectory = configElement.ChildNodes.Item(3).Attributes.Item(0).Value;
-            Data.BoundingBoxes = Convert.ToBoolean(configElement.ChildNodes.Item(3).Attributes.Item(1).Value);
+            Data.BoundingBoxes = int.Parse(configElement.ChildNodes.Item(3).Attributes.Item(1).Value);
             Data.ResolutionWidth = int.Parse(configElement.ChildNodes.Item(3).Attributes.Item(2).Value);
             Data.ResolutionHeight = int.Parse(configElement.ChildNodes.Item(3).Attributes.Item(3).Value);
             Data.FrameRate = int.Parse(configElement.ChildNodes.Item(3).Attributes.Item(4).Value);

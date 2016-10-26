@@ -152,15 +152,14 @@ public class Movement : MonoBehaviour
                 if (!_isInPosition)
                 {
                     CheckPosition();
+                    if (_nMA.remainingDistance < 0.1f)
+                    {
+                        transform.position = Vector3.Lerp(transform.position, _nMA.destination, Time.deltaTime);
+                    }
                 }
                 else
                 {
                     CheckRotation();
-                }
-
-                if (_nMA.remainingDistance < 0.1f)
-                {
-                    transform.position = Vector3.Lerp(transform.position, _nMA.destination, Time.deltaTime);
                 }
             }          
         }
