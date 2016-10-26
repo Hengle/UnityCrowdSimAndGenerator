@@ -16,6 +16,7 @@ public class SequenceController : MonoBehaviour
     private List<GameObject> _planes;
     private bool _markActivities;
     private bool _isCrowd;
+    private int _scenarioLevelIndex;
 
     public bool MarkActivities
     {
@@ -58,6 +59,7 @@ public class SequenceController : MonoBehaviour
         _actionScript = GetComponent<Activity>();
         _agent = GetComponent<Agent>();
         _isFinished = true;
+        _scenarioLevelIndex = _currentActivityIndex;
     }
 
     void Update()
@@ -92,10 +94,16 @@ public class SequenceController : MonoBehaviour
     {
         if (_currentActivityIndex + 1 < _sequence.Count)
         {
+            _scenarioLevelIndex++;
+
             if (_sequence[_currentActivityIndex + 1].Movement != null)
             {
+                if (_sequence[_currentActivityIndex + 1].Movement.Forced)
+                {
+                    _scenarioLevelIndex--;
+                }
                 _movementScript.Speed = _sequence[_currentActivityIndex + 1].Movement.Speed;
-                _movementScript.LevelIndex = _currentActivityIndex + 2;
+                _movementScript.LevelIndex = _scenarioLevelIndex;
                 _movementScript.BlendParameter = _sequence[_currentActivityIndex + 1].Movement.Blend;
 
                 Vector3 positionOffsetForMultiActorActivity = Vector3.zero;
@@ -158,7 +166,7 @@ public class SequenceController : MonoBehaviour
                             break;
                         }
                     }
-                    MovementData forcedMovement = new MovementData(forcedPosition, 2.5f);
+                    MovementData forcedMovement = new MovementData(forcedPosition, 2.5f, true);
                     InGameActionInfo forcedAction = new InGameActionInfo(forcedMovement);
                     _sequence.Insert(_currentActivityIndex + 2, forcedAction);
                 }
@@ -168,7 +176,7 @@ public class SequenceController : MonoBehaviour
                 _actionScript.OtherAgents = _sequence[_currentActivityIndex + 1].Activity.RequiredAgents;
                 _actionScript.ParamName = _sequence[_currentActivityIndex + 1].Activity.ParameterName;
                 _actionScript.ActionBounds = _sequence[_currentActivityIndex + 1].Activity.ComplexActionBounds;
-                _actionScript.LevelIndex = _currentActivityIndex + 2;
+                _actionScript.LevelIndex = _scenarioLevelIndex;
                 if (!_isCrowd)
                 {
                     GetComponent<DisplayActivityText>().ChangeText(string.Format("{0}_{1}_{2}_{3}", _actionScript.LevelIndex, _actionScript.ActorName, _actionScript.MocapId, _actionScript.NameToDisplay));

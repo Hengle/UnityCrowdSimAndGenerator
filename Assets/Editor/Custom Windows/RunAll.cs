@@ -23,9 +23,9 @@ public class RunAll : EditorWindow
         public int time;
         public int conditions;
         public int crowd;
-        public bool boundingBox;
+        public int boundingBox;
 
-        public AllConfigs(int t, int c, int ppl, bool bb)
+        public AllConfigs(int t, int c, int ppl, int bb)
         {
             time = t;
             conditions = c;
@@ -61,7 +61,8 @@ public class RunAll : EditorWindow
             wc.Time = listOfAllConfigs[index].time;
             wc.Conditions = listOfAllConfigs[index].conditions;
             cc.MaxPeople = listOfAllConfigs[index].crowd;
-            ss.MarkAgentsOnScreenshots = listOfAllConfigs[index].boundingBox;
+            ss.TakeScreenshots = true;
+            ss.MarkUpMode = listOfAllConfigs[index].boundingBox;
             index++;
             UnityEngine.Debug.Log(index);
             EditorApplication.isPlaying = true;
@@ -86,8 +87,9 @@ public class RunAll : EditorWindow
             {
                 for (int i = 1; i < maxTime; i++)
                 {
-                    listOfAllConfigs.Add(new AllConfigs(i, j, k, true));
-                    listOfAllConfigs.Add(new AllConfigs(i, j, k, false));
+                    listOfAllConfigs.Add(new AllConfigs(i, j, k, 1));
+                    listOfAllConfigs.Add(new AllConfigs(i, j, k, 2));
+                    listOfAllConfigs.Add(new AllConfigs(i, j, k, 3));
                 }
             }
         }
