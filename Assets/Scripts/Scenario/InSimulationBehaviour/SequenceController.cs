@@ -59,7 +59,7 @@ public class SequenceController : MonoBehaviour
         _actionScript = GetComponent<Activity>();
         _agent = GetComponent<Agent>();
         _isFinished = true;
-        _scenarioLevelIndex = _currentActivityIndex;
+        _scenarioLevelIndex = 0;
     }
 
     void Update()
@@ -152,13 +152,11 @@ public class SequenceController : MonoBehaviour
             }
 
             if (_sequence[_currentActivityIndex + 1].Activity != null)
-            {
-                
-
+            {               
                 if (_currentActivityIndex + 2 < _sequence.Count && _sequence[_currentActivityIndex + 2].Activity != null && _sequence[_currentActivityIndex + 2].Activity.RequiredAgents != null)
                 {
                     Vector3 forcedPosition = new Vector3();
-                    for (int i = _currentActivityIndex; i <= 0; i--)
+                    for (int i = _currentActivityIndex; i != -1; i--)
                     {
                         if (_sequence[i].Movement != null)
                         {

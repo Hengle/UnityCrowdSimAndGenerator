@@ -128,7 +128,8 @@ public class SequencesCreator
                     Probability = 1.0f,
                     Actors = new List<Actor> { new Actor()},
                     Blends = null,
-                };
+                    Forced = true,
+            };
                 actionSequencesPerAgent[i].Insert(0, forcedWalked);
             }
         }
@@ -606,6 +607,10 @@ public class SequencesCreator
             case "walk":
                 float speedW = UnityEngine.Random.Range(1.6f, 3.0f);//(2.5f, 5.0f);
                 mData = new MovementData(point, speedW);
+                if (action.Forced)
+                {
+                    mData.Forced = true;
+                }
                 if (action.Blends != null)
                 {
                     mData.Blend = string.Format("{0}@{1}", action.Blends[0].MocapId, action.Blends[0].Name);

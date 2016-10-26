@@ -138,9 +138,14 @@ public class Movement : MonoBehaviour
     }
 
     void Update()
-    {
+    {      
         if (!IsFinished)
         {
+            if (name.Equals("actor0_0"))
+            {
+                Debug.Log(_nMA.enabled + " " + transform.position + " " + _nMA.remainingDistance + " " + _isInPosition);
+            }
+
             if (_nMA.enabled)
             {
                 if (_settingDestinationFailed)
@@ -148,14 +153,16 @@ public class Movement : MonoBehaviour
                     _settingDestinationFailed = false;
                     Destination = _destination;
                 }
+                if (_nMA.remainingDistance < 0.5f)
+                {
+                    transform.position = Vector3.Lerp(transform.position, _destination, Time.deltaTime);
+                    Debug.Log("CLAMPING " + name);
+                }
 
                 if (!_isInPosition)
                 {
                     CheckPosition();
-                    if (_nMA.remainingDistance < 0.1f)
-                    {
-                        transform.position = Vector3.Lerp(transform.position, _nMA.destination, Time.deltaTime);
-                    }
+
                 }
                 else
                 {
@@ -176,7 +183,7 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                _nMA.SetDestination(_destination);
+              _nMA.SetDestination(_destination);
             }
         }
     }
