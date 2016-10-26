@@ -55,12 +55,10 @@ class AnnotationFileWriter
 
     public void SaveAnnotatedFramesAtDirectory(List<AnnotatedFrame> annotatedFrames, string directory)
     {
-
-
         string markedDirectory = directory + "Marked/";
         string unmarkedDirectory = directory + "UnMarked/";
 
-        if (! (saveMarked && saveUnmarked))
+        if (!(saveMarked && saveUnmarked))
         {
             markedDirectory = directory;
             unmarkedDirectory = directory;
@@ -76,7 +74,21 @@ class AnnotationFileWriter
             Directory.CreateDirectory(unmarkedDirectory);
         }
 
+        if (saveMarked)
+        {
+            SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, markedDirectory, true);
+        }
 
+        if (saveUnmarked)
+        {
+            SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, unmarkedDirectory, false);
+        }
+
+
+    }
+
+    public void SaveAnnotatedFramesAtDirectoryWithMarkedFlag(List<AnnotatedFrame> annotatedFrames, string directory, bool mark)
+    {
         StringBuilder trackingStringBuilder = new StringBuilder();
         StringBuilder actionRecognitionStringBuilder = new StringBuilder();
 
@@ -84,12 +96,12 @@ class AnnotationFileWriter
 
         if (saveMarked)
         {
-            _screenshotId = Directory.GetFiles(markedDirectory, string.Format("*.{0}", _imageFormat)).Length;
+            _screenshotId = Directory.GetFiles(directory, string.Format("*.{0}", _imageFormat)).Length;
         }
 
         if (saveUnmarked && !saveMarked)
         {
-            _screenshotId = Directory.GetFiles(unmarkedDirectory, string.Format("*.{0}", _imageFormat)).Length;
+            _screenshotId = Directory.GetFiles(directory, string.Format("*.{0}", _imageFormat)).Length;
         }
 
         foreach (var annotatedFrame in annotatedFrames)
@@ -131,48 +143,23 @@ class AnnotationFileWriter
                                                                 annotation.actionRecognitionBounds.width,
                                                                 annotation.actionRecognitionBounds.height));
 
-                    if (saveMarked)
-                    {
-                        SaveActorCutout(annotation, annotatedFrame.frame, markedDirectory);
-                    }
 
-                    if (saveUnmarked)
-                    {
-                        SaveActorCutout(annotation, annotatedFrame.frame, unmarkedDirectory);
-                    }
-
+                    SaveActorCutout(annotation, annotatedFrame.frame, directory);                   
                 }               
-            }           
-
-            if (saveUnmarked)
-            {               
-                SaveScreenshot(annotatedFrame.frame, unmarkedDirectory);
             }
 
-            if (saveMarked)
+            if (mark)
             {
                 DrawAnnotationRectangle(annotatedFrame.frame, annotatedFrame.annotations);
-                SaveScreenshot(annotatedFrame.frame, markedDirectory);
             }
-        }
-            
-        if (saveMarked)
-        {           
-            AppendAnnotationsFile(markedDirectory + "TrackingAnnotations.txt", trackingStringBuilder.ToString());
-            AppendAnnotationsFile(markedDirectory + "TrackingTraining.txt", trackingTrainingStringBuilder.ToString());
-            AppendAnnotationsFile(markedDirectory + "ActionRecognitionAnnotations.txt", actionRecognitionStringBuilder.ToString());
-        }
 
-        if (saveUnmarked)
-        {         
-            AppendAnnotationsFile(unmarkedDirectory + "TrackingAnnotations.txt", trackingStringBuilder.ToString());
-            AppendAnnotationsFile(unmarkedDirectory + "TrackingTraining.txt", trackingTrainingStringBuilder.ToString());
-            AppendAnnotationsFile(unmarkedDirectory + "ActionRecognitionAnnotations.txt", actionRecognitionStringBuilder.ToString());
-        }
 
-        //AppendAnnotationsFile(directory + "TrackingAnnotations.txt", trackingStringBuilder.ToString());
-        //AppendAnnotationsFile(directory + "TrackingTraining.txt", trackingTrainingStringBuilder.ToString());
-        //AppendAnnotationsFile(directory + "ActionRecognitionAnnotations.txt", actionRecognitionStringBuilder.ToString());
+            SaveScreenshot(annotatedFrame.frame, directory);
+        }      
+
+        AppendAnnotationsFile(directory + "TrackingAnnotations.txt", trackingStringBuilder.ToString());
+        AppendAnnotationsFile(directory + "TrackingTraining.txt", trackingTrainingStringBuilder.ToString());
+        AppendAnnotationsFile(directory + "ActionRecognitionAnnotations.txt", actionRecognitionStringBuilder.ToString());
     }
 
     private string ScreenShotName()
