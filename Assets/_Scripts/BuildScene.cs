@@ -20,6 +20,7 @@ namespace ProceduralSceneGenerator
         public GameObject grassTile;
         public GameObject grassTileWithoutTrees;
         public GameObject cameraPrafab;
+        public GameObject reflectionProbe;
 
         private BuildingTemplateMaterials btm;
         private GameObject scenePrefab;
@@ -474,6 +475,8 @@ namespace ProceduralSceneGenerator
                     sceneProp.gameObject.isStatic = true;
                 }            
             }
+            GameObject instance =  (GameObject) Instantiate(reflectionProbe, renderer);
+            instance.GetComponent<ReflectionProbe>().size = mapSize * 10 * Vector3.one * 1.2f; 
 
             GameObject overseer =  Instantiate(simulationOverseerPrefab);
             overseer.transform.parent = scenePrefab.transform;

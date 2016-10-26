@@ -476,6 +476,8 @@ MonoBehaviour:
     type: 2}
   cameraPrafab: {fileID: 1000013029285688, guid: 80ad3e00569d61449af1186161acd9da,
     type: 2}
+  reflectionProbe: {fileID: 1000010498801898, guid: 8364f31280738fb40bf398374888cc4f,
+    type: 2}
   mapSize: 10
 --- !u!4 &1001412845
 Transform:
