@@ -120,6 +120,10 @@ public class Activity : MonoBehaviour
     {
         get
         {
+            if (_complexAction && !_canExecuteComplexAction)
+            {
+                _nameToDisplay = "Waiting";
+            }
             return _nameToDisplay;
         }
     }
@@ -158,7 +162,7 @@ public class Activity : MonoBehaviour
     {
         get
         {
-            return _complexAction && _nameToDisplay != "Waiting";
+            return _complexAction && _canExecuteComplexAction && _nameToDisplay != "Waiting";
         }
     }
 
