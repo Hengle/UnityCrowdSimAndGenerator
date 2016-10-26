@@ -61,7 +61,7 @@ public class RunAll : EditorWindow
             wc.Time = listOfAllConfigs[index].time;
             wc.Conditions = listOfAllConfigs[index].conditions;
             cc.MaxPeople = listOfAllConfigs[index].crowd;
-            ss.MarkAgentsOnScreenshots = listOfAllConfigs[index].boundingBox;
+            //ss.MarkAgentsOnScreenshots = listOfAllConfigs[index].boundingBox;
             index++;
             UnityEngine.Debug.Log(index);
             EditorApplication.isPlaying = true;

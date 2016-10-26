@@ -29,7 +29,7 @@ class HumanoidModelImporter : AssetPostprocessor
         }
 
         useImporter = requirementsMet;
-
+        //useImporter = false;
         if (useImporter)
         {
             if (assetPath.Contains("@"))

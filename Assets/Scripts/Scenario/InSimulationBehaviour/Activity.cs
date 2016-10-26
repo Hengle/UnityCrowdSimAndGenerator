@@ -158,8 +158,7 @@ public class Activity : MonoBehaviour
     {
         get
         {
-
-            return _otherRequiredAgents != null;
+            return _complexAction && _nameToDisplay != "Waiting";
         }
     }
 

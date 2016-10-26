@@ -265,9 +265,7 @@ public class SequencesCreator
                             commonMeetingPoint = GenerateCorrectWaypoint(bounds);
                             lastMovements[j].Waypoint = commonMeetingPoint;
                         }
-
-                        SpawnMarker(commonMeetingPoint);
-
+                        //SpawnMarker(commonMeetingPoint);
                     }
                     else
                     {

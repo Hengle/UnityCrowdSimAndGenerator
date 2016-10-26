@@ -67,9 +67,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d770248ae0a979d45b4a1d9b9d024b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Repeats: 0
+  Repeats: 1
   ScenarioFile: 
-  SimultaneousScenarioInstances: 0
+  SimultaneousScenarioInstances: 1
   Tracking: 0
   SessionLength: 1
   ScreenshotsDirectory: D:/Screenshots
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Characters: []
-  MaxPeople: 0
+  MaxPeople: 1
   CreatePrefabs: 1
   LoadAgentsFromResources: 1
   AgentsFilter: 
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TakeScreenshots: 1
-  MarkAgentsOnScreenshots: 1
+  MarkUpMode: 1
   ResWidth: 1600
   ResHeight: 1200
   FrameRate: 24
