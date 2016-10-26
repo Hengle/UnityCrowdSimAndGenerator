@@ -154,6 +154,15 @@ public class Activity : MonoBehaviour
         }
     }
 
+    public bool IsComplex
+    {
+        get
+        {
+
+            return _otherRequiredAgents != null;
+        }
+    }
+
     private void CreateLocalAnimatorControllerCopy()
     {
         AnimatorController currentController = _animator.runtimeAnimatorController as AnimatorController;

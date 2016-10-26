@@ -82,22 +82,37 @@ public class Annotator
             if (IsVisibleFromCamera(camera, agent))
             {
                 bool agentIsCrowd = agent.tag == "Crowd";
-                string agentAction = agent.gameObject.GetComponent<Movement>().IsFinished ? agent.gameObject.GetComponent<Activity>().ParamName : "Moving";
+                string agentAction = agent.gameObject.GetComponent<Movement>().IsFinished ? agent.gameObject.GetComponent<Activity>().NameToDisplay : agent.gameObject.GetComponent<Movement>().NameToDisplay;
+                string agentName = agent.gameObject.GetComponent<Movement>().IsFinished ? agent.gameObject.GetComponent<Activity>().ActorName : agent.gameObject.GetComponent<Movement>().ActorName;//agent.gameObject.GetComponent<Activity>().ActorName;
+                string mocapName = agent.gameObject.GetComponent<Movement>().IsFinished ? agent.gameObject.GetComponent<Activity>().MocapId : agent.gameObject.GetComponent<Movement>().MocapId;//agent.gameObject.GetComponent<Activity>().MocapId;
+                int levelIndex = agent.gameObject.GetComponent<Movement>().IsFinished ? agent.gameObject.GetComponent<Activity>().LevelIndex : agent.gameObject.GetComponent<Movement>().LevelIndex;//agent.gameObject.GetComponent<Activity>().LevelIndex;
+                bool isComplex = agent.gameObject.GetComponent<Movement>().IsFinished ? agent.gameObject.GetComponent<Activity>().IsComplex : false;
                 Rect trackingRekt = new Rect();
                 Rect actionRecognitionRekt = new Rect();
 
-                trackingRekt = GetRect(agent, camera);//(bounds, camera);
+                trackingRekt = GetRect(agent, camera);
                 //AdjustTrackingRect(ref trackingRekt);
 
                 if (!agentIsCrowd)
                 {
-                    actionRecognitionRekt = GetFixedSizeRect(agent, camera);//(bounds, camera);
+                    actionRecognitionRekt = GetFixedSizeRect(agent, camera);
                 }
                 
                 if (IsRectValid(trackingRekt))
                 {                                                         
                     Agent a = agent.GetComponent<Agent>();
-                    annotations.Add(new Annotation(agentAction, trackingRekt, actionRecognitionRekt, a.AgentId, 1.0f, agent.transform.position, agentIsCrowd, IsRectValid(actionRecognitionRekt)));
+                    annotations.Add(new Annotation(agentAction, 
+                                                    trackingRekt, 
+                                                    actionRecognitionRekt, 
+                                                    a.AgentId, 
+                                                    1.0f, 
+                                                    agent.transform.position, 
+                                                    agentIsCrowd, 
+                                                    IsRectValid(actionRecognitionRekt),
+                                                    levelIndex,
+                                                    agentName,
+                                                    mocapName,
+                                                    isComplex));
                 }
             }           
         }
@@ -105,12 +120,12 @@ public class Annotator
     }
     
     //REKT
-    private Rect GetRect(GameObject agent, Camera camera)//(Bounds bounds, Camera camera)
+    private Rect GetRect(GameObject agent, Camera camera)
     {
         SkinnedMeshRenderer biggest = agent.GetComponentsInChildren<SkinnedMeshRenderer>().Aggregate((i1, i2) => i1.bounds.extents.magnitude > i2.bounds.extents.magnitude ? i1 : i2);
         biggest.sharedMesh.RecalculateBounds();
         biggest.updateWhenOffscreen = true;
-        Bounds bounds = biggest.bounds;//.sharedMesh.bounds;//biggest.bounds;
+        Bounds bounds = biggest.bounds;
 
         Vector4[] pts = new Vector4[8];
 
@@ -170,9 +185,6 @@ public class Annotator
         }
 
         Rect r = Rect.MinMaxRect((int)min.x, (int)min.y, (int)max.x, (int)max.y);   
-        //Debug.DrawLine()
-
-
         return r;
     }
 

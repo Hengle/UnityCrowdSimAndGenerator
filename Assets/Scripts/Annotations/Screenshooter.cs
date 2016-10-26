@@ -16,7 +16,7 @@ public class Screenshooter : MonoBehaviour
     private static int screenshotId = 0;
 
     public bool TakeScreenshots = false;
-    public bool MarkAgentsOnScreenshots = false;
+    public int MarkUpMode = 0;
     public int ResWidth = 1600;
     public int ResHeight = 1200;
     public int FrameRate = 24;
@@ -40,18 +40,18 @@ public class Screenshooter : MonoBehaviour
     {
         Time.captureFramerate = FrameRate;
         _annotationFileWriter = new AnnotationFileWriter();
-        _annotationFileWriter.MarkAgentsOnScreenshots = MarkAgentsOnScreenshots;
+        _annotationFileWriter.MarkUpMode = MarkUpMode;
         _simulationController = FindObjectOfType<SimulationController>();
         _cameras = FindObjectsOfType<Camera>();
         SetupDictionary();
     }
 
 
-    public void SetParams(bool takeScreens, bool markAgents)
+    public void SetParams(bool takeScreens, int markUpMode)
     {
         TakeScreenshots = takeScreens;
-        MarkAgentsOnScreenshots = markAgents;
-        _annotationFileWriter.MarkAgentsOnScreenshots = MarkAgentsOnScreenshots;
+        MarkUpMode = markUpMode;
+        _annotationFileWriter.MarkUpMode = MarkUpMode;
 
     }
 
