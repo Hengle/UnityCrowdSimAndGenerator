@@ -22,7 +22,9 @@ public class Activity : MonoBehaviour
     private bool _isFinished;
     private NavMeshAgent _navMeshAgent;
     private Bounds _actionBounds;
+    private Bounds _idleStateBounds;
     private GameObject _actionArena;
+    private GameObject _idleStateArena;
 
     private string _nameToDisplay;
     private int _levelIndex;
@@ -175,24 +177,24 @@ public class Activity : MonoBehaviour
         _animator.runtimeAnimatorController = newController;
     }
 
-    private void CreateActionArena()
+    private void CreateArena(ref GameObject arena, Bounds bounds)
     {
-        if (_actionArena == null)
+        if (arena == null)
         {
-            _actionArena = new GameObject();
-            NavMeshObstacle obstacle = _actionArena.AddComponent<NavMeshObstacle>();
+            arena = new GameObject();
+            NavMeshObstacle obstacle = arena.AddComponent<NavMeshObstacle>();
             obstacle.carving = true;
             obstacle.center = gameObject.transform.position;
-            obstacle.size = _actionBounds.size;
+            obstacle.size = bounds.size;
         }
     }
 
-    private void DeleteActionArena()
+    private void DeleteArena(ref GameObject arena)
     {
-        if (_actionArena != null)
+        if (arena != null)
         {
-            GameObject.DestroyImmediate(_actionArena);
-            _actionArena = null;
+            DestroyImmediate(arena);
+            arena = null;
         }
     }
 
@@ -205,6 +207,7 @@ public class Activity : MonoBehaviour
         _sphereCollider.isTrigger = true;
         _sphereCollider.enabled = false;
         _isFinished = true;
+        _idleStateBounds = new Bounds(Vector3.zero, new Vector3(0.1f, 1.0f, 0.1f));
 
         CreateLocalAnimatorControllerCopy();
     }
@@ -213,18 +216,18 @@ public class Activity : MonoBehaviour
     {
         if (!IsFinished)
         {
-
+            _navMeshAgent.enabled = false;
             if (!_complexAction)
             {
                 if (ExitTime > 0.0f && _elapsedTimeCounter <= ExitTime)
                 {
                     if (_elapsedTimeCounter >= ExitTime * 0.9f)
                     {
-                        DeleteActionArena();
+                        DeleteArena(ref _actionArena);
                     }
                     else
                     {
-                        CreateActionArena();
+                        CreateArena(ref _actionArena, _actionBounds);
                     }
 
                     _navMeshAgent.enabled = false;
@@ -237,7 +240,7 @@ public class Activity : MonoBehaviour
                 {
                     _isFinished = true;
                     _dynamicAnimationState.ExitState();
-                    DeleteActionArena();
+                    DeleteArena(ref _actionArena);
                     _navMeshAgent.enabled = true;
                 }
             }
@@ -245,6 +248,7 @@ public class Activity : MonoBehaviour
             {
                 if (!_canExecuteComplexAction)
                 {
+                    CreateArena(ref _idleStateArena, _idleStateBounds);
                     _nameToDisplay = IDLE_STATE_NAME;
                     _canExecuteComplexAction = true;
                     foreach (bool agentNearbyCheck in _requiredAgentsNearbyCheck)
@@ -258,17 +262,19 @@ public class Activity : MonoBehaviour
                 }
                 else
                 {
+                    _sphereCollider.enabled = false;
+                    DeleteArena(ref _idleStateArena);
                     string[] name = _paramName.Split('@');
                     _nameToDisplay = name[1];
                     if (ExitTime > 0.0f && _elapsedTimeCounter <= ExitTime)
                     {
                         if (_elapsedTimeCounter >= ExitTime * 0.9f)
                         {
-                            DeleteActionArena();
+                            DeleteArena(ref _actionArena);
                         }
                         else
                         {
-                            CreateActionArena();
+                            CreateArena(ref _actionArena, _actionBounds);
                         }
 
                         _navMeshAgent.enabled = false;
@@ -280,16 +286,16 @@ public class Activity : MonoBehaviour
                     {
                         _isFinished = true;
                         _dynamicAnimationState.ExitState();
-                        DeleteActionArena();
+                        DeleteArena(ref _actionArena);
                         _navMeshAgent.enabled = true;
                     }
                 }
             }
-            //Debug.Log(string.Format("{0} {1} {2} {3}", LevelIndex, MocapId, ActorName, NameToDisplay));
         }
         else
         {
-            GetComponent<NavMeshAgent>().obstacleAvoidanceType = ObstacleAvoidanceType.HighQualityObstacleAvoidance;
+            _navMeshAgent.enabled = true;
+            _navMeshAgent.obstacleAvoidanceType = ObstacleAvoidanceType.HighQualityObstacleAvoidance;
             _elapsedTimeCounter = 0.0f;
             _otherRequiredAgents = null;
             _complexAction = false;
