@@ -1,0 +1,1390 @@
+fileFormatVersion: 2
+guid: 60a77be0527347d449073bd59cfe8c26
+timeCreated: 1477573145
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: B0238
+    100002: B0238:ARIEL
+    100004: B0238:C7
+    100006: B0238:CLAV
+    100008: B0238:LANK
+    100010: B0238:LBHD
+    100012: B0238:LBSH
+    100014: B0238:LBWT
+    100016: B0238:LELB
+    100018: B0238:LFHD
+    100020: B0238:LFSH
+    100022: B0238:LFWT
+    100024: B0238:LHEL
+    100026: B0238:LHIP
+    100028: B0238:LIEL
+    100030: B0238:LIHAND
+    100032: B0238:LIWR
+    100034: B0238:LKNE
+    100036: B0238:LKNI
+    100038: B0238:LMT1
+    100040: B0238:LMT5
+    100042: B0238:LMWT
+    100044: B0238:LOHAND
+    100046: B0238:LOWR
+    100048: B0238:LSHN
+    100050: B0238:LTOE
+    100052: B0238:LUPA
+    100054: B0238:LWRE
+    100056: B0238:RANK
+    100058: B0238:RBHD
+    100060: B0238:RBSH
+    100062: B0238:RBWT
+    100064: B0238:RELB
+    100066: B0238:RFHD
+    100068: B0238:RFSH
+    100070: B0238:RFWT
+    100072: B0238:RHEL
+    100074: B0238:RHIP
+    100076: B0238:RIEL
+    100078: B0238:RIHAND
+    100080: B0238:RIWR
+    100082: B0238:RKNE
+    100084: B0238:RKNI
+    100086: B0238:RMT1
+    100088: B0238:RMT5
+    100090: B0238:RMWT
+    100092: B0238:ROHAND
+    100094: B0238:ROWR
+    100096: B0238:RSHN
+    100098: B0238:RTOE
+    100100: B0238:RUPA
+    100102: B0238:RWRE
+    100104: B0238:Solving
+    100106: B0238:Solving:Head
+    100108: B0238:Solving:HeadEnd
+    100110: B0238:Solving:Hips
+    100112: B0238:Solving:L_FingersEnd
+    100114: B0238:Solving:LeftArm
+    100116: B0238:Solving:LeftFoot
+    100118: B0238:Solving:LeftForeArm
+    100120: B0238:Solving:LeftHand
+    100122: B0238:Solving:LeftHandEnd
+    100124: B0238:Solving:LeftHandThumb1
+    100126: B0238:Solving:LeftHandThumb2
+    100128: B0238:Solving:LeftLeg
+    100130: B0238:Solving:LeftShoulder
+    100132: B0238:Solving:LeftToeBase
+    100134: B0238:Solving:LeftToeBaseEnd
+    100136: B0238:Solving:LeftUpLeg
+    100138: B0238:Solving:Neck
+    100140: B0238:Solving:R_FingersEnd
+    100142: B0238:Solving:RightArm
+    100144: B0238:Solving:RightFoot
+    100146: B0238:Solving:RightForeArm
+    100148: B0238:Solving:RightHand
+    100150: B0238:Solving:RightHandEnd
+    100152: B0238:Solving:RightHandThumb1
+    100154: B0238:Solving:RightHandThumb2
+    100156: B0238:Solving:RightLeg
+    100158: B0238:Solving:RightShoulder
+    100160: B0238:Solving:RightToeBase
+    100162: B0238:Solving:RightToeBaseEnd
+    100164: B0238:Solving:RightUpLeg
+    100166: B0238:Solving:Spine
+    100168: B0238:Solving:Spine1
+    100170: B0238:Solving:Spine2
+    100172: B0238:Solving:Spine3
+    100174: B0238:STRN
+    100176: B0238:T10
+    100178: //RootNode
+    100180: B0275
+    100182: B0275:ARIEL
+    100184: B0275:C7
+    100186: B0275:CLAV
+    100188: B0275:LANK
+    100190: B0275:LBHD
+    100192: B0275:LBSH
+    100194: B0275:LBWT
+    100196: B0275:LELB
+    100198: B0275:LFHD
+    100200: B0275:LFSH
+    100202: B0275:LFWT
+    100204: B0275:LHEL
+    100206: B0275:LHIP
+    100208: B0275:LIEL
+    100210: B0275:LIHAND
+    100212: B0275:LIWR
+    100214: B0275:LKNE
+    100216: B0275:LKNI
+    100218: B0275:LMT1
+    100220: B0275:LMT5
+    100222: B0275:LMWT
+    100224: B0275:LOHAND
+    100226: B0275:LOWR
+    100228: B0275:LSHN
+    100230: B0275:LTOE
+    100232: B0275:LUPA
+    100234: B0275:LWRE
+    100236: B0275:RANK
+    100238: B0275:RBHD
+    100240: B0275:RBSH
+    100242: B0275:RBWT
+    100244: B0275:RELB
+    100246: B0275:RFHD
+    100248: B0275:RFSH
+    100250: B0275:RFWT
+    100252: B0275:RHEL
+    100254: B0275:RHIP
+    100256: B0275:RIEL
+    100258: B0275:RIHAND
+    100260: B0275:RIWR
+    100262: B0275:RKNE
+    100264: B0275:RKNI
+    100266: B0275:RMT1
+    100268: B0275:RMT5
+    100270: B0275:RMWT
+    100272: B0275:ROHAND
+    100274: B0275:ROWR
+    100276: B0275:RSHN
+    100278: B0275:RTOE
+    100280: B0275:RUPA
+    100282: B0275:RWRE
+    100284: B0275:Solving
+    100286: B0275:Solving:Head
+    100288: B0275:Solving:HeadEnd
+    100290: B0275:Solving:Hips
+    100292: B0275:Solving:L_FingersEnd
+    100294: B0275:Solving:LeftArm
+    100296: B0275:Solving:LeftFoot
+    100298: B0275:Solving:LeftForeArm
+    100300: B0275:Solving:LeftHand
+    100302: B0275:Solving:LeftHandEnd
+    100304: B0275:Solving:LeftHandThumb1
+    100306: B0275:Solving:LeftHandThumb2
+    100308: B0275:Solving:LeftLeg
+    100310: B0275:Solving:LeftShoulder
+    100312: B0275:Solving:LeftToeBase
+    100314: B0275:Solving:LeftToeBaseEnd
+    100316: B0275:Solving:LeftUpLeg
+    100318: B0275:Solving:Neck
+    100320: B0275:Solving:R_FingersEnd
+    100322: B0275:Solving:RightArm
+    100324: B0275:Solving:RightFoot
+    100326: B0275:Solving:RightForeArm
+    100328: B0275:Solving:RightHand
+    100330: B0275:Solving:RightHandEnd
+    100332: B0275:Solving:RightHandThumb1
+    100334: B0275:Solving:RightHandThumb2
+    100336: B0275:Solving:RightLeg
+    100338: B0275:Solving:RightShoulder
+    100340: B0275:Solving:RightToeBase
+    100342: B0275:Solving:RightToeBaseEnd
+    100344: B0275:Solving:RightUpLeg
+    100346: B0275:Solving:Spine
+    100348: B0275:Solving:Spine1
+    100350: B0275:Solving:Spine2
+    100352: B0275:Solving:Spine3
+    100354: B0275:STRN
+    100356: B0275:T10
+    100358: B3014
+    100360: B3014:ARIEL
+    100362: B3014:C7
+    100364: B3014:CLAV
+    100366: B3014:LANK
+    100368: B3014:LBHD
+    100370: B3014:LBSH
+    100372: B3014:LBWT
+    100374: B3014:LELB
+    100376: B3014:LFHD
+    100378: B3014:LFSH
+    100380: B3014:LFWT
+    100382: B3014:LHEL
+    100384: B3014:LHIP
+    100386: B3014:LIEL
+    100388: B3014:LIHAND
+    100390: B3014:LIWR
+    100392: B3014:LKNE
+    100394: B3014:LKNI
+    100396: B3014:LMT1
+    100398: B3014:LMT5
+    100400: B3014:LMWT
+    100402: B3014:LOHAND
+    100404: B3014:LOWR
+    100406: B3014:LSHN
+    100408: B3014:LTOE
+    100410: B3014:LUPA
+    100412: B3014:LWRE
+    100414: B3014:RANK
+    100416: B3014:RBHD
+    100418: B3014:RBSH
+    100420: B3014:RBWT
+    100422: B3014:RELB
+    100424: B3014:RFHD
+    100426: B3014:RFSH
+    100428: B3014:RFWT
+    100430: B3014:RHEL
+    100432: B3014:RHIP
+    100434: B3014:RIEL
+    100436: B3014:RIHAND
+    100438: B3014:RIWR
+    100440: B3014:RKNE
+    100442: B3014:RKNI
+    100444: B3014:RMT1
+    100446: B3014:RMT5
+    100448: B3014:RMWT
+    100450: B3014:ROHAND
+    100452: B3014:ROWR
+    100454: B3014:RSHN
+    100456: B3014:RTOE
+    100458: B3014:RUPA
+    100460: B3014:RWRE
+    100462: B3014:Solving
+    100464: B3014:Solving:Head
+    100466: B3014:Solving:HeadEnd
+    100468: B3014:Solving:Hips
+    100470: B3014:Solving:L_FingersEnd
+    100472: B3014:Solving:LeftArm
+    100474: B3014:Solving:LeftFoot
+    100476: B3014:Solving:LeftForeArm
+    100478: B3014:Solving:LeftHand
+    100480: B3014:Solving:LeftHandEnd
+    100482: B3014:Solving:LeftHandThumb1
+    100484: B3014:Solving:LeftHandThumb2
+    100486: B3014:Solving:LeftLeg
+    100488: B3014:Solving:LeftShoulder
+    100490: B3014:Solving:LeftToeBase
+    100492: B3014:Solving:LeftToeBaseEnd
+    100494: B3014:Solving:LeftUpLeg
+    100496: B3014:Solving:Neck
+    100498: B3014:Solving:R_FingersEnd
+    100500: B3014:Solving:RightArm
+    100502: B3014:Solving:RightFoot
+    100504: B3014:Solving:RightForeArm
+    100506: B3014:Solving:RightHand
+    100508: B3014:Solving:RightHandEnd
+    100510: B3014:Solving:RightHandThumb1
+    100512: B3014:Solving:RightHandThumb2
+    100514: B3014:Solving:RightLeg
+    100516: B3014:Solving:RightShoulder
+    100518: B3014:Solving:RightToeBase
+    100520: B3014:Solving:RightToeBaseEnd
+    100522: B3014:Solving:RightUpLeg
+    100524: B3014:Solving:Spine
+    100526: B3014:Solving:Spine1
+    100528: B3014:Solving:Spine2
+    100530: B3014:Solving:Spine3
+    100532: B3014:STRN
+    100534: B3014:T10
+    100536: System
+    100538: System:Bonita_10_2099034
+    100540: System:Bonita_10_2100709
+    100542: System:Bonita_10_2100712
+    100544: System:Bonita_10_2100716
+    100546: System:Bonita_10_2100719
+    100548: System:Bonita_10_2100727
+    100550: System:Bonita_10_2100729
+    100552: System:Bonita_10_2100738
+    100554: System:Bonita_10_2100744
+    100556: System:Bonita_10_2100745
+    100558: System:T40_12695
+    100560: System:T40_13827
+    100562: System:T40_15290
+    100564: System:T40_15298
+    100566: System:T40_15462
+    100568: System:T40_15469
+    100570: System:T40_15475
+    100572: System:T40_15482
+    100574: System:T40_16731
+    100576: System:T40_16795
+    100578: System:Vantage_5_2107617
+    100580: System:Vantage_5_2107676
+    100582: System:Vantage_5_2107693
+    100584: System:Vantage_5_2107712
+    100586: System:Vantage_5_2107727
+    100588: System:Vantage_5_2107733
+    100590: System:Vantage_5_2107744
+    100592: System:Vantage_5_2108360
+    100594: System:Vantage_5_2111032
+    100596: System:Vantage_5_2111805
+    100598: Unlabeled_Markers
+    100600: Unlabeled_Markers:_118
+    100602: Unlabeled_Markers:_123
+    100604: Unlabeled_Markers:_128
+    100606: Unlabeled_Markers:_141
+    100608: Unlabeled_Markers:_142
+    100610: Unlabeled_Markers:_151
+    100612: Unlabeled_Markers:_159
+    100614: Unlabeled_Markers:_177
+    100616: Unlabeled_Markers:_179
+    100618: Unlabeled_Markers:_196
+    100620: Unlabeled_Markers:_198
+    100622: Unlabeled_Markers:_199
+    100624: Unlabeled_Markers:_200
+    100626: Unlabeled_Markers:_201
+    100628: Unlabeled_Markers:_202
+    100630: Unlabeled_Markers:_208
+    100632: Unlabeled_Markers:_213
+    100634: Unlabeled_Markers:_222
+    100636: Unlabeled_Markers:_233
+    100638: Unlabeled_Markers:_275
+    100640: Unlabeled_Markers:_276
+    100642: Unlabeled_Markers:_277
+    100644: Unlabeled_Markers:_279
+    100646: Unlabeled_Markers:_77
+    400000: B0238
+    400002: B0238:ARIEL
+    400004: B0238:C7
+    400006: B0238:CLAV
+    400008: B0238:LANK
+    400010: B0238:LBHD
+    400012: B0238:LBSH
+    400014: B0238:LBWT
+    400016: B0238:LELB
+    400018: B0238:LFHD
+    400020: B0238:LFSH
+    400022: B0238:LFWT
+    400024: B0238:LHEL
+    400026: B0238:LHIP
+    400028: B0238:LIEL
+    400030: B0238:LIHAND
+    400032: B0238:LIWR
+    400034: B0238:LKNE
+    400036: B0238:LKNI
+    400038: B0238:LMT1
+    400040: B0238:LMT5
+    400042: B0238:LMWT
+    400044: B0238:LOHAND
+    400046: B0238:LOWR
+    400048: B0238:LSHN
+    400050: B0238:LTOE
+    400052: B0238:LUPA
+    400054: B0238:LWRE
+    400056: B0238:RANK
+    400058: B0238:RBHD
+    400060: B0238:RBSH
+    400062: B0238:RBWT
+    400064: B0238:RELB
+    400066: B0238:RFHD
+    400068: B0238:RFSH
+    400070: B0238:RFWT
+    400072: B0238:RHEL
+    400074: B0238:RHIP
+    400076: B0238:RIEL
+    400078: B0238:RIHAND
+    400080: B0238:RIWR
+    400082: B0238:RKNE
+    400084: B0238:RKNI
+    400086: B0238:RMT1
+    400088: B0238:RMT5
+    400090: B0238:RMWT
+    400092: B0238:ROHAND
+    400094: B0238:ROWR
+    400096: B0238:RSHN
+    400098: B0238:RTOE
+    400100: B0238:RUPA
+    400102: B0238:RWRE
+    400104: B0238:Solving
+    400106: B0238:Solving:Head
+    400108: B0238:Solving:HeadEnd
+    400110: B0238:Solving:Hips
+    400112: B0238:Solving:L_FingersEnd
+    400114: B0238:Solving:LeftArm
+    400116: B0238:Solving:LeftFoot
+    400118: B0238:Solving:LeftForeArm
+    400120: B0238:Solving:LeftHand
+    400122: B0238:Solving:LeftHandEnd
+    400124: B0238:Solving:LeftHandThumb1
+    400126: B0238:Solving:LeftHandThumb2
+    400128: B0238:Solving:LeftLeg
+    400130: B0238:Solving:LeftShoulder
+    400132: B0238:Solving:LeftToeBase
+    400134: B0238:Solving:LeftToeBaseEnd
+    400136: B0238:Solving:LeftUpLeg
+    400138: B0238:Solving:Neck
+    400140: B0238:Solving:R_FingersEnd
+    400142: B0238:Solving:RightArm
+    400144: B0238:Solving:RightFoot
+    400146: B0238:Solving:RightForeArm
+    400148: B0238:Solving:RightHand
+    400150: B0238:Solving:RightHandEnd
+    400152: B0238:Solving:RightHandThumb1
+    400154: B0238:Solving:RightHandThumb2
+    400156: B0238:Solving:RightLeg
+    400158: B0238:Solving:RightShoulder
+    400160: B0238:Solving:RightToeBase
+    400162: B0238:Solving:RightToeBaseEnd
+    400164: B0238:Solving:RightUpLeg
+    400166: B0238:Solving:Spine
+    400168: B0238:Solving:Spine1
+    400170: B0238:Solving:Spine2
+    400172: B0238:Solving:Spine3
+    400174: B0238:STRN
+    400176: B0238:T10
+    400178: //RootNode
+    400180: B0275
+    400182: B0275:ARIEL
+    400184: B0275:C7
+    400186: B0275:CLAV
+    400188: B0275:LANK
+    400190: B0275:LBHD
+    400192: B0275:LBSH
+    400194: B0275:LBWT
+    400196: B0275:LELB
+    400198: B0275:LFHD
+    400200: B0275:LFSH
+    400202: B0275:LFWT
+    400204: B0275:LHEL
+    400206: B0275:LHIP
+    400208: B0275:LIEL
+    400210: B0275:LIHAND
+    400212: B0275:LIWR
+    400214: B0275:LKNE
+    400216: B0275:LKNI
+    400218: B0275:LMT1
+    400220: B0275:LMT5
+    400222: B0275:LMWT
+    400224: B0275:LOHAND
+    400226: B0275:LOWR
+    400228: B0275:LSHN
+    400230: B0275:LTOE
+    400232: B0275:LUPA
+    400234: B0275:LWRE
+    400236: B0275:RANK
+    400238: B0275:RBHD
+    400240: B0275:RBSH
+    400242: B0275:RBWT
+    400244: B0275:RELB
+    400246: B0275:RFHD
+    400248: B0275:RFSH
+    400250: B0275:RFWT
+    400252: B0275:RHEL
+    400254: B0275:RHIP
+    400256: B0275:RIEL
+    400258: B0275:RIHAND
+    400260: B0275:RIWR
+    400262: B0275:RKNE
+    400264: B0275:RKNI
+    400266: B0275:RMT1
+    400268: B0275:RMT5
+    400270: B0275:RMWT
+    400272: B0275:ROHAND
+    400274: B0275:ROWR
+    400276: B0275:RSHN
+    400278: B0275:RTOE
+    400280: B0275:RUPA
+    400282: B0275:RWRE
+    400284: B0275:Solving
+    400286: B0275:Solving:Head
+    400288: B0275:Solving:HeadEnd
+    400290: B0275:Solving:Hips
+    400292: B0275:Solving:L_FingersEnd
+    400294: B0275:Solving:LeftArm
+    400296: B0275:Solving:LeftFoot
+    400298: B0275:Solving:LeftForeArm
+    400300: B0275:Solving:LeftHand
+    400302: B0275:Solving:LeftHandEnd
+    400304: B0275:Solving:LeftHandThumb1
+    400306: B0275:Solving:LeftHandThumb2
+    400308: B0275:Solving:LeftLeg
+    400310: B0275:Solving:LeftShoulder
+    400312: B0275:Solving:LeftToeBase
+    400314: B0275:Solving:LeftToeBaseEnd
+    400316: B0275:Solving:LeftUpLeg
+    400318: B0275:Solving:Neck
+    400320: B0275:Solving:R_FingersEnd
+    400322: B0275:Solving:RightArm
+    400324: B0275:Solving:RightFoot
+    400326: B0275:Solving:RightForeArm
+    400328: B0275:Solving:RightHand
+    400330: B0275:Solving:RightHandEnd
+    400332: B0275:Solving:RightHandThumb1
+    400334: B0275:Solving:RightHandThumb2
+    400336: B0275:Solving:RightLeg
+    400338: B0275:Solving:RightShoulder
+    400340: B0275:Solving:RightToeBase
+    400342: B0275:Solving:RightToeBaseEnd
+    400344: B0275:Solving:RightUpLeg
+    400346: B0275:Solving:Spine
+    400348: B0275:Solving:Spine1
+    400350: B0275:Solving:Spine2
+    400352: B0275:Solving:Spine3
+    400354: B0275:STRN
+    400356: B0275:T10
+    400358: B3014
+    400360: B3014:ARIEL
+    400362: B3014:C7
+    400364: B3014:CLAV
+    400366: B3014:LANK
+    400368: B3014:LBHD
+    400370: B3014:LBSH
+    400372: B3014:LBWT
+    400374: B3014:LELB
+    400376: B3014:LFHD
+    400378: B3014:LFSH
+    400380: B3014:LFWT
+    400382: B3014:LHEL
+    400384: B3014:LHIP
+    400386: B3014:LIEL
+    400388: B3014:LIHAND
+    400390: B3014:LIWR
+    400392: B3014:LKNE
+    400394: B3014:LKNI
+    400396: B3014:LMT1
+    400398: B3014:LMT5
+    400400: B3014:LMWT
+    400402: B3014:LOHAND
+    400404: B3014:LOWR
+    400406: B3014:LSHN
+    400408: B3014:LTOE
+    400410: B3014:LUPA
+    400412: B3014:LWRE
+    400414: B3014:RANK
+    400416: B3014:RBHD
+    400418: B3014:RBSH
+    400420: B3014:RBWT
+    400422: B3014:RELB
+    400424: B3014:RFHD
+    400426: B3014:RFSH
+    400428: B3014:RFWT
+    400430: B3014:RHEL
+    400432: B3014:RHIP
+    400434: B3014:RIEL
+    400436: B3014:RIHAND
+    400438: B3014:RIWR
+    400440: B3014:RKNE
+    400442: B3014:RKNI
+    400444: B3014:RMT1
+    400446: B3014:RMT5
+    400448: B3014:RMWT
+    400450: B3014:ROHAND
+    400452: B3014:ROWR
+    400454: B3014:RSHN
+    400456: B3014:RTOE
+    400458: B3014:RUPA
+    400460: B3014:RWRE
+    400462: B3014:Solving
+    400464: B3014:Solving:Head
+    400466: B3014:Solving:HeadEnd
+    400468: B3014:Solving:Hips
+    400470: B3014:Solving:L_FingersEnd
+    400472: B3014:Solving:LeftArm
+    400474: B3014:Solving:LeftFoot
+    400476: B3014:Solving:LeftForeArm
+    400478: B3014:Solving:LeftHand
+    400480: B3014:Solving:LeftHandEnd
+    400482: B3014:Solving:LeftHandThumb1
+    400484: B3014:Solving:LeftHandThumb2
+    400486: B3014:Solving:LeftLeg
+    400488: B3014:Solving:LeftShoulder
+    400490: B3014:Solving:LeftToeBase
+    400492: B3014:Solving:LeftToeBaseEnd
+    400494: B3014:Solving:LeftUpLeg
+    400496: B3014:Solving:Neck
+    400498: B3014:Solving:R_FingersEnd
+    400500: B3014:Solving:RightArm
+    400502: B3014:Solving:RightFoot
+    400504: B3014:Solving:RightForeArm
+    400506: B3014:Solving:RightHand
+    400508: B3014:Solving:RightHandEnd
+    400510: B3014:Solving:RightHandThumb1
+    400512: B3014:Solving:RightHandThumb2
+    400514: B3014:Solving:RightLeg
+    400516: B3014:Solving:RightShoulder
+    400518: B3014:Solving:RightToeBase
+    400520: B3014:Solving:RightToeBaseEnd
+    400522: B3014:Solving:RightUpLeg
+    400524: B3014:Solving:Spine
+    400526: B3014:Solving:Spine1
+    400528: B3014:Solving:Spine2
+    400530: B3014:Solving:Spine3
+    400532: B3014:STRN
+    400534: B3014:T10
+    400536: System
+    400538: System:Bonita_10_2099034
+    400540: System:Bonita_10_2100709
+    400542: System:Bonita_10_2100712
+    400544: System:Bonita_10_2100716
+    400546: System:Bonita_10_2100719
+    400548: System:Bonita_10_2100727
+    400550: System:Bonita_10_2100729
+    400552: System:Bonita_10_2100738
+    400554: System:Bonita_10_2100744
+    400556: System:Bonita_10_2100745
+    400558: System:T40_12695
+    400560: System:T40_13827
+    400562: System:T40_15290
+    400564: System:T40_15298
+    400566: System:T40_15462
+    400568: System:T40_15469
+    400570: System:T40_15475
+    400572: System:T40_15482
+    400574: System:T40_16731
+    400576: System:T40_16795
+    400578: System:Vantage_5_2107617
+    400580: System:Vantage_5_2107676
+    400582: System:Vantage_5_2107693
+    400584: System:Vantage_5_2107712
+    400586: System:Vantage_5_2107727
+    400588: System:Vantage_5_2107733
+    400590: System:Vantage_5_2107744
+    400592: System:Vantage_5_2108360
+    400594: System:Vantage_5_2111032
+    400596: System:Vantage_5_2111805
+    400598: Unlabeled_Markers
+    400600: Unlabeled_Markers:_118
+    400602: Unlabeled_Markers:_123
+    400604: Unlabeled_Markers:_128
+    400606: Unlabeled_Markers:_141
+    400608: Unlabeled_Markers:_142
+    400610: Unlabeled_Markers:_151
+    400612: Unlabeled_Markers:_159
+    400614: Unlabeled_Markers:_177
+    400616: Unlabeled_Markers:_179
+    400618: Unlabeled_Markers:_196
+    400620: Unlabeled_Markers:_198
+    400622: Unlabeled_Markers:_199
+    400624: Unlabeled_Markers:_200
+    400626: Unlabeled_Markers:_201
+    400628: Unlabeled_Markers:_202
+    400630: Unlabeled_Markers:_208
+    400632: Unlabeled_Markers:_213
+    400634: Unlabeled_Markers:_222
+    400636: Unlabeled_Markers:_233
+    400638: Unlabeled_Markers:_275
+    400640: Unlabeled_Markers:_276
+    400642: Unlabeled_Markers:_277
+    400644: Unlabeled_Markers:_279
+    400646: Unlabeled_Markers:_77
+    7400000: Szarpanie_T01_x2d
+    7400002: B3014@IntenseCombat
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: <None>
+    animationImportErrors: 
+    animationImportWarnings: "\nDefault bone length found in this file is different
+      form the one found in the source avatar:\n\t'B0238:Solving:LeftLeg' : position
+      error = 16.538765 mm\n\t'B0238:Solving:LeftFoot' : position error = 11.549338
+      mm\n\t'B0238:Solving:LeftToeBase' : position error = 13.048830 mm\n\nClip 'Szarpanie_T01_x2d'
+      has import animation warnings that might lower retargeting quality:\n\t'B0238:Solving:Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'B0238:Solving:Spine2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths:
+    - B0238:Solving:Hips
+    clipAnimations:
+    - serializedVersion: 16
+      name: B3014@IntenseCombat
+      takeName: Szarpanie_T01_x2d
+      firstFrame: 85
+      lastFrame: 1498
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: B0238:Solving:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:Spine3
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: B0238:Solving:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: B0238@Reference(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:T40_16795
+      position: {x: 3.939542, y: 3.1506336, z: 5.603598}
+      rotation: {x: 0.8819163, y: 0.19947343, z: 0.4235929, w: 0.0548002}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100716
+      position: {x: -3.3656032, y: 0.75029755, z: 2.970485}
+      rotation: {x: 0.033516943, y: 0.9903162, z: -0.031460166, w: -0.13099901}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: System:Bonita_10_2100729
+      position: {x: 3.702577, y: 2.3426487, z: -0.4666372}
+      rotation: {x: 0.017219909, y: 0.09973393, z: 0.28390843, w: 0.95349497}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:ARIEL
+      position: {x: 0.12941188, y: 1.7216742, z: -1.0459158}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LFHD
+      position: {x: 0.083095044, y: 1.7213933, z: -0.9183603}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LBHD
+      position: {x: 0.030702204, y: 1.6297626, z: -1.0194697}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RFHD
+      position: {x: 0.21040675, y: 1.6782751, z: -0.9373369}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RBHD
+      position: {x: 0.20848571, y: 1.6115426, z: -1.0208344}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:C7
+      position: {x: 0.100032, y: 1.4877396, z: -1.1089119}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:T10
+      position: {x: 0.095121115, y: 1.2155557, z: -1.1452643}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:CLAV
+      position: {x: 0.11377631, y: 1.3983697, z: -0.8981879}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:STRN
+      position: {x: 0.12116513, y: 1.1872623, z: -0.8040736}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LFSH
+      position: {x: -0.030685319, y: 1.4426743, z: -0.9436022}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LBSH
+      position: {x: -0.052176416, y: 1.4059329, z: -1.1233549}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LUPA
+      position: {x: -0.18756925, y: 1.4957243, z: -1.0328121}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LELB
+      position: {x: -0.31220347, y: 1.4935273, z: -0.9978865}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LIEL
+      position: {x: -0.31025136, y: 1.3951483, z: -0.948619}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LOWR
+      position: {x: -0.52323055, y: 1.4928519, z: -0.9236563}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LIWR
+      position: {x: -0.48499918, y: 1.4979925, z: -0.83062965}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LWRE
+      position: {x: -0.41306174, y: 1.5099096, z: -0.96367425}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LIHAND
+      position: {x: -0.57627964, y: 1.5437264, z: -0.82686967}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LOHAND
+      position: {x: -0.5800807, y: 1.5178795, z: -0.9168749}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RFSH
+      position: {x: 0.24204853, y: 1.4438035, z: -0.980262}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RBSH
+      position: {x: 0.245727, y: 1.4050587, z: -1.1366603}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RUPA
+      position: {x: 0.40501568, y: 1.4599249, z: -1.1026542}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RELB
+      position: {x: 0.5373904, y: 1.477236, z: -1.0914159}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RIEL
+      position: {x: 0.5684668, y: 1.3814651, z: -1.0613718}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:ROWR
+      position: {x: 0.7429584, y: 1.4958439, z: -1.0730776}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RIWR
+      position: {x: 0.73525435, y: 1.4983648, z: -0.9770871}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RWRE
+      position: {x: 0.6359917, y: 1.5034126, z: -1.0777193}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RIHAND
+      position: {x: 0.81268615, y: 1.5303353, z: -0.9800749}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:ROHAND
+      position: {x: 0.8237083, y: 1.5155003, z: -1.059069}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LFWT
+      position: {x: -0.048348274, y: 0.9130547, z: -0.87024117}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LMWT
+      position: {x: 0.12747264, y: 1.0173154, z: -0.76761407}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LBWT
+      position: {x: 0.025039965, y: 0.973281, z: -1.1059853}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RFWT
+      position: {x: 0.27541018, y: 0.936039, z: -0.88808864}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RMWT
+      position: {x: 0.10323525, y: 0.9894652, z: -1.0996236}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RBWT
+      position: {x: 0.19330096, y: 0.96588004, z: -1.1156837}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LHIP
+      position: {x: -0.029162716, y: 0.5840102, z: -0.89687437}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LKNE
+      position: {x: -0.06450409, y: 0.43443838, z: -1.044491}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LKNI
+      position: {x: 0.07543777, y: 0.4382003, z: -0.9980977}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LSHN
+      position: {x: -0.059992608, y: 0.23922575, z: -0.9891737}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LANK
+      position: {x: -0.07693469, y: 0.0989105, z: -1.0424359}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LHEL
+      position: {x: 0.017990928, y: 0.07943945, z: -1.0830562}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LMT5
+      position: {x: -0.12013791, y: 0.04139523, z: -0.92596555}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LMT1
+      position: {x: -0.00078447966, y: 0.034937464, z: -0.90967923}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:LTOE
+      position: {x: -0.086726435, y: 0.046061218, z: -0.8614166}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RHIP
+      position: {x: 0.260935, y: 0.54060024, z: -0.92797834}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RKNE
+      position: {x: 0.28506517, y: 0.424025, z: -1.0602834}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RKNI
+      position: {x: 0.16267769, y: 0.4156996, z: -0.98581004}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RSHN
+      position: {x: 0.27435452, y: 0.26885864, z: -1.0142759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RANK
+      position: {x: 0.26693678, y: 0.08587681, z: -1.0910798}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RHEL
+      position: {x: 0.19720358, y: 0.07897911, z: -1.1199386}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RMT5
+      position: {x: 0.34131926, y: 0.04465154, z: -0.98768544}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RMT1
+      position: {x: 0.22056037, y: 0.03630891, z: -0.94152355}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:RTOE
+      position: {x: 0.3039063, y: 0.051424935, z: -0.89872426}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:Hips
+      position: {x: 0.0019542128, y: 0.9038253, z: -0.0007008314}
+      rotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:Spine
+      position: {x: -0, y: 0.04313815, z: 0.06470722}
+      rotation: {x: -0.08991302, y: -0.03742667, z: -0.008774064, w: 0.9952075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:Spine1
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: 0.052590724, y: -0.0016305244, z: 0.00040166997, w: 0.9986148}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:Spine2
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: 0.046037268, y: 0.0032435516, z: 0.011735177, w: 0.99886554}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:Spine3
+      position: {x: -0, y: 0, z: 0.0862763}
+      rotation: {x: 0.0052488926, y: 0.0061917333, z: 0.0016465157, w: 0.9999657}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:Neck
+      position: {x: -0, y: -0.03235361, z: 0.22647527}
+      rotation: {x: 0.092424475, y: -0.0005403856, z: 0.02061299, w: 0.99550617}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:Head
+      position: {x: -0, y: 0, z: 0.11862991}
+      rotation: {x: -0.09181412, y: 0.00467369, z: 0.027073028, w: 0.99539715}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:HeadEnd
+      position: {x: -0, y: 0, z: 0.13965975}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightShoulder
+      position: {x: 0.029757999, y: -0.049596667, z: 0.1606932}
+      rotation: {x: 0.025464252, y: 0.99943465, z: -0.0014133824, w: -0.02190769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightArm
+      position: {x: -0.14779785, y: -0.00000007250128, z: 0.00000024959445}
+      rotation: {x: -0.06673639, y: -0.011572808, z: -0.03690426, w: 0.9970207}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightForeArm
+      position: {x: -0.28405353, y: 0, z: 0}
+      rotation: {x: -0.0054405094, y: 0.023560371, z: 0.05271576, w: 0.9983168}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightHand
+      position: {x: -0.20037927, y: 0, z: 0}
+      rotation: {x: 0.19128291, y: 0.06555472, z: -0.071879916, w: 0.976702}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightHandEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:R_FingersEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightHandThumb1
+      position: {x: -0.024915682, y: -0.04152614, z: 0.016610455}
+      rotation: {x: 0.9876721, y: 0.13002947, z: 0.011375968, w: 0.08641026}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightHandThumb2
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftShoulder
+      position: {x: -0.029757999, y: -0.049596667, z: 0.1606932}
+      rotation: {x: 0.0052331993, y: -0.03233437, z: 0.011325983, w: 0.99939924}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftArm
+      position: {x: -0.14779806, y: 0, z: 0}
+      rotation: {x: 0.014847753, y: 0.06874729, z: -0.032903776, w: 0.9969808}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftForeArm
+      position: {x: -0.28405353, y: 0, z: 0}
+      rotation: {x: 0.008321355, y: -0.030180926, z: 0.04464378, w: 0.9985123}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftHand
+      position: {x: -0.20037927, y: 0, z: 0}
+      rotation: {x: -0.13043894, y: 0.031470623, z: -0.22317274, w: 0.96549946}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftHandEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0.7071067, y: -0, z: -0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:L_FingersEnd
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftHandThumb1
+      position: {x: -0.024915682, y: -0.04152614, z: -0.016610455}
+      rotation: {x: 0.9876721, y: 0.13002947, z: 0.011375968, w: 0.08641026}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftHandThumb2
+      position: {x: -0.06228921, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightUpLeg
+      position: {x: 0.08828207, y: 0, z: -0.025790267}
+      rotation: {x: 0.16679879, y: -0.75239336, z: 0.09112259, w: 0.6306973}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightLeg
+      position: {x: -0.41859066, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.034673344, w: 0.9993987}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightFoot
+      position: {x: -0.40022987, y: 0, z: 0}
+      rotation: {x: 0.02687109, y: 0.1094049, z: 0.6516812, w: 0.7500801}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightToeBase
+      position: {x: -0.14929587, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.18097281, w: 0.98348814}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:RightToeBaseEnd
+      position: {x: -0.0714192, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftUpLeg
+      position: {x: -0.08828207, y: 0, z: -0.025790267}
+      rotation: {x: -0.082737334, y: -0.6881737, z: -0.23377922, w: 0.6818496}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftLeg
+      position: {x: -0.41859066, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.08436016, w: 0.99643534}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftFoot
+      position: {x: -0.40022987, y: 0, z: 0}
+      rotation: {x: 0.020862125, y: -0.11842328, z: 0.5247042, w: 0.8427492}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftToeBase
+      position: {x: -0.14929587, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.2610112, w: 0.9653358}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: B0238:Solving:LeftToeBaseEnd
+      position: {x: -0.0714192, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
