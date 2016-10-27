@@ -6,6 +6,7 @@ using UnityEditor.Animations;
 [RequireComponent(typeof(SphereCollider))]
 public class Activity : MonoBehaviour
 {
+    private const string IDLE_STATE_NAME = "Standing";
     private Animator _animator;
     private SphereCollider _sphereCollider;
     private string _paramName;
@@ -61,7 +62,7 @@ public class Activity : MonoBehaviour
             _nameToDisplay = name[1];
             _isFinished = false;
             _elapsedTimeCounter = 0.0f;
-            GetComponent<NavMeshAgent>().obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
+            GetComponent<NavMeshAgent>().obstacleAvoidanceType = ObstacleAvoidanceType.HighQualityObstacleAvoidance;
             _dynamicAnimationState = new DynamicAnimationState(_animator, _paramName);
             _exitTime = _dynamicAnimationState.Length;
         }
@@ -122,7 +123,7 @@ public class Activity : MonoBehaviour
         {
             if (_complexAction && !_canExecuteComplexAction)
             {
-                _nameToDisplay = "Waiting";
+                _nameToDisplay = IDLE_STATE_NAME;
             }
             return _nameToDisplay;
         }
@@ -162,7 +163,7 @@ public class Activity : MonoBehaviour
     {
         get
         {
-            return _complexAction && _canExecuteComplexAction && _nameToDisplay != "Waiting";
+            return _complexAction && _canExecuteComplexAction && _nameToDisplay != IDLE_STATE_NAME;
         }
     }
 
@@ -244,7 +245,7 @@ public class Activity : MonoBehaviour
             {
                 if (!_canExecuteComplexAction)
                 {
-                    _nameToDisplay = "Waiting";
+                    _nameToDisplay = IDLE_STATE_NAME;
                     _canExecuteComplexAction = true;
                     foreach (bool agentNearbyCheck in _requiredAgentsNearbyCheck)
                     {
