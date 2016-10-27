@@ -100,16 +100,16 @@ public class Agent : MonoBehaviour
                 Vector3 velocity = Quaternion.Inverse(transform.rotation) * agent.desiredVelocity;
                 float angle = Mathf.Atan2(velocity.x, velocity.z) * 180.0f / Mathf.PI;
 
-                if (_applyFinalRotation && MovementInPlace)//IsStopping())
+                if (_applyFinalRotation && MovementInPlace)
                 {
-                    float angleDifference = Quaternion.Angle(transform.rotation, _finalRotation);
-                    int fullAngles = Mathf.FloorToInt(angleDifference / 360.0f);
-                    angleDifference = angleDifference - fullAngles * 360.0f;
+                    float angleDifference = AngleDifference(transform.rotation, _finalRotation);//Quaternion.Angle(transform.rotation, _finalRotation);
+                    //int fullAngles = Mathf.FloorToInt(angleDifference / 360.0f);
+                    //angleDifference = angleDifference - fullAngles * 360.0f;
 
                     if (Mathf.Abs(angleDifference) > 10.0f)
                     {
-                        angle = angleDifference > 180.0f ? angleDifference - 360.0f : angleDifference;
-
+                        //angle = angleDifference > 180.0f ? angleDifference - 360.0f : angleDifference;
+                        angle = angleDifference;
                         locomotion.Do(0.0f, angle);
                     }
                     else
@@ -166,6 +166,17 @@ public class Agent : MonoBehaviour
     public bool IsInPlace()
     {
         return MovementInPlace && (_applyFinalRotation ? Mathf.Abs(Quaternion.Angle(transform.rotation, _finalRotation)) <= 1.0f : true); //&& IsStopping();
+    }
+
+    private float AngleDifference(Quaternion a, Quaternion b)
+    {
+        Vector3 forwardA = a * Vector3.forward;
+        Vector3 forwardB = b * Vector3.forward;
+
+        float angleA = Mathf.Atan2(forwardA.x, forwardA.z) * Mathf.Rad2Deg;
+        float angleB = Mathf.Atan2(forwardB.x, forwardB.z) * Mathf.Rad2Deg;
+
+        return Mathf.DeltaAngle(angleA, angleB);
     }
 
     private float GetAngle(Vector3 from, Vector3 to)
