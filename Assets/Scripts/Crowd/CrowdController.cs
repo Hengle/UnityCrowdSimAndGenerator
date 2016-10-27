@@ -58,7 +58,7 @@ public class CrowdController : MonoBehaviour
                 {
                     agent.GetComponent<NavMeshAgent>().speed = Random.Range(3.1f, 5.0f);
         }
-                agent.GetComponent<NavMeshAgent>().stoppingDistance = 1.0f;
+                agent.GetComponent<NavMeshAgent>().stoppingDistance = 0.25f;
                 _crowd.Add(agent);
             }
         }

@@ -1,15 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class Movement : MonoBehaviour
 {
     private NavMeshAgent _nMA;
     private float _speed;
-    private Vector3 _destination;
+    public Vector3 _destination;
     private Quaternion _finalRotation;
     private Agent _agent;
-    private bool _isFinished;
-    private bool _isInPosition = false;
+    public bool _isFinished;
+    public bool _isInPosition = false;
     private bool _settingDestinationFailed = false;
     private string _blendParam;
 
@@ -64,7 +65,7 @@ public class Movement : MonoBehaviour
             {
                 _settingDestinationFailed = true;
             }
-            
+
         }
     }
     public string BlendParameter
@@ -138,25 +139,15 @@ public class Movement : MonoBehaviour
     }
 
     void Update()
-    {      
+    {
         if (!IsFinished)
         {
-            if (name.Equals("actor0_0"))
-            {
-                Debug.Log(_nMA.enabled + " " + transform.position + " " + _nMA.remainingDistance + " " + _isInPosition);
-            }
-
             if (_nMA.enabled)
             {
                 if (_settingDestinationFailed)
                 {
                     _settingDestinationFailed = false;
                     Destination = _destination;
-                }
-                if (_nMA.remainingDistance < 0.5f)
-                {
-                    transform.position = Vector3.Lerp(transform.position, _destination, Time.deltaTime);
-                    Debug.Log("CLAMPING " + name);
                 }
 
                 if (!_isInPosition)
@@ -166,31 +157,77 @@ public class Movement : MonoBehaviour
                 }
                 else
                 {
+                    
                     CheckRotation();
                 }
-            }          
+            }
         }
     }
 
     private void CheckPosition()
     {
-        if (_nMA.remainingDistance < _nMA.stoppingDistance + Mathf.Epsilon)
+        //if (_nMA.remainingDistance < _nMA.stoppingDistance + Mathf.Epsilon)
+        //{
+        //    if (Vector3.Distance(_nMA.destination, transform.position) < _nMA.stoppingDistance * 2)
+        //    {
+        //        _isInPosition = true;
+        //        _nMA.Stop();
+        //    }
+        //    else
+        //    {
+        //        if (_nMA.remainingDistance < 0.75f)
+        //        {
+        //            transform.position = Vector3.Lerp(transform.position, _nMA.destination, Time.deltaTime);
+        //        }
+        //        if (tag == "ScenarioAgent")
+        //        {
+        //            Debug.Log("Clamping " + name); 
+        //        }
+        //        _nMA.SetDestination(_destination);
+
+        //    }
+        //}
+        //else
+        //{
+        //    _nMA.SetDestination(_destination);
+
+        //}
+        //_nMA.SetDestination(_destination);
+        Clamping();
+        if (Mathf.Abs(Vector3.Distance(transform.position, _destination)) <= 0.26f)
         {
-            if (Vector3.Distance(_nMA.destination, transform.position) < _nMA.stoppingDistance * 2)
+            Debug.Log("Na pozycji " + name);
+            _isInPosition = true;
+            _nMA.Stop();
+        }
+        else if (Mathf.Abs(Vector3.Distance(_nMA.destination, _destination)) > 0.1f)
+        {
+            _nMA.Resume();
+            _nMA.SetDestination(_destination);
+            Debug.Log("Liczę " + name);
+        }
+    }
+
+    private void Clamping()
+    {
+        if (tag != "Crowd")
+        {
+            if (Mathf.Abs(Vector3.Distance(transform.position, _destination)) < 1.0f)
             {
-                _isInPosition = true;
-                _nMA.Stop();
-            }
-            else
-            {
-              _nMA.SetDestination(_destination);
-            }
+                transform.position = Vector3.Lerp(transform.position, _destination, Time.deltaTime);
+                Debug.Log("Clampuję " + name);
+            } 
         }
     }
 
     private void CheckRotation()
     {
         if (!_agent.ApplyFinalRotation || _agent.IsInPlace())
+        {
+            Debug.Log("Sprawdzam rotację " + name);
+            _isFinished = true;
+        }
+        if (tag == "Crowd")
         {
             _isFinished = true;
         }
