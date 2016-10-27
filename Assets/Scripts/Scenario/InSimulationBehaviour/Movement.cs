@@ -165,34 +165,7 @@ public class Movement : MonoBehaviour
     }
 
     private void CheckPosition()
-    {
-        //if (_nMA.remainingDistance < _nMA.stoppingDistance + Mathf.Epsilon)
-        //{
-        //    if (Vector3.Distance(_nMA.destination, transform.position) < _nMA.stoppingDistance * 2)
-        //    {
-        //        _isInPosition = true;
-        //        _nMA.Stop();
-        //    }
-        //    else
-        //    {
-        //        if (_nMA.remainingDistance < 0.75f)
-        //        {
-        //            transform.position = Vector3.Lerp(transform.position, _nMA.destination, Time.deltaTime);
-        //        }
-        //        if (tag == "ScenarioAgent")
-        //        {
-        //            Debug.Log("Clamping " + name); 
-        //        }
-        //        _nMA.SetDestination(_destination);
-
-        //    }
-        //}
-        //else
-        //{
-        //    _nMA.SetDestination(_destination);
-
-        //}
-        //_nMA.SetDestination(_destination);
+    {     
         Clamping();
         if (Mathf.Abs(Vector3.Distance(transform.position, _destination)) <= 0.26f)
         {

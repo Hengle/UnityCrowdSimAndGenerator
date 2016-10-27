@@ -82,7 +82,6 @@ public class Agent : MonoBehaviour
     static int deathCounter = 0;
     void OnDestroy()
     {
-        //print(gameObject.name + " was destroyed! " + deathCounter);
         deathCounter++;
     }
 
@@ -102,13 +101,9 @@ public class Agent : MonoBehaviour
 
                 if (_applyFinalRotation && MovementInPlace)
                 {
-                    float angleDifference = AngleDifference(transform.rotation, _finalRotation);//Quaternion.Angle(transform.rotation, _finalRotation);
-                    //int fullAngles = Mathf.FloorToInt(angleDifference / 360.0f);
-                    //angleDifference = angleDifference - fullAngles * 360.0f;
-
+                    float angleDifference = AngleDifference(transform.rotation, _finalRotation);
                     if (Mathf.Abs(angleDifference) > 10.0f)
                     {
-                        //angle = angleDifference > 180.0f ? angleDifference - 360.0f : angleDifference;
                         angle = angleDifference;
                         locomotion.Do(0.0f, angle);
                     }
@@ -147,21 +142,12 @@ public class Agent : MonoBehaviour
         catch (NullReferenceException e)
         {
         }
-
-        //Vector3 position = animator.rootPosition;
-        //position.y = agent.nextPosition.y;
-        //transform.position = position;
     }
 
     private bool IsDone()
     {
         return !agent.pathPending && IsInPlace();
     }
-
-    //private bool IsStopping()
-    //{
-    //    return agent.remainingDistance <= agent.stoppingDistance;
-    //}
 
     public bool IsInPlace()
     {
@@ -177,14 +163,6 @@ public class Agent : MonoBehaviour
         float angleB = Mathf.Atan2(forwardB.x, forwardB.z) * Mathf.Rad2Deg;
 
         return Mathf.DeltaAngle(angleA, angleB);
-    }
-
-    private float GetAngle(Vector3 from, Vector3 to)
-    {
-        float angle = Vector3.Angle(from, to);
-        Vector3 normal = Vector3.Cross(from, to);
-        angle *= Mathf.Sign(Vector3.Dot(normal, transform.up));
-        return angle;
     }
 
     void Update()
