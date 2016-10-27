@@ -169,7 +169,6 @@ public class Movement : MonoBehaviour
         Clamping();
         if (Mathf.Abs(Vector3.Distance(transform.position, _destination)) <= 0.26f)
         {
-            Debug.Log("Na pozycji " + name);
             _isInPosition = true;
             _nMA.destination = transform.position;
             _nMA.Stop();
@@ -178,7 +177,6 @@ public class Movement : MonoBehaviour
         {
             _nMA.Resume();
             _nMA.SetDestination(_destination);
-            Debug.Log("Liczę " + name);
         }
 
         _agent.MovementInPlace = _isInPosition;
@@ -191,7 +189,6 @@ public class Movement : MonoBehaviour
             if (Mathf.Abs(Vector3.Distance(transform.position, _destination)) < 0.75f)
             {
                 transform.position = Vector3.Lerp(transform.position, _destination, Time.deltaTime);
-                Debug.Log("Clampuję " + name);
             } 
         }
     }
@@ -200,7 +197,6 @@ public class Movement : MonoBehaviour
     {
         if (!_agent.ApplyFinalRotation || _agent.IsInPlace())
         {
-            Debug.Log("Sprawdzam rotację " + name);
             _isFinished = true;
         }
         if (tag == "Crowd")
