@@ -12,6 +12,7 @@ public class Agent : MonoBehaviour
     private Quaternion _finalRotation;
     private bool _applyFinalRotation = false;
     private static uint idCounter = 0;
+    private bool _movementInPlace = false;
 
     public uint AgentId
     {
@@ -53,6 +54,19 @@ public class Agent : MonoBehaviour
         }
     }
 
+    public bool MovementInPlace
+    {
+        get
+        {
+            return _movementInPlace;
+        }
+
+        set
+        {
+            _movementInPlace = value;
+        }
+    }
+
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -86,7 +100,7 @@ public class Agent : MonoBehaviour
                 Vector3 velocity = Quaternion.Inverse(transform.rotation) * agent.desiredVelocity;
                 float angle = Mathf.Atan2(velocity.x, velocity.z) * 180.0f / Mathf.PI;
 
-                if (_applyFinalRotation && IsStopping())
+                if (_applyFinalRotation && MovementInPlace)//IsStopping())
                 {
                     float angleDifference = Quaternion.Angle(transform.rotation, _finalRotation);
                     int fullAngles = Mathf.FloorToInt(angleDifference / 360.0f);
@@ -144,14 +158,14 @@ public class Agent : MonoBehaviour
         return !agent.pathPending && IsInPlace();
     }
 
-    private bool IsStopping()
-    {
-        return agent.remainingDistance <= agent.stoppingDistance;
-    }
+    //private bool IsStopping()
+    //{
+    //    return agent.remainingDistance <= agent.stoppingDistance;
+    //}
 
     public bool IsInPlace()
     {
-        return IsStopping() && (_applyFinalRotation ? Mathf.Abs(Quaternion.Angle(transform.rotation, _finalRotation)) <= 1.0f : true);
+        return MovementInPlace && (_applyFinalRotation ? Mathf.Abs(Quaternion.Angle(transform.rotation, _finalRotation)) <= 1.0f : true); //&& IsStopping();
     }
 
     private float GetAngle(Vector3 from, Vector3 to)

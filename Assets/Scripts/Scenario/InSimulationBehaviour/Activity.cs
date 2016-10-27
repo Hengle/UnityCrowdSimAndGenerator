@@ -62,7 +62,7 @@ public class Activity : MonoBehaviour
             _nameToDisplay = name[1];
             _isFinished = false;
             _elapsedTimeCounter = 0.0f;
-            GetComponent<NavMeshAgent>().obstacleAvoidanceType = ObstacleAvoidanceType.HighQualityObstacleAvoidance;
+            GetComponent<NavMeshAgent>().obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
             _dynamicAnimationState = new DynamicAnimationState(_animator, _paramName);
             _exitTime = _dynamicAnimationState.Length;
         }
@@ -83,7 +83,7 @@ public class Activity : MonoBehaviour
                 _otherRequiredAgents.Remove(gameObject);
                 _requiredAgentsNearbyCheck = new bool[_otherRequiredAgents.Count];
                 _complexAction = true;
-                _canExecuteComplexAction = false;               
+                _canExecuteComplexAction = false;
                 _sphereCollider.enabled = true;
             }
             else
@@ -178,7 +178,7 @@ public class Activity : MonoBehaviour
     private void CreateActionArena()
     {
         if (_actionArena == null)
-        {            
+        {
             _actionArena = new GameObject();
             NavMeshObstacle obstacle = _actionArena.AddComponent<NavMeshObstacle>();
             obstacle.carving = true;
@@ -190,9 +190,9 @@ public class Activity : MonoBehaviour
     private void DeleteActionArena()
     {
         if (_actionArena != null)
-        {            
+        {
             GameObject.DestroyImmediate(_actionArena);
-            _actionArena = null;            
+            _actionArena = null;
         }
     }
 
@@ -210,7 +210,7 @@ public class Activity : MonoBehaviour
     }
 
     void Update()
-    {  
+    {
         if (!IsFinished)
         {
 
@@ -226,15 +226,15 @@ public class Activity : MonoBehaviour
                     {
                         CreateActionArena();
                     }
-                    
+
                     _navMeshAgent.enabled = false;
                     _elapsedTimeCounter += Time.deltaTime;
                     _dynamicAnimationState.EnterState();
-                    
+
                 }
 
                 if (ExitTime > 0.0f && _elapsedTimeCounter >= ExitTime)
-                {                  
+                {
                     _isFinished = true;
                     _dynamicAnimationState.ExitState();
                     DeleteActionArena();
@@ -273,7 +273,7 @@ public class Activity : MonoBehaviour
 
                         _navMeshAgent.enabled = false;
                         _elapsedTimeCounter += Time.deltaTime;
-                        _dynamicAnimationState.EnterState();                       
+                        _dynamicAnimationState.EnterState();
                     }
 
                     if (ExitTime > 0.0f && _elapsedTimeCounter >= ExitTime)
@@ -313,7 +313,7 @@ public class Activity : MonoBehaviour
                         }
                     }
                 }
-            } 
+            }
         }
     }
 
@@ -330,7 +330,7 @@ public class Activity : MonoBehaviour
                         _requiredAgentsNearbyCheck[i] = false;
                     }
                 }
-            } 
+            }
         }
     }
 }
