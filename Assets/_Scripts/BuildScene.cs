@@ -192,7 +192,7 @@ namespace ProceduralSceneGenerator
             CreateBuildings();
 
 
-            
+
             float move = -(mapSize / 2 * buildingFootprint) + buildingFootprint / 2;
             renderer.position = new Vector3(-move, +citySquareTile.transform.lossyScale.y / 2, -move);
 
@@ -294,6 +294,7 @@ namespace ProceduralSceneGenerator
 
             ///Końcowa pętla wstawiająca (prawie) wszystkie obiekty            
             int k = 0;
+            int index = 0;
             for (int h = 0; h < mapHeight; h++)
             {
                 for (int w = 0; w < mapWidth; w++)
@@ -313,13 +314,17 @@ namespace ProceduralSceneGenerator
                     }
                     else if (result < -2)
                     {
-                        var cr = Instantiate(croosRoads, pos, croosRoads.transform.rotation, streetsRend) as GameObject;
-                        cr.transform.localScale = Vector3.one * (buildingFootprint / 30);
-
+                       
+                        float[] b = {0, -90f, 90f, -180f};
+                        var rotto = Quaternion.Euler(Vector3.up * b[index]);
+                        var cr = Instantiate(croosRoads, pos, rotto, streetsRend) as GameObject;
+                        cr.transform.localScale = Vector3.one* (buildingFootprint / 30);
+                        cr.transform.rotation = rotto;
+                        Debug.Log("Object rotated by " + b[index]);
+                        index++;
                         //Create cameras above cross roads
                         GameObject cam = Instantiate(cameraPrafab);//new GameObject("Camera" + w + h);
-                        cam.name = "Camera" + w + h;
-                        //cam.AddComponent<Camera>();
+                        cam.name = "Camera" + w + h;                       
                         cam.AddComponent<SphereCollider>();
                         cam.GetComponent<SphereCollider>().radius = 0.3f;
                         cam.GetComponent<Camera>().fieldOfView = 30;
@@ -451,14 +456,14 @@ namespace ProceduralSceneGenerator
             if (mapSize % 2 == 1)
             {
                 navMeshPlane.transform.localPosition = 3 * new Vector3((buildingFootprint / 2), 0, buildingFootprint / 2);
-                
+
             }
             else
             {
                 navMeshPlane.transform.localPosition = (Vector3.zero);
             }
-           // navMeshPlane.transform.position = new Vector3(navMeshPlane.transform.position.x, 0f, navMeshPlane.transform.position.z);
-            
+            // navMeshPlane.transform.position = new Vector3(navMeshPlane.transform.position.x, 0f, navMeshPlane.transform.position.z);
+
             ground.transform.parent = renderer;
             navMeshPlane.isStatic = true;
             scenePrefab = renderer.gameObject;
@@ -473,12 +478,12 @@ namespace ProceduralSceneGenerator
                 if (sceneProp.tag != "Ground")
                 {
                     sceneProp.gameObject.isStatic = true;
-                }            
+                }
             }
-            GameObject instance =  (GameObject) Instantiate(reflectionProbe, renderer);
-            instance.GetComponent<ReflectionProbe>().size = mapSize * 10 * Vector3.one * 1.2f; 
+            GameObject instance = (GameObject)Instantiate(reflectionProbe, renderer);
+            instance.GetComponent<ReflectionProbe>().size = mapSize * 10 * Vector3.one * 1.2f;
 
-            GameObject overseer =  Instantiate(simulationOverseerPrefab);
+            GameObject overseer = Instantiate(simulationOverseerPrefab);
             overseer.transform.parent = scenePrefab.transform;
 
             SaveScenePrefab();
@@ -508,8 +513,8 @@ namespace ProceduralSceneGenerator
         private void SaveScenePrefab()
         {
             int sceneId = GetGighestScenePrefabIndex() + 1;
-            PrefabUtility.CreatePrefab(string.Format("Assets/Scenes/ScenePrefab#{0}.prefab", sceneId), scenePrefab);            
-        }    
+            PrefabUtility.CreatePrefab(string.Format("Assets/Scenes/ScenePrefab#{0}.prefab", sceneId), scenePrefab);
+        }
 
         private int GetGighestScenePrefabIndex()
         {

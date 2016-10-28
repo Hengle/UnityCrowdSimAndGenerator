@@ -468,7 +468,7 @@ MonoBehaviour:
     type: 2}
   xStreets: {fileID: 1000011829627810, guid: 2a8f440a7eabcbf4988c8580ff0f15da, type: 2}
   zStreets: {fileID: 1000013457698196, guid: e900b7bc8455e5c47bdcee1256aa72bc, type: 2}
-  croosRoads: {fileID: 1000013684482088, guid: bfe9cfe3c48b23b4c919940e75b77a32, type: 2}
+  croosRoads: {fileID: 1000013607462202, guid: bfe9cfe3c48b23b4c919940e75b77a32, type: 2}
   citySquareTile: {fileID: 1000014177251550, guid: 5585a9a0596384a4ebcf8dafc84514f9,
     type: 2}
   grassTile: {fileID: 1000013914163924, guid: 68ed7936debf0c148a7de0b3a8e87988, type: 2}
@@ -520,6 +520,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: a568f3d98376e7646b5e1078e9ad700e, type: 3}
   - {fileID: 2800000, guid: d5dcf4d128b7bb140a88560046437075, type: 3}
   - {fileID: 2800000, guid: b4b388b26b13fd349b0a6e07eb28a77e, type: 3}
+  - {fileID: 2800000, guid: b882ab1732b6e1d4589b00987963c432, type: 3}
+  - {fileID: 2800000, guid: 6f51c32c54e2bc8429f6be6396d0d905, type: 3}
+  - {fileID: 2800000, guid: a71ab89f34af16448a5142f221ebfbc1, type: 3}
+  - {fileID: 2800000, guid: b41ea2485fadc164cba59744cbb42777, type: 3}
   facadeMaterials:
   - {fileID: 2100000, guid: f241bac203c5b4b479899ed7085fb61e, type: 2}
   - {fileID: 2100000, guid: 60313e079f1301946b873afa07d7ec96, type: 2}

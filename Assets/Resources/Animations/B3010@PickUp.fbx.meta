@@ -277,8 +277,8 @@ ModelImporter:
     - serializedVersion: 16
       name: PickUp
       takeName: B3010_Podnoszenie_E14_R03_T02_x2d
-      firstFrame: 114
-      lastFrame: 1390
+      firstFrame: 1
+      lastFrame: 1613
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -301,7 +301,7 @@ ModelImporter:
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
