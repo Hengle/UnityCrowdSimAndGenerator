@@ -73,15 +73,15 @@ class AnnotationFileWriter
         {
             Directory.CreateDirectory(unmarkedDirectory);
         }
+       
+        if (saveUnmarked)
+        {
+            SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, unmarkedDirectory, false);
+        }
 
         if (saveMarked)
         {
             SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, markedDirectory, true);
-        }
-
-        if (saveUnmarked)
-        {
-            SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, unmarkedDirectory, false);
         }
 
 

@@ -79,6 +79,9 @@ class HumanoidModelImporter : AssetPostprocessor
         camera.clearFlags = CameraClearFlags.Color;
         camera.backgroundColor = Color.white;
         camera.farClipPlane = 5.0f;
+        Light light = previewCamera.AddComponent<Light>();
+        light.type = LightType.Directional;
+
         Vector3 cameraOffset = new Vector3(0.0f, 1.0f, 2.0f);
         previewCamera.transform.position = previewInstance.transform.position + cameraOffset;
         previewCamera.transform.LookAt(previewInstance.transform.position + new Vector3(0.0f, 1.0f, 0.0f));
