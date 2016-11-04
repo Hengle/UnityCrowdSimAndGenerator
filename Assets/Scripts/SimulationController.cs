@@ -284,7 +284,7 @@ public class SimulationController : MonoBehaviour
 }
 
 
-//Uncomment commented and comment ucommented to allow for bulk simulation 
+//Uncomment commented and comment ucommented to allow for bulk simulation
 
 //using UnityEngine;
 //using UnityEditor;
@@ -331,14 +331,12 @@ public class SimulationController : MonoBehaviour
 //        public int Time;
 //        public int Weather;
 //        public int Crowd;
-//        public bool Boxes;
 
-//        public LukaszToPala(int time, int weather, int crowd, bool boxes)
+//        public LukaszToPala(int time, int weather, int crowd)
 //        {
 //            Time = time;
 //            Weather = weather;
 //            Crowd = crowd;
-//            Boxes = boxes;
 //        }
 //    }
 //    public List<LukaszToPala> _lukasze;
@@ -356,17 +354,7 @@ public class SimulationController : MonoBehaviour
 //            {
 //                for (int k = 0; k < 3; k++)
 //                {
-//                    for (int l = 0; l < 2; l++)
-//                    {
-//                        if (l == 0)
-//                        {
-//                            _lukasze.Add(new LukaszToPala(i, j,25 + k * 65, false));
-//                        }
-//                        else if (l == 1)
-//                        {
-//                            _lukasze.Add(new LukaszToPala(i, j, 25 + k * 65, true));
-//                        }
-//                    }
+//                    _lukasze.Add(new LukaszToPala(i, j, 25 + k * 65));                    
 //                }
 //            }
 //        }
@@ -635,7 +623,7 @@ public class SimulationController : MonoBehaviour
 
 //        Repeats = 1;
 //        SimultaneousScenarioInstances = 1;
-//        string time, con, size, box;
+//        string time, con, size;
 //        switch (lukasz.Time)
 //        {
 //            case 1:
@@ -687,18 +675,10 @@ public class SimulationController : MonoBehaviour
 //                size = "Size";
 //                break;
 //        }
-//        if (lukasz.Boxes)
-//        {
-//            box = "WithBB";
-//        }
-//        else
-//        {
-//            box = "WithoutBB";
-//        }
 
-//        ScreenshotsDirectory = string.Format("D:/Screenshots/{0}_{1}_{2}_{3}", time, con, size, box);
+//        ScreenshotsDirectory = string.Format("D:/Screenshots/{0}_{1}_{2}", time, con, size);
 
-//        _screenshooter.SetParams(true, lukasz.Boxes);
+//        _screenshooter.SetParams(true, 3);
 //        _screenshooter.ResWidth = 800;
 //        _screenshooter.ResHeight = 600;
 //        _screenshooter.ChangeFrameRate(24);
