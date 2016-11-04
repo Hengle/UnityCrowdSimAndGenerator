@@ -19,20 +19,56 @@ public class Annotator
     {
         bool visible = false;
         bool inFrustum = false;
-        RaycastHit hit;
-
-        Vector3 direction = camera.transform.position - (agent.transform.position + agent.transform.up);
-        if (Physics.Raycast(agent.transform.position + agent.transform.up, direction, out hit))
-        {
-            visible = hit.collider.name == camera.name;
-        }
+        int threshold = agent.tag == "Crowd" ? 2 : 1;
+        
+        
+        //float maxDistance = 80.0f;
+        // RaycastHit hit;
+        //Vector3 direction = camera.transform.position - (agent.transform.position + agent.transform.up);
+        //if (Physics.Raycast(agent.transform.position + agent.transform.up, direction, out hit))
+        //{
+        //    visible = hit.collider.name == camera.name;
+        //}
+        //if (Vector3.Distance(agent.transform.position, camera.transform.position) < maxDistance)
+        //{
 
         Bounds bounds = agent.GetComponentsInChildren<Renderer>().Aggregate((i1, i2) => i1.bounds.extents.magnitude > i2.bounds.extents.magnitude ? i1 : i2).bounds;
-
         Plane[] frustum = GeometryUtility.CalculateFrustumPlanes(camera);
-        inFrustum = GeometryUtility.TestPlanesAABB(frustum,bounds);
 
+        inFrustum = GeometryUtility.TestPlanesAABB(frustum, bounds);
+
+        if (inFrustum)
+        {
+            int visisbilityCounter = 0;
+            RaycastHit hit;
+            visible = false;
+            Vector3[] pts = GetBoundsPoints(bounds);
+            foreach (var p in pts)
+            {
+                Vector3 direction = camera.transform.position - p;
+                if (Physics.Raycast(p, direction, out hit))
+                {
+                    visible = hit.collider.name == camera.name;//|| visible;
+                    if (visible)
+                    {
+                        visisbilityCounter++;
+                    }
+                }
+            }
+
+            visible = visisbilityCounter >= threshold;
+        }
+    
         return visible && inFrustum;
+    }
+
+    private void SetAgentVisisble(GameObject agent, bool v)
+    {
+        MaterialChanger mc = agent.GetComponent<MaterialChanger>();
+        if (mc != null)
+        {
+            mc.SetVisible(v);
+        }
     }
 
     private bool IsRectValid(Rect rect)
@@ -113,12 +149,39 @@ public class Annotator
                                                     agentName,
                                                     mocapName,
                                                     isComplex));
+
+                    
                 }
-            }           
+                SetAgentVisisble(agent, IsVisibleFromCamera(camera, agent) && IsRectValid(trackingRekt));
+            }
+            else
+            {
+                SetAgentVisisble(agent, false);
+            }
+            
         }
+
+        
         return annotations;
     }
-    
+
+    private Vector3[] GetBoundsPoints(Bounds bounds)
+    {
+        Vector3[] pts = new Vector3[9];
+
+        pts[0] = new Vector3(bounds.center.x + bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z + bounds.extents.z);// lewy góra przód
+        pts[1] = new Vector3(bounds.center.x + bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z - bounds.extents.z);// lewy góra tył
+        pts[2] = new Vector3(bounds.center.x + bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z + bounds.extents.z);// lewy dół przód
+        pts[3] = new Vector3(bounds.center.x + bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z - bounds.extents.z);// lewy dół tył
+        pts[4] = new Vector3(bounds.center.x - bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z + bounds.extents.z);// prawy góra przód
+        pts[5] = new Vector3(bounds.center.x - bounds.extents.x, bounds.center.y + bounds.extents.y, bounds.center.z - bounds.extents.z);// prawy góra tył
+        pts[6] = new Vector3(bounds.center.x - bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z + bounds.extents.z);// prawy dół przód
+        pts[7] = new Vector3(bounds.center.x - bounds.extents.x, bounds.center.y - bounds.extents.y, bounds.center.z - bounds.extents.z);// prawy dół tył
+        pts[8] = bounds.center; //środek
+
+        return pts;
+    }
+
     //REKT
     private Rect GetRect(GameObject agent, Camera camera)
     {
