@@ -132,6 +132,19 @@ public class SequencesCreator
             };
                 actionSequencesPerAgent[i].Insert(0, forcedWalked);
             }
+            if (!actionSequencesPerAgent[i][0].Name.ToLower().Equals("run") && !actionSequencesPerAgent[i][0].Name.ToLower().Equals("walk"))
+            {
+                Action forcedWalked = new Action
+                {
+                    Name = "walk",
+                    Index = 0,
+                    Probability = 1.0f,
+                    Actors = new List<Actor> { new Actor() },
+                    Blends = null,
+                    Forced = true,
+                };
+                actionSequencesPerAgent[i].Insert(0, forcedWalked);
+            }
         }
         List<SequenceController> sequenceControllers = new List<SequenceController>();
         _sequencesPerAgentPerInstance = new List<List<List<InGameActionInfo>>>();
