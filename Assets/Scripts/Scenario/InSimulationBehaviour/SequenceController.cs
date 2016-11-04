@@ -59,7 +59,7 @@ public class SequenceController : MonoBehaviour
         _actionScript = GetComponent<Activity>();
         _agent = GetComponent<Agent>();
         _isFinished = true;
-        _scenarioLevelIndex = 0;
+        _scenarioLevelIndex = -1;
     }
 
     void Update()
@@ -100,7 +100,7 @@ public class SequenceController : MonoBehaviour
             {
                 if (_sequence[_currentActivityIndex + 1].Movement.Forced)
                 {
-                    _scenarioLevelIndex--;
+                    _scenarioLevelIndex = _scenarioLevelIndex > 0? _scenarioLevelIndex-- : 0 ;
                 }
                 _movementScript.Speed = _sequence[_currentActivityIndex + 1].Movement.Speed;
                 _movementScript.LevelIndex = _scenarioLevelIndex;
