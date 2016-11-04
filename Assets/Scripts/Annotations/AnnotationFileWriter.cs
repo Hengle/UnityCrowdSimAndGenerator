@@ -14,6 +14,7 @@ class AnnotationFileWriter
 
     private bool saveMarked = false;
     private bool saveUnmarked = true;
+    private bool dontSave = false;
 
     public int MarkUpMode
     {
@@ -29,6 +30,7 @@ class AnnotationFileWriter
             switch (_markUpMode)
             {
                 case 0:
+                    dontSave = true;
                     break;
                 case 1:
                     saveUnmarked = true;
@@ -55,36 +57,37 @@ class AnnotationFileWriter
 
     public void SaveAnnotatedFramesAtDirectory(List<AnnotatedFrame> annotatedFrames, string directory)
     {
-        string markedDirectory = directory + "Marked/";
-        string unmarkedDirectory = directory + "UnMarked/";
-
-        if (!(saveMarked && saveUnmarked))
+        if (!dontSave)
         {
-            markedDirectory = directory;
-            unmarkedDirectory = directory;
-        }
+            string markedDirectory = directory + "Marked/";
+            string unmarkedDirectory = directory + "UnMarked/";
 
-        if (saveMarked && !Directory.Exists(markedDirectory))
-        {
-            Directory.CreateDirectory(markedDirectory);
-        }
+            if (!(saveMarked && saveUnmarked))
+            {
+                markedDirectory = directory;
+                unmarkedDirectory = directory;
+            }
 
-        if (saveUnmarked && !Directory.Exists(unmarkedDirectory))
-        {
-            Directory.CreateDirectory(unmarkedDirectory);
-        }
-       
-        if (saveUnmarked)
-        {
-            SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, unmarkedDirectory, false);
-        }
+            if (saveMarked && !Directory.Exists(markedDirectory))
+            {
+                Directory.CreateDirectory(markedDirectory);
+            }
 
-        if (saveMarked)
-        {
-            SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, markedDirectory, true);
-        }
+            if (saveUnmarked && !Directory.Exists(unmarkedDirectory))
+            {
+                Directory.CreateDirectory(unmarkedDirectory);
+            }
 
+            if (saveUnmarked)
+            {
+                SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, unmarkedDirectory, false);
+            }
 
+            if (saveMarked)
+            {
+                SaveAnnotatedFramesAtDirectoryWithMarkedFlag(annotatedFrames, markedDirectory, true);
+            }
+        }       
     }
 
     public void SaveAnnotatedFramesAtDirectoryWithMarkedFlag(List<AnnotatedFrame> annotatedFrames, string directory, bool mark)
