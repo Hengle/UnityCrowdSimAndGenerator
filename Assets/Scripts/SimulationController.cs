@@ -245,6 +245,7 @@ public class SimulationController : MonoBehaviour
                 crowd[index].GetComponent<NavMeshAgent>().avoidancePriority = 0;
                 crowd[index].GetComponent<NavMeshAgent>().stoppingDistance = 0.02f;
                 //crowd[index].GetComponent<GenerateDestination>().enabled = false;
+                crowd[index].AddComponent<SpeedAdjuster>();
                 crowd[index].AddComponent<DisplayActivityText>();
                 actors.Add(crowd[index]);
                 if (MarkWithPlanes)

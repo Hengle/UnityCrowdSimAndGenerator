@@ -136,6 +136,17 @@ public class SequenceController : MonoBehaviour
                             positionOffsetForMultiActorActivity.x = exactSpot.position.x;
                             positionOffsetForMultiActorActivity.z = exactSpot.position.z;
                         }
+                        SpeedAdjuster speedAdjusterScript = GetComponent<SpeedAdjuster>();
+                        if (speedAdjusterScript != null)
+                        {
+                            speedAdjusterScript.Destination = _sequence[_currentActivityIndex + 1].Movement.Waypoint + positionOffsetForMultiActorActivity;
+                            speedAdjusterScript.OtherAgents = _sequence[_currentActivityIndex + 2].Activity.RequiredAgents;
+                            speedAdjusterScript.Adjust = true;
+                        }
+                        else
+                        {
+                            Debug.Log("There's no speed adjuster script");
+                        }
                     }
                 }
 

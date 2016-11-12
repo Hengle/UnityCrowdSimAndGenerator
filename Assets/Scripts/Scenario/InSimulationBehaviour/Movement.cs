@@ -172,6 +172,11 @@ public class Movement : MonoBehaviour
             _isInPosition = true;
             _nMA.destination = transform.position;
             _nMA.Stop();
+            SpeedAdjuster sA = GetComponent<SpeedAdjuster>();
+            if (sA != null)
+            {
+                sA.Adjust = false;
+            }
         }
         else if (Mathf.Abs(Vector3.Distance(_nMA.destination, _destination)) > 0.1f)
         {
