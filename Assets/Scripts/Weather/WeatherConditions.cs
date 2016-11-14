@@ -112,7 +112,7 @@ public class WeatherConditions : MonoBehaviour
             case 5:
                 foreach (var camera in cameras)
                 {
-                    var fog = camera.GetComponent <UnityStandardAssets.ImageEffects.GlobalFog>();
+                    var fog = camera.GetComponent<UnityStandardAssets.ImageEffects.GlobalFog>();
                     fog.enabled = true;
                 }
                 light.color = Color.gray;
@@ -128,33 +128,19 @@ public class WeatherConditions : MonoBehaviour
     {
         Light light = MainLight.GetComponent<Light>();
         Camera[] cameras = FindObjectsOfType<Camera>();
-        switch (id)
+        RainSnowController[] rains = FindObjectsOfType(typeof(RainSnowController)) as RainSnowController[];
+        foreach (var rsc in rains)
         {
-            case 2:
-                RainSnowController[] rains = FindObjectsOfType(typeof(RainSnowController)) as RainSnowController[];
-                foreach (var rsc in rains)
-                {
-                    DestroyImmediate(rsc.gameObject);
-                }
-                break;
-            case 3:
-                RainSnowController[] snows = FindObjectsOfType(typeof(RainSnowController)) as RainSnowController[];
-                foreach (var rsc in snows)
-                {
-                    DestroyImmediate(rsc.gameObject);
-                }
-                break;
-            case 4:
-                break;
-            case 5:
-                foreach (var camera in cameras)
-                {
-                    var fog = camera.GetComponent<UnityStandardAssets.ImageEffects.GlobalFog>();
-                    fog.enabled = false;
-                }
-                break;
-            default:
-                break;
+            DestroyImmediate(rsc.gameObject);
+        }
+        foreach (var camera in cameras)
+        {
+            var fog = camera.GetComponent<UnityStandardAssets.ImageEffects.GlobalFog>();
+            if (fog != null)
+            {
+                Debug.Log("NO FOG in " + camera.name);
+            }
+            fog.enabled = false;
         }
     }
 }
