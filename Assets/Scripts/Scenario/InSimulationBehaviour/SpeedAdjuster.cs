@@ -21,6 +21,7 @@ public class SpeedAdjuster : MonoBehaviour
     private NavMeshAgent _nMA;
     private Movement _movement;
     private Vector3 _destination;
+    private bool _walking;
 
     public bool Adjust
     {
@@ -60,6 +61,19 @@ public class SpeedAdjuster : MonoBehaviour
         set
         {
             _destination = value;
+        }
+    }
+
+    public bool Walking
+    {
+        get
+        {
+            return _walking;
+        }
+
+        set
+        {
+            _walking = value;
         }
     }
 
@@ -113,11 +127,27 @@ public class SpeedAdjuster : MonoBehaviour
         float agentTime = agentDistance / agentSpeed;
         if (agentTime > time)
         {
-            _movement.Speed = Mathf.Clamp(_nMA.speed + 0.25f, 1.6f, 5.5f);
+            //_movement.Speed = Mathf.Clamp(_nMA.speed + 0.25f, 1.6f, 5.25f);
+            if (Walking)
+            {
+                _movement.Speed = Mathf.Clamp(_nMA.speed + 0.25f, 1.6f, 3.25f);
+            }
+            else
+            {
+                _movement.Speed = Mathf.Clamp(_nMA.speed + 0.25f, 3.5f, 5.5f);
+            }
         }
         else if (agentTime < time)
         {
-            _movement.Speed = Mathf.Clamp(_nMA.speed - 0.25f, 1.6f, 5.5f);
+            //_movement.Speed = Mathf.Clamp(_nMA.speed - 0.25f, 1.6f, 5.25f);
+            if (Walking)
+            {
+                _movement.Speed = Mathf.Clamp(_nMA.speed - 0.25f, 1.6f, 3.25f);
+            }
+            else
+            {
+                _movement.Speed = Mathf.Clamp(_nMA.speed - 0.25f, 3.5f, 5.5f);
+            }
         }
     }
 }

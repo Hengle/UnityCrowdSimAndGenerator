@@ -95,13 +95,19 @@ public class SequenceController : MonoBehaviour
         if (_currentActivityIndex + 1 < _sequence.Count)
         {
             _scenarioLevelIndex++;
+            if (_currentActivityIndex >= 0)
+            {
+                if (_sequence[_currentActivityIndex].Movement != null)
+                {
+                    if (_sequence[_currentActivityIndex].Movement.Forced)
+                    {
+                        _scenarioLevelIndex--;
+                    }
+                }
+            }
 
             if (_sequence[_currentActivityIndex + 1].Movement != null)
             {
-                if (_sequence[_currentActivityIndex + 1].Movement.Forced)
-                {
-                    _scenarioLevelIndex = _scenarioLevelIndex > 0? _scenarioLevelIndex-- : 0 ;
-                }
                 _movementScript.Speed = _sequence[_currentActivityIndex + 1].Movement.Speed;
                 _movementScript.LevelIndex = _scenarioLevelIndex;
                 _movementScript.BlendParameter = _sequence[_currentActivityIndex + 1].Movement.Blend;
@@ -122,7 +128,7 @@ public class SequenceController : MonoBehaviour
                             if (!assetPath.Contains(_sequence[_currentActivityIndex + 2].Activity.ParameterName))
                             {
                                 assetPath = AssetDatabase.GUIDToAssetPath(path);
-                            }                        
+                            }
                         }
 
                         GameObject exactSpotParent = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);
@@ -142,10 +148,7 @@ public class SequenceController : MonoBehaviour
                             speedAdjusterScript.Destination = _sequence[_currentActivityIndex + 1].Movement.Waypoint + positionOffsetForMultiActorActivity;
                             speedAdjusterScript.OtherAgents = _sequence[_currentActivityIndex + 2].Activity.RequiredAgents;
                             speedAdjusterScript.Adjust = true;
-                        }
-                        else
-                        {
-                            Debug.Log("There's no speed adjuster script");
+                            speedAdjusterScript.Walking = _sequence[_currentActivityIndex + 1].Movement.Speed <= 3.0f ? true : false;
                         }
                     }
                 }
@@ -153,7 +156,7 @@ public class SequenceController : MonoBehaviour
                 if (!_isCrowd)
                 {
                     _movementScript.Destination = _sequence[_currentActivityIndex + 1].Movement.Waypoint + positionOffsetForMultiActorActivity;
-                    GetComponent<DisplayActivityText>().ChangeText(string.Format("{0}_{1}_{2}", _movementScript.LevelIndex, _movementScript.ActorName, _movementScript.NameToDisplay));        
+                    GetComponent<DisplayActivityText>().ChangeText(string.Format("{0}_{1}_{2}", _movementScript.LevelIndex, _movementScript.ActorName, _movementScript.NameToDisplay));
                 }
                 else
                 {
@@ -163,7 +166,7 @@ public class SequenceController : MonoBehaviour
             }
 
             if (_sequence[_currentActivityIndex + 1].Activity != null)
-            {               
+            {
                 if (_currentActivityIndex + 2 < _sequence.Count && _sequence[_currentActivityIndex + 2].Activity != null && _sequence[_currentActivityIndex + 2].Activity.RequiredAgents != null)
                 {
                     Vector3 forcedPosition = new Vector3();
@@ -194,6 +197,7 @@ public class SequenceController : MonoBehaviour
             }
             _isFinished = false;
             _currentActivityIndex++;
+            //Debug.Log(name + " Current: " + _currentActivityIndex + " ScenarioBased: " + _scenarioLevelIndex);
         }
         else
         {
