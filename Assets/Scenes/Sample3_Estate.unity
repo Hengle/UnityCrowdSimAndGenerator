@@ -10779,7 +10779,7 @@ GameObject:
   - 218: {fileID: 1885079113}
   - 154: {fileID: 1885079112}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: Terrain2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
