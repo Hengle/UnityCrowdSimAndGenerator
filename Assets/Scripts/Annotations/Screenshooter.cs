@@ -52,12 +52,10 @@ public class Screenshooter : MonoBehaviour
         TakeScreenshots = takeScreens;
         MarkUpMode = markUpMode;
         _annotationFileWriter.MarkUpMode = MarkUpMode;
-
     }
 
     void Update ()
     {
-
         if (TakeScreenshots)
         {
             foreach (var camera in _cameras)
@@ -74,8 +72,6 @@ public class Screenshooter : MonoBehaviour
             }
         }
     }
-
-
 
     private void TakeScreenshot(Camera camera)
     {
@@ -102,7 +98,6 @@ public class Screenshooter : MonoBehaviour
 
         camera.ResetProjectionMatrix();
     }
-
 
     private void ClearDictionary()
     {

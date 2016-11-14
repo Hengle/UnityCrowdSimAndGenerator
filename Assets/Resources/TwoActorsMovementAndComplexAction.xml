@@ -1,6 +1,6 @@
 ﻿<scenario name="TwoActorsMovementAndComplexAction">
   <level id="0">
-    <action prob="1.0" name="walk" id ="0">
+    <action prob="1.0" name="run" id ="0">
       <actor name="actor1" mocapId ="">
       </actor>
     </action>

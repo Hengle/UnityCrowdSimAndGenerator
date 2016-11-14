@@ -79,12 +79,13 @@ public class Annotator
             rect.y + rect.height <= _resHeigth;
     }
 
-    private void AdjustTrackingRect(ref Rect rect)
+    private bool AdjustTrackingRect(ref Rect rect)
     {
-        if (!IsRectValid(rect))
+        bool success = IsRectValid(rect);       
+        if (!success)
         {
-            //rect.x = rect.x < 0.0f ? 0.0f : rect.x;
-            // rect.y = rect.y < 0.0f ? 0.0f : rect.y;
+            float previousWidth = rect.width;
+            float previousHeight = rect.height;
 
             if (rect.x < 0.0f)
             {
@@ -98,9 +99,13 @@ public class Annotator
                 rect.y = 0.0f;
             }
           
-            rect.width = rect.x + rect.width > _resWidth ? _resWidth - rect.x : rect.width;
-            rect.height = rect.y + rect.height > _resHeigth ? _resHeigth - rect.y : rect.height;
+            rect.width = rect.x + rect.width >= _resWidth ? _resWidth - (rect.x + 1) : rect.width;
+            rect.height = rect.y + rect.height >= _resHeigth ? _resHeigth - (rect.y + 1) : rect.height;
+
+            success = rect.width >= previousWidth / 2.0f && rect.height >= previousHeight / 2.0f;
         }
+
+        return success;
     }
 
     public void SetResolution(int width, int height)
@@ -133,8 +138,14 @@ public class Annotator
                 {
                     actionRecognitionRekt = GetFixedSizeRect(agent, camera);
                 }
-                
-                if (IsRectValid(trackingRekt))
+
+                bool rectValid = IsRectValid(trackingRekt);
+                if (!rectValid)
+                {
+                    rectValid = AdjustTrackingRect(ref trackingRekt);
+                }
+
+                if (rectValid)
                 {                                                         
                     Agent a = agent.GetComponent<Agent>();
                     annotations.Add(new Annotation(agentAction, 
@@ -160,8 +171,7 @@ public class Annotator
             }
             
         }
-
-        
+       
         return annotations;
     }
 
