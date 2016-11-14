@@ -19,7 +19,7 @@ public class Annotator
     {
         bool visible = false;
         bool inFrustum = false;
-        int threshold = agent.tag == "Crowd" ? 2 : 1;
+        int threshold = agent.tag == "Crowd" ? 3 : 1;
         
         
         //float maxDistance = 80.0f;
@@ -163,7 +163,7 @@ public class Annotator
 
                     
                 }
-                SetAgentVisisble(agent, IsVisibleFromCamera(camera, agent) && IsRectValid(trackingRekt));
+                SetAgentVisisble(agent, IsVisibleFromCamera(camera, agent) && rectValid);
             }
             else
             {
