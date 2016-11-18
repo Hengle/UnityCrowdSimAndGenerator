@@ -292,6 +292,7 @@ public class SimulationController : MonoBehaviour
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Diagnostics;
+//using UnityEditor;
 
 //[RequireComponent(typeof(CrowdController))]
 //[RequireComponent(typeof(WeatherConditions))]
@@ -359,13 +360,13 @@ public class SimulationController : MonoBehaviour
 //        _screenshooter = FindObjectOfType<Screenshooter>();
 //        _weatherController = GetComponent<WeatherConditions>();
 //        _conditions = new List<SceneConditions>();
-//        for (int i = 1; i < 4; i++)
+//        for (int i = 3; i > 0; i--)
 //        {
 //            for (int k = 0; k < 3; k++)
 //            {
 //                for (int j = 1; j < 6; j++)
 //                {
-//                    _conditions.Add(new SceneConditions(i, j, 50 + k * 75));
+//                    _conditions.Add(new SceneConditions(i, j, 25 + k * 35));
 //                }
 //            }
 //        }
@@ -426,24 +427,28 @@ public class SimulationController : MonoBehaviour
 //        }
 
 //        _crowdController.RemoveCrowd();
-//        StartCoroutine(EndInstance());
+//        //StartCoroutine(EndInstance());
+//        EndInstance();
 //    }
 
-//    private IEnumerator EndInstance()
+//    private void EndInstance()
 //    {
-//        yield return new WaitForSeconds(0.5f);
-//        _weatherController.RemoveConditions(_conditions[CurrentCondtion].Weather);
-//        if (CurrentCondtion < _conditions.Count)
+//        //yield return new WaitForSeconds(0.5f);
+//        _weatherController.RemoveConditions();
+//        if (CurrentCondtion < _conditions.Count - 1)
 //        {
-
+//            CurrentCondtion++;
 //            Autoscreens(_conditions[CurrentCondtion]);
 //        }
 //        else
 //        {
-//            var psi = new ProcessStartInfo("shutdown", "/s /t 0");
-//            psi.CreateNoWindow = true;
-//            psi.UseShellExecute = false;
-//            Process.Start(psi);
+//            //Shuts down computer
+//            //var psi = new ProcessStartInfo("shutdown", "/s /t 0");
+//            //psi.CreateNoWindow = true;
+//            //psi.UseShellExecute = false;
+//            //Process.Start(psi);
+//            EditorApplication.isPlaying = false;
+//            EditorApplication.Exit(0);
 //        }
 //    }
 
@@ -464,7 +469,7 @@ public class SimulationController : MonoBehaviour
 //        _crowdController.ActionsFilter = "";
 
 //        Tracking = true;
-//        SessionLength = 10;
+//        SessionLength = 20;
 
 //        string time, con, size;
 //        switch (conditions.Time)
@@ -505,26 +510,25 @@ public class SimulationController : MonoBehaviour
 //        }
 //        switch (conditions.Crowd)
 //        {
-//            case 50:
+//            case 25:
 //                size = "Small";
 //                break;
-//            case 125:
+//            case 60:
 //                size = "Medium";
 //                break;
-//            case 200:
+//            case 95:
 //                size = "Large";
 //                break;
 //            default:
 //                size = "Size";
 //                break;
 //        }
+//        ScreenshotsDirectory = string.Format("D:/Screenshots/Sample3_Estate/{0}_{1}_{2}", time, con, size);
 
-//        ScreenshotsDirectory = string.Format("D:/Screenshots/{0}_{1}_{2}", time, con, size);
-
-//        _screenshooter.SetParams(true, 3);
+//        _screenshooter.SetParams(true, 2);
 //        _screenshooter.ResWidth = 800;
 //        _screenshooter.ResHeight = 600;
-//        _screenshooter.ChangeFrameRate(1);
+//        _screenshooter.ChangeFrameRate(8);
 //        _screenshooter.ScreenshotLimit = 500;
 
 //        GetComponent<CamerasController>().enabled = false;
@@ -545,7 +549,6 @@ public class SimulationController : MonoBehaviour
 //        }
 //        _screenshooter.TakeScreenshots = false;
 
-//        CurrentCondtion++;
 //        Invoke("StartInstanceOfSimulation", 0.5f);
 //    }
 //}

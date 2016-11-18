@@ -124,7 +124,7 @@ public class WeatherConditions : MonoBehaviour
         }
     }
 
-    public void RemoveConditions(int id)
+    public void RemoveConditions()
     {
         Light light = MainLight.GetComponent<Light>();
         Camera[] cameras = FindObjectsOfType<Camera>();
